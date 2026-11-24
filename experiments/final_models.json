@@ -1,0 +1,316 @@
+{
+  "models": [
+    {
+      "key": "focused_5class",
+      "name": "Tomato Care · Deep learning (5 conditions)",
+      "task": "5class",
+      "generation": "upgrade",
+      "round": "final",
+      "family": "Deep learning",
+      "kind": "ensemble",
+      "type": "ensemble",
+      "class_keys": [
+        "healthy",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "members": [
+        {
+          "key": "convnext_t_in1k_robust_oe_fold0",
+          "name": "ConvNeXt-Tiny, robust recipe, class-weighted loss + outlier exposure · fold 0",
+          "path": "deploy/5class/convnext_t_in1k_robust_oe/fold0.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "knn",
+          "ood_threshold": 0.37133715861772787
+        },
+        {
+          "key": "convnext_t_in1k_robust_oe_fold1",
+          "name": "ConvNeXt-Tiny, robust recipe, class-weighted loss + outlier exposure · fold 1",
+          "path": "deploy/5class/convnext_t_in1k_robust_oe/fold1.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "knn",
+          "ood_threshold": 0.5519847155876728
+        },
+        {
+          "key": "convnext_t_in1k_robust_oe_fold2",
+          "name": "ConvNeXt-Tiny, robust recipe, class-weighted loss + outlier exposure · fold 2",
+          "path": "deploy/5class/convnext_t_in1k_robust_oe/fold2.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "knn",
+          "ood_threshold": 0.5287015743615651
+        },
+        {
+          "key": "convnext_t_in1k_robust_oe_fold3",
+          "name": "ConvNeXt-Tiny, robust recipe, class-weighted loss + outlier exposure · fold 3",
+          "path": "deploy/5class/convnext_t_in1k_robust_oe/fold3.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "knn",
+          "ood_threshold": 0.44703345748900475
+        },
+        {
+          "key": "convnext_t_in1k_robust_oe_fold4",
+          "name": "ConvNeXt-Tiny, robust recipe, class-weighted loss + outlier exposure · fold 4",
+          "path": "deploy/5class/convnext_t_in1k_robust_oe/fold4.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "knn",
+          "ood_threshold": 0.4476887182343654
+        }
+      ],
+      "recipes": [
+        "convnext_t_in1k_robust_oe"
+      ],
+      "tta_views": 1,
+      "feature_set": "5-fold ensemble of ConvNeXt-Tiny, robust recipe, class-weighted loss + outlier exposure",
+      "description": "Imbalance: class-weighted loss. Calibration: vector scaling. One threshold (0.81) and a per-condition unusual-image gate, all fixed on out-of-fold data.",
+      "confidence_threshold": 0.81,
+      "operating_point": {
+        "threshold": 0.81,
+        "chosen_on": "out-of-fold cross-validation predictions (cross-fitted)",
+        "rule": "lowest calibrated confidence with out-of-fold accuracy on answered photos >= 90% (coverage of in-scope photos >= 50%; answered out-of-scope photos count as errors)",
+        "oof": {
+          "coverage": 0.8875453446191052,
+          "accuracy_kept": 0.90234375,
+          "out_of_scope_answered": 0.4276729559748428
+        }
+      },
+      "ood": {
+        "method": "knn feature distance (fold models' own training photos)",
+        "keep": 0.95,
+        "per_condition": true
+      },
+      "adjust": {
+        "ood_class_scale": [
+          0.932933437614686,
+          1.0512001153651682,
+          1.0071996412340471,
+          1.032997998476986,
+          0.9485895138401196
+        ],
+        "fitted_on": "out-of-fold predictions of the train+val photos (cross-fitted)",
+        "calibration": {
+          "a": [
+            1.1363598974515412,
+            0.7894460518925492,
+            1.3075535944098655,
+            1.4171026742623456,
+            1.221645578611173
+          ],
+          "b": [
+            -0.20937162112403465,
+            -0.03742517198619911,
+            -0.04557473157616299,
+            0.039701729997442065,
+            0.25266995593170133
+          ]
+        }
+      },
+      "pipeline": {
+        "imbalance": "class-weighted loss",
+        "arm": "A",
+        "calibration": "vector",
+        "threshold": 0.81,
+        "unusual_gate": "knn",
+        "outlier_exposure": true
+      },
+      "model_name": "ConvNeXt-Tiny ensemble"
+    },
+    {
+      "key": "full_8class",
+      "name": "Tomato Care · Full (8 conditions)",
+      "task": "8class",
+      "generation": "upgrade",
+      "round": "final",
+      "family": "Deep learning",
+      "kind": "ensemble",
+      "type": "ensemble",
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "members": [
+        {
+          "key": "convnext_t_in1k_sampler_fold0",
+          "name": "ConvNeXt-Tiny, robust recipe, class-balanced sampling · fold 0",
+          "path": "deploy/8class/convnext_t_in1k_sampler/fold0.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "maha",
+          "ood_threshold": 4564.675370091226
+        },
+        {
+          "key": "convnext_t_in1k_sampler_fold1",
+          "name": "ConvNeXt-Tiny, robust recipe, class-balanced sampling · fold 1",
+          "path": "deploy/8class/convnext_t_in1k_sampler/fold1.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "maha",
+          "ood_threshold": 5649.170184433246
+        },
+        {
+          "key": "convnext_t_in1k_sampler_fold2",
+          "name": "ConvNeXt-Tiny, robust recipe, class-balanced sampling · fold 2",
+          "path": "deploy/8class/convnext_t_in1k_sampler/fold2.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "maha",
+          "ood_threshold": 6118.557571137086
+        },
+        {
+          "key": "convnext_t_in1k_sampler_fold3",
+          "name": "ConvNeXt-Tiny, robust recipe, class-balanced sampling · fold 3",
+          "path": "deploy/8class/convnext_t_in1k_sampler/fold3.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "maha",
+          "ood_threshold": 6012.191464395085
+        },
+        {
+          "key": "convnext_t_in1k_sampler_fold4",
+          "name": "ConvNeXt-Tiny, robust recipe, class-balanced sampling · fold 4",
+          "path": "deploy/8class/convnext_t_in1k_sampler/fold4.pt",
+          "temperature": 1.0,
+          "tta_views": 1,
+          "ood_method": "maha",
+          "ood_threshold": 5390.612880001737
+        }
+      ],
+      "recipes": [
+        "convnext_t_in1k_sampler"
+      ],
+      "tta_views": 1,
+      "feature_set": "5-fold ensemble of ConvNeXt-Tiny, robust recipe, class-balanced sampling",
+      "description": "Imbalance: class-balanced sampling. Calibration: vector scaling. One threshold (0.76) and a per-condition unusual-image gate, all fixed on out-of-fold data.",
+      "confidence_threshold": 0.76,
+      "operating_point": {
+        "threshold": 0.76,
+        "chosen_on": "out-of-fold cross-validation predictions (cross-fitted)",
+        "rule": "lowest calibrated confidence with out-of-fold accuracy on answered photos >= 90% (coverage of in-scope photos >= 50%)",
+        "oof": {
+          "coverage": 0.8411472697186982,
+          "accuracy_kept": 0.9029508196721312,
+          "out_of_scope_answered": null
+        }
+      },
+      "ood": {
+        "method": "maha feature distance (fold models' own training photos)",
+        "keep": 0.95,
+        "per_condition": true
+      },
+      "adjust": {
+        "ood_class_scale": [
+          1.2172416594221347,
+          1.0325242148689686,
+          1.3213548666080157,
+          0.8022988703022267,
+          1.0341285918682548,
+          1.354740134149616,
+          1.0,
+          0.968274542410606
+        ],
+        "fitted_on": "out-of-fold predictions of the train+val photos (cross-fitted)",
+        "calibration": {
+          "a": [
+            0.9005135252493355,
+            1.0295819877829158,
+            0.9384022638229988,
+            0.844826946790808,
+            1.1607139791465626,
+            1.2316678927439915,
+            1.245215873708009,
+            0.8740168668118923
+          ],
+          "b": [
+            -0.1394155190770279,
+            -0.1822451989936384,
+            -0.03801688080540474,
+            0.48005310253141464,
+            0.13211425357748433,
+            -0.056825453368593355,
+            -0.05032175443198397,
+            -0.14534349323210222
+          ]
+        }
+      },
+      "pipeline": {
+        "imbalance": "class-balanced sampling",
+        "arm": "B",
+        "calibration": "vector",
+        "threshold": 0.76,
+        "unusual_gate": "maha",
+        "outlier_exposure": false
+      }
+    },
+    {
+      "key": "classical_5class",
+      "name": "Tomato Care · Classical ML (5 conditions)",
+      "task": "5class",
+      "generation": "upgrade",
+      "round": "final",
+      "family": "Machine learning",
+      "kind": "classical",
+      "type": "sklearn",
+      "path": "ml/classical_5class.joblib",
+      "class_keys": [
+        "healthy",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "feature_set": "Color + Texture",
+      "temperature": 2.630797874198493,
+      "description": "Gradient boosting on handcrafted colour + texture features (no deep learning). Calibration: temperature scaling. One threshold (0.84) and a per-condition unusual-image gate, all fixed on out-of-fold data.",
+      "confidence_threshold": 0.84,
+      "operating_point": {
+        "threshold": 0.84,
+        "chosen_on": "out-of-fold cross-validation predictions (cross-fitted)",
+        "rule": "target 90% not reachable at >= 50% coverage: best accuracy at >= 50% coverage",
+        "oof": {
+          "coverage": 0.5205562273276905,
+          "accuracy_kept": 0.8223615464994776,
+          "out_of_scope_answered": 0.6037735849056604
+        }
+      },
+      "ood": {
+        "method": "maha distance in the standardised colour + texture feature space (training photos)",
+        "keep": 0.95,
+        "per_condition": true
+      },
+      "adjust": {
+        "ood_class_scale": [
+          0.5584746992122722,
+          0.6725576873494822,
+          1.025846457642757,
+          2.0,
+          2.0
+        ],
+        "fitted_on": "out-of-fold predictions of the train+val photos (cross-fitted)"
+      },
+      "pipeline": {
+        "classifier": "Gradient boosting",
+        "features": "Color + Texture",
+        "params": {
+          "learning_rate": 0.1,
+          "max_leaf_nodes": 31
+        },
+        "calibration": "temperature",
+        "threshold": 0.84,
+        "unusual_gate": "maha"
+      },
+      "model_name": "Gradient Boosting"
+    }
+  ]
+}

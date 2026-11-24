@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tomato Care — tomato leaf disease diagnosis from a single photo, with calibrated confidence, an unusual-image check, Grad-CAM explanations and a reproducible, leakage-free evaluation."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tomato Care — Tomato Leaf Disease Diagnosis" />
+    <meta property="og:description" content="Tomato Care — tomato leaf disease diagnosis from a single photo, with calibrated confidence, an unusual-image check, Grad-CAM explanations and a reproducible, leakage-free evaluation." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0b3b2c" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tomato Care — Tomato Leaf Disease Diagnosis</title>
+    <script>
+      // Apply the saved theme before first paint (no light-to-dark flash).
+      try {
+        const saved = localStorage.getItem("tl-theme") || "system";
+        const dark = saved === "dark" || (saved === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", dark);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Tomato Care needs JavaScript to run.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

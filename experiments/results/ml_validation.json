@@ -1,0 +1,972 @@
+{
+  "grid": [
+    {
+      "model_key": "logreg",
+      "model": "Logistic Regression",
+      "feature_set": "HOG",
+      "best_params": {
+        "C": 0.01,
+        "pca": "none"
+      },
+      "cv_f1_macro": 0.23095998518549576,
+      "cv_f1_macro_std": 0.02568395655896429,
+      "val": {
+        "accuracy": 0.3729903536977492,
+        "precision_macro": 0.1869382763680328,
+        "recall_macro": 0.20787537947212603,
+        "f1_macro": 0.18875984372640542,
+        "f1_weighted": 0.39477767569803696
+      },
+      "train_time_s": 2.1996892000024673,
+      "tuning_time_s": 40.51618310000049,
+      "n_features": 1764,
+      "pca_components": null,
+      "candidates_tried": 8,
+      "val_confusion_matrix": [
+        [
+          1,
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          4,
+          6,
+          1,
+          15,
+          3,
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          13
+        ],
+        [
+          2,
+          36,
+          3,
+          76,
+          8,
+          2,
+          0,
+          29
+        ],
+        [
+          0,
+          0,
+          1,
+          4,
+          3,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          8,
+          17,
+          3,
+          9,
+          0,
+          28
+        ]
+      ]
+    },
+    {
+      "model_key": "logreg",
+      "model": "Logistic Regression",
+      "feature_set": "Color",
+      "best_params": {
+        "C": 1.0,
+        "pca": "none"
+      },
+      "cv_f1_macro": 0.4067746710297088,
+      "cv_f1_macro_std": 0.055682752861458074,
+      "val": {
+        "accuracy": 0.48231511254019294,
+        "precision_macro": 0.35258617538222803,
+        "recall_macro": 0.4317102275578303,
+        "f1_macro": 0.35515539894935,
+        "f1_weighted": 0.5284655161958081
+      },
+      "train_time_s": 0.37475889999768697,
+      "tuning_time_s": 1.1669156000134535,
+      "n_features": 73,
+      "pca_components": null,
+      "candidates_tried": 4,
+      "val_confusion_matrix": [
+        [
+          3,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          2
+        ],
+        [
+          4,
+          19,
+          0,
+          5,
+          3,
+          1,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          6,
+          0,
+          0,
+          4,
+          0,
+          1
+        ],
+        [
+          12,
+          54,
+          4,
+          75,
+          6,
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          0,
+          0,
+          2,
+          6,
+          1,
+          1,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          15,
+          1,
+          14,
+          5,
+          1,
+          1,
+          0,
+          36
+        ]
+      ]
+    },
+    {
+      "model_key": "logreg",
+      "model": "Logistic Regression",
+      "feature_set": "HOG + Color",
+      "best_params": {
+        "C": 0.01,
+        "pca": "none"
+      },
+      "cv_f1_macro": 0.34089697708538125,
+      "cv_f1_macro_std": 0.044455930764607174,
+      "val": {
+        "accuracy": 0.5401929260450161,
+        "precision_macro": 0.33813524617034973,
+        "recall_macro": 0.34867796301871645,
+        "f1_macro": 0.3411989126843735,
+        "f1_weighted": 0.5520382740596356
+      },
+      "train_time_s": 1.9880281000223476,
+      "tuning_time_s": 19.48429500000202,
+      "n_features": 1837,
+      "pca_components": null,
+      "candidates_tried": 8,
+      "val_confusion_matrix": [
+        [
+          1,
+          1,
+          0,
+          2,
+          1,
+          0,
+          0,
+          5
+        ],
+        [
+          4,
+          11,
+          0,
+          16,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          2,
+          0,
+          6
+        ],
+        [
+          2,
+          33,
+          1,
+          97,
+          4,
+          1,
+          0,
+          18
+        ],
+        [
+          1,
+          0,
+          0,
+          3,
+          6,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          2,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          7,
+          11,
+          2,
+          1,
+          0,
+          45
+        ]
+      ]
+    },
+    {
+      "model_key": "svm",
+      "model": "SVM (RBF kernel)",
+      "feature_set": "HOG",
+      "best_params": {
+        "C": 10.0,
+        "gamma": 0.0001,
+        "pca": "none"
+      },
+      "cv_f1_macro": 0.21930490886264292,
+      "cv_f1_macro_std": 0.03531889490475236,
+      "val": {
+        "accuracy": 0.5691318327974276,
+        "precision_macro": 0.259468085106383,
+        "recall_macro": 0.1773947513673541,
+        "f1_macro": 0.15726932175141894,
+        "f1_weighted": 0.47965116702627086
+      },
+      "train_time_s": 16.331307699991157,
+      "tuning_time_s": 155.93423089999123,
+      "n_features": 1764,
+      "pca_components": null,
+      "candidates_tried": 24,
+      "val_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0,
+          31,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          11
+        ],
+        [
+          0,
+          0,
+          0,
+          140,
+          0,
+          0,
+          0,
+          16
+        ],
+        [
+          0,
+          0,
+          0,
+          12,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          36
+        ]
+      ]
+    },
+    {
+      "model_key": "svm",
+      "model": "SVM (RBF kernel)",
+      "feature_set": "Color",
+      "best_params": {
+        "C": 100.0,
+        "gamma": 0.0001,
+        "pca": "none"
+      },
+      "cv_f1_macro": 0.4147266488575637,
+      "cv_f1_macro_std": 0.0632912315646785,
+      "val": {
+        "accuracy": 0.6977491961414791,
+        "precision_macro": 0.45169061942959,
+        "recall_macro": 0.35409414358472574,
+        "f1_macro": 0.36119110068039373,
+        "f1_weighted": 0.6542738448207204
+      },
+      "train_time_s": 0.9028222000051755,
+      "tuning_time_s": 2.3362441000062972,
+      "n_features": 73,
+      "pca_components": null,
+      "candidates_tried": 12,
+      "val_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          5,
+          0,
+          28,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          4,
+          0,
+          7
+        ],
+        [
+          0,
+          6,
+          0,
+          142,
+          4,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          7,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          13,
+          1,
+          0,
+          0,
+          58
+        ]
+      ]
+    },
+    {
+      "model_key": "svm",
+      "model": "SVM (RBF kernel)",
+      "feature_set": "HOG + Color",
+      "best_params": {
+        "C": 100.0,
+        "gamma": 0.0001,
+        "pca": "PCA (95% variance)"
+      },
+      "cv_f1_macro": 0.32553381397961123,
+      "cv_f1_macro_std": 0.06092404556971075,
+      "val": {
+        "accuracy": 0.6463022508038585,
+        "precision_macro": 0.5114020641194554,
+        "recall_macro": 0.32234479276431327,
+        "f1_macro": 0.3560842921501959,
+        "f1_weighted": 0.5965745445595656
+      },
+      "train_time_s": 3.99955000000773,
+      "tuning_time_s": 143.90844670002116,
+      "n_features": 1837,
+      "pca_components": 407,
+      "candidates_tried": 24,
+      "val_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          3,
+          0,
+          30,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3,
+          1,
+          0,
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          3,
+          0,
+          136,
+          1,
+          0,
+          0,
+          16
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          6,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          21,
+          0,
+          0,
+          0,
+          51
+        ]
+      ]
+    },
+    {
+      "model_key": "rf",
+      "model": "Random Forest",
+      "feature_set": "HOG",
+      "best_params": {
+        "max_depth": 20,
+        "max_features": "log2",
+        "min_samples_leaf": 2,
+        "n_estimators": 300
+      },
+      "cv_f1_macro": 0.14285542653695202,
+      "cv_f1_macro_std": 0.016386001727427595,
+      "val": {
+        "accuracy": 0.5337620578778135,
+        "precision_macro": 0.12414449585502216,
+        "recall_macro": 0.14850061468212153,
+        "f1_macro": 0.12511812511812512,
+        "f1_weighted": 0.4203343946109219
+      },
+      "train_time_s": 0.9837796000065282,
+      "tuning_time_s": 159.8847989999922,
+      "n_features": 1764,
+      "pca_components": null,
+      "candidates_tried": 16,
+      "val_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          9,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          33,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          149,
+          0,
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          0,
+          0,
+          13,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          56,
+          0,
+          0,
+          0,
+          17
+        ]
+      ]
+    },
+    {
+      "model_key": "rf",
+      "model": "Random Forest",
+      "feature_set": "Color",
+      "best_params": {
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "n_estimators": 600
+      },
+      "cv_f1_macro": 0.44149640403312673,
+      "cv_f1_macro_std": 0.07222018774743143,
+      "val": {
+        "accuracy": 0.6977491961414791,
+        "precision_macro": 0.410728157970805,
+        "recall_macro": 0.36564405200963424,
+        "f1_macro": 0.3681398411484268,
+        "f1_weighted": 0.6589878405621548
+      },
+      "train_time_s": 1.5533546000078786,
+      "tuning_time_s": 41.84956920001423,
+      "n_features": 73,
+      "pca_components": null,
+      "candidates_tried": 16,
+      "val_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          7,
+          0,
+          26,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0,
+          5,
+          0,
+          6
+        ],
+        [
+          0,
+          9,
+          0,
+          141,
+          3,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          1,
+          4,
+          5,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          3,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          12,
+          1,
+          0,
+          0,
+          58
+        ]
+      ]
+    },
+    {
+      "model_key": "rf",
+      "model": "Random Forest",
+      "feature_set": "HOG + Color",
+      "best_params": {
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "n_estimators": 300
+      },
+      "cv_f1_macro": 0.24107492014810936,
+      "cv_f1_macro_std": 0.03806410110031835,
+      "val": {
+        "accuracy": 0.6752411575562701,
+        "precision_macro": 0.5989058008884244,
+        "recall_macro": 0.29364846768528274,
+        "f1_macro": 0.30350612292436185,
+        "f1_weighted": 0.5925420568527608
+      },
+      "train_time_s": 2.8694992999953683,
+      "tuning_time_s": 168.54888779998873,
+      "n_features": 1837,
+      "pca_components": null,
+      "candidates_tried": 16,
+      "val_confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          1,
+          0,
+          32,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          13
+        ],
+        [
+          0,
+          0,
+          0,
+          152,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          1,
+          0,
+          0,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          3,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          21,
+          0,
+          0,
+          0,
+          52
+        ]
+      ]
+    }
+  ],
+  "selected": {
+    "logreg": {
+      "feature_set": "Color",
+      "file": "ml/logreg__color.joblib"
+    },
+    "svm": {
+      "feature_set": "Color",
+      "file": "ml/svm__color.joblib"
+    },
+    "rf": {
+      "feature_set": "Color",
+      "file": "ml/rf__color.joblib"
+    }
+  }
+}

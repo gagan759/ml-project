@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tomato Care">
+  <defs>
+    <linearGradient id="tc-tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17744a"/>
+      <stop offset="1" stop-color="#062619"/>
+    </linearGradient>
+    <radialGradient id="tc-fruit" cx="0.36" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#ff967b"/>
+      <stop offset="0.45" stop-color="#f0543f"/>
+      <stop offset="1" stop-color="#b3241a"/>
+    </radialGradient>
+    <linearGradient id="tc-sepal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#86e8ae"/>
+      <stop offset="1" stop-color="#2fae6a"/>
+    </linearGradient>
+    <path id="tc-s" d="M0 0C3.2-2.6 8.6-2.4 12.2 0 8.6 2.4 3.2 2.6 0 0Z"/>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#tc-tile)"/>
+  <path d="M32 21.4C37.8 19.3 46.9 20.1 51.2 27.8c3.8 6.6 2.1 16.6-4.9 22.4C41.5 54.2 22.5 54.2 17.7 50.2 10.7 44.4 9 34.4 12.8 27.8 17.1 20.1 26.2 19.3 32 21.4Z" fill="url(#tc-fruit)"/>
+  <ellipse cx="22.6" cy="29.6" rx="4.4" ry="2.4" transform="rotate(-38 22.6 29.6)" fill="#fff" opacity=".32"/>
+  <g fill="url(#tc-sepal)" stroke="#0b4029" stroke-width=".8" stroke-linejoin="round">
+    <use href="#tc-s" transform="translate(32 21.6) rotate(14)"/>
+    <use href="#tc-s" transform="translate(32 21.6) rotate(166)"/>
+    <use href="#tc-s" transform="translate(32 21.6) rotate(-28) scale(.9)"/>
+    <use href="#tc-s" transform="translate(32 21.6) rotate(-152) scale(.9)"/>
+    <use href="#tc-s" transform="translate(32 21.6) rotate(90) scale(.6)"/>
+  </g>
+  <path d="M32 21.8c-.6-4 .3-7.2 3.6-9.4" fill="none" stroke="#86e8ae" stroke-width="3" stroke-linecap="round"/>
+  <path d="M14.6 39.6h8.2l2.9-6.1 4.7 11.6 3.9-8.7 2.4 3.2h12.7" fill="none" stroke="#fff" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

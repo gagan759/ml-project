@@ -1,0 +1,225 @@
+{
+  "limits": {
+    "background_texture": {
+      "low": 6.278131068665919,
+      "high": 18.84920117391761
+    },
+    "brightness": {
+      "low": 121.84410247802734,
+      "high": 193.04444396972661
+    },
+    "highlights": {
+      "low": 175.0,
+      "high": 218.0
+    },
+    "leaf_contrast": {
+      "low": 77.87700790405273,
+      "high": 124.68828689575196
+    },
+    "leaf_fraction": {
+      "low": 0.064808349609375,
+      "high": 0.5190798950195313
+    },
+    "second_leaf": {
+      "low": 0.0,
+      "high": 0.014823303222656257
+    },
+    "sharpness": {
+      "low": 38.63455745812971,
+      "high": 589.0779101428025
+    }
+  },
+  "genuine_test_photos": {
+    "photos": 290,
+    "flagged": 0.02413793103448276,
+    "by_issue": {
+      "blurry": 0.010344827586206896,
+      "bright": 0.0034482758620689655,
+      "busy_background": 0.0034482758620689655,
+      "dark": 0.0034482758620689655,
+      "several_leaves": 0.006896551724137931
+    }
+  },
+  "changed_test_photos": {
+    "blur_sigma2": {
+      "photos": 290,
+      "flagged": 1.0,
+      "by_issue": {
+        "blurry": 1.0,
+        "bright": 0.0034482758620689655,
+        "busy_background": 0.0034482758620689655,
+        "dark": 0.0034482758620689655,
+        "several_leaves": 0.006896551724137931
+      }
+    },
+    "blur_sigma4": {
+      "photos": 290,
+      "flagged": 1.0,
+      "by_issue": {
+        "blurry": 1.0,
+        "bright": 0.0034482758620689655,
+        "busy_background": 0.0034482758620689655,
+        "dark": 0.0034482758620689655,
+        "several_leaves": 0.006896551724137931
+      }
+    },
+    "dark_x0.35": {
+      "photos": 290,
+      "flagged": 1.0,
+      "by_issue": {
+        "blurry": 0.803448275862069,
+        "dark": 1.0,
+        "no_leaf": 1.0
+      }
+    },
+    "overexposed_x1.7": {
+      "photos": 290,
+      "flagged": 1.0,
+      "by_issue": {
+        "bright": 1.0,
+        "busy_background": 0.010344827586206896,
+        "several_leaves": 0.006896551724137931
+      }
+    },
+    "jpeg_q15": {
+      "photos": 290,
+      "flagged": 0.034482758620689655,
+      "by_issue": {
+        "blurry": 0.013793103448275862,
+        "bright": 0.010344827586206896,
+        "busy_background": 0.0034482758620689655,
+        "dark": 0.0034482758620689655,
+        "several_leaves": 0.006896551724137931
+      }
+    },
+    "background_black": {
+      "photos": 290,
+      "flagged": 1.0,
+      "by_issue": {
+        "dark": 1.0,
+        "no_leaf": 0.4206896551724138,
+        "several_leaves": 0.006896551724137931,
+        "small_leaf": 0.006896551724137931
+      }
+    },
+    "background_wood": {
+      "photos": 290,
+      "flagged": 1.0,
+      "by_issue": {
+        "dark": 1.0,
+        "no_leaf": 0.996551724137931
+      }
+    },
+    "background_grass": {
+      "photos": 290,
+      "flagged": 1.0,
+      "by_issue": {
+        "dark": 1.0,
+        "no_leaf": 0.996551724137931
+      }
+    },
+    "background_fabric": {
+      "photos": 290,
+      "flagged": 1.0,
+      "by_issue": {
+        "bright": 1.0,
+        "busy_background": 0.0034482758620689655,
+        "dark": 0.03103448275862069,
+        "no_leaf": 0.9896551724137931
+      }
+    },
+    "four_leaves_same": {
+      "photos": 68,
+      "flagged": 1.0,
+      "by_issue": {
+        "busy_background": 0.029411764705882353,
+        "no_leaf": 0.014705882352941176,
+        "several_leaves": 0.9852941176470589,
+        "small_leaf": 0.11764705882352941
+      }
+    },
+    "four_leaves_mixed": {
+      "photos": 40,
+      "flagged": 1.0,
+      "by_issue": {
+        "busy_background": 0.075,
+        "several_leaves": 1.0,
+        "small_leaf": 0.1
+      }
+    }
+  },
+  "out_of_dataset": {
+    "synthetic_probes": {
+      "photos": 30,
+      "flagged": 1.0,
+      "by_issue": {
+        "blurry": 0.3,
+        "bright": 0.4,
+        "busy_background": 0.16666666666666666,
+        "dark": 0.5666666666666667,
+        "no_leaf": 0.7666666666666667,
+        "several_leaves": 0.03333333333333333,
+        "small_leaf": 0.1
+      }
+    },
+    "empty_paper": {
+      "photos": 60,
+      "flagged": 1.0,
+      "by_issue": {
+        "blurry": 0.43333333333333335,
+        "bright": 0.1,
+        "no_leaf": 1.0
+      }
+    },
+    "other_crop": {
+      "photos": 96,
+      "flagged": 0.9895833333333334,
+      "by_issue": {
+        "bright": 0.20833333333333334,
+        "busy_background": 0.1875,
+        "dark": 0.3958333333333333,
+        "no_leaf": 0.71875,
+        "several_leaves": 0.09375,
+        "small_leaf": 0.041666666666666664
+      }
+    },
+    "tomato_unsupported": {
+      "photos": 56,
+      "flagged": 1.0,
+      "by_issue": {
+        "blurry": 0.017857142857142856,
+        "bright": 0.017857142857142856,
+        "busy_background": 0.17857142857142858,
+        "dark": 0.5714285714285714,
+        "no_leaf": 0.8214285714285714,
+        "several_leaves": 0.10714285714285714,
+        "small_leaf": 0.05357142857142857
+      }
+    },
+    "tomato_known_shift": {
+      "photos": 36,
+      "flagged": 1.0,
+      "by_issue": {
+        "bright": 0.05555555555555555,
+        "busy_background": 0.2777777777777778,
+        "dark": 0.75,
+        "no_leaf": 0.7222222222222222,
+        "several_leaves": 0.2222222222222222,
+        "small_leaf": 0.1111111111111111
+      }
+    },
+    "everyday": {
+      "photos": 69,
+      "flagged": 1.0,
+      "by_issue": {
+        "blurry": 0.057971014492753624,
+        "bright": 0.7391304347826086,
+        "busy_background": 0.3333333333333333,
+        "dark": 0.42028985507246375,
+        "no_leaf": 0.5797101449275363,
+        "several_leaves": 0.10144927536231885,
+        "small_leaf": 0.08695652173913043
+      }
+    }
+  }
+}

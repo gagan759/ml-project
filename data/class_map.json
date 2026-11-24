@@ -1,0 +1,52 @@
+{
+  "classes": [
+    {
+      "index": 0,
+      "key": "early_blight",
+      "folder": "Early_blight",
+      "name": "Early Blight"
+    },
+    {
+      "index": 1,
+      "key": "healthy",
+      "folder": "Healthy",
+      "name": "Healthy"
+    },
+    {
+      "index": 2,
+      "key": "late_blight",
+      "folder": "Late_blight",
+      "name": "Late Blight"
+    },
+    {
+      "index": 3,
+      "key": "leaf_miner",
+      "folder": "Leaf Miner",
+      "name": "Leaf Miner"
+    },
+    {
+      "index": 4,
+      "key": "magnesium_deficiency",
+      "folder": "Magnesium Deficiency",
+      "name": "Magnesium Deficiency"
+    },
+    {
+      "index": 5,
+      "key": "nitrogen_deficiency",
+      "folder": "Nitrogen Deficiency",
+      "name": "Nitrogen Deficiency"
+    },
+    {
+      "index": 6,
+      "key": "potassium_deficiency",
+      "folder": "Pottassium Deficiency",
+      "name": "Potassium Deficiency"
+    },
+    {
+      "index": 7,
+      "key": "spotted_wilt_virus",
+      "folder": "Spotted Wilt Virus",
+      "name": "Spotted Wilt Virus"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "5class": {
+    "threshold": 0.81,
+    "single_photo": {
+      "leaves_or_photos": 475,
+      "accuracy": 0.9263157894736842,
+      "coverage": 0.8778947368421053,
+      "accuracy_answered": 0.9688249400479616
+    },
+    "averaged": {
+      "leaves_or_photos": 214,
+      "accuracy": 0.9205607476635514,
+      "coverage": 0.8411214953271028,
+      "accuracy_answered": 0.9777777777777777
+    },
+    "all_photos_single": {
+      "leaves_or_photos": 1654,
+      "accuracy": 0.9014510278113664,
+      "coverage": 0.8875453446191052,
+      "accuracy_answered": 0.944141689373297
+    },
+    "unsupported_answered": {
+      "single_photo": 0.3953488372093023,
+      "averaged": 0.42857142857142855,
+      "leaves": 21,
+      "photos": 43
+    }
+  },
+  "8class": {
+    "threshold": 0.76,
+    "single_photo": {
+      "leaves_or_photos": 518,
+      "accuracy": 0.8803088803088803,
+      "coverage": 0.8397683397683398,
+      "accuracy_answered": 0.9333333333333333
+    },
+    "averaged": {
+      "leaves_or_photos": 235,
+      "accuracy": 0.8553191489361702,
+      "coverage": 0.8,
+      "accuracy_answered": 0.9414893617021277
+    },
+    "all_photos_single": {
+      "leaves_or_photos": 1813,
+      "accuracy": 0.8494208494208494,
+      "coverage": 0.8411472697186982,
+      "accuracy_answered": 0.9029508196721312
+    }
+  }
+}

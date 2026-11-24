@@ -1,0 +1,21 @@
+{
+  "time_window_s": 120,
+  "reference_quantile": 0.999,
+  "threshold": 0.871410071849823,
+  "reference_pairs": 456880,
+  "reference_max": 0.9202459454536438,
+  "candidate_pairs": 8018,
+  "merged_pairs": 340,
+  "merged_pairs_crossing_official_splits": 152,
+  "photos_in_merged_pairs": 578,
+  "per_class_merged_pairs": {
+    "leaf_miner": 182,
+    "spotted_wilt_virus": 58,
+    "healthy": 54,
+    "late_blight": 16,
+    "magnesium_deficiency": 15,
+    "early_blight": 9,
+    "nitrogen_deficiency": 4,
+    "potassium_deficiency": 2
+  }
+}

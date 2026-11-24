@@ -1,0 +1,300 @@
+{
+  "rf_feature_set": "Color",
+  "rf_group_importance": {
+    "Hue histogram": 0.33312949182859924,
+    "Saturation histogram": 0.24816250642320167,
+    "Brightness histogram": 0.203183707752861,
+    "L*a*b* colour moments": 0.21552429399533812
+  },
+  "permutation_importance": {
+    "model": "Random Forest",
+    "feature_set": "Color",
+    "baseline_val_f1_macro": 0.3681398411484268,
+    "groups": {
+      "Hue histogram": {
+        "mean_drop": 0.14203899949526325,
+        "std": 0.026049644766556593
+      },
+      "Saturation histogram": {
+        "mean_drop": 0.03139395751188673,
+        "std": 0.028250030977208337
+      },
+      "Brightness histogram": {
+        "mean_drop": -0.04695880541647049,
+        "std": 0.009931696972923223
+      },
+      "L*a*b* colour moments": {
+        "mean_drop": 0.030042221436143296,
+        "std": 0.01914728513328871
+      }
+    }
+  },
+  "selected_model": "ConvNeXt-Tiny (fine-tuned) + TTA",
+  "selected_test_errors": [
+    {
+      "photo_id": "IMG20220323102220",
+      "true": "Early Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.9221113920211792
+    },
+    {
+      "photo_id": "IMG20220323103125",
+      "true": "Early Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.8024693131446838
+    },
+    {
+      "photo_id": "IMG20220323121804",
+      "true": "Early Blight",
+      "predicted": "Leaf Miner",
+      "confidence": 0.47711700201034546
+    },
+    {
+      "photo_id": "IMG20220324112404",
+      "true": "Early Blight",
+      "predicted": "Late Blight",
+      "confidence": 0.7700079083442688
+    },
+    {
+      "photo_id": "IMG20220324175916",
+      "true": "Early Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.7991378903388977
+    },
+    {
+      "photo_id": "IMG20220324175919",
+      "true": "Early Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.7651606798171997
+    },
+    {
+      "photo_id": "IMG20220324113702",
+      "true": "Healthy",
+      "predicted": "Leaf Miner",
+      "confidence": 0.927558183670044
+    },
+    {
+      "photo_id": "IMG20220324115056",
+      "true": "Healthy",
+      "predicted": "Leaf Miner",
+      "confidence": 0.5592958927154541
+    },
+    {
+      "photo_id": "IMG20220323123120",
+      "true": "Late Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.9081698656082153
+    },
+    {
+      "photo_id": "IMG20220323181329",
+      "true": "Late Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.7704895734786987
+    },
+    {
+      "photo_id": "IMG20220324105425",
+      "true": "Late Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.8274304270744324
+    },
+    {
+      "photo_id": "IMG20220324105427",
+      "true": "Late Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.6774619817733765
+    },
+    {
+      "photo_id": "IMG20220325111253",
+      "true": "Late Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.9349938631057739
+    },
+    {
+      "photo_id": "IMG20220323130218",
+      "true": "Leaf Miner",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.850226104259491
+    },
+    {
+      "photo_id": "IMG20220324114629",
+      "true": "Leaf Miner",
+      "predicted": "Healthy",
+      "confidence": 0.6022088527679443
+    },
+    {
+      "photo_id": "IMG20220324121948",
+      "true": "Leaf Miner",
+      "predicted": "Healthy",
+      "confidence": 0.671913743019104
+    },
+    {
+      "photo_id": "IMG20220324122241",
+      "true": "Leaf Miner",
+      "predicted": "Late Blight",
+      "confidence": 0.6974717974662781
+    },
+    {
+      "photo_id": "IMG20220325104813",
+      "true": "Leaf Miner",
+      "predicted": "Healthy",
+      "confidence": 0.8580925464630127
+    },
+    {
+      "photo_id": "IMG20220325113512",
+      "true": "Leaf Miner",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.5861021280288696
+    },
+    {
+      "photo_id": "IMG20220325113740",
+      "true": "Leaf Miner",
+      "predicted": "Nitrogen Deficiency",
+      "confidence": 0.8840121626853943
+    },
+    {
+      "photo_id": "IMG20220325133751",
+      "true": "Leaf Miner",
+      "predicted": "Healthy",
+      "confidence": 0.8311434388160706
+    },
+    {
+      "photo_id": "IMG20220325134147",
+      "true": "Leaf Miner",
+      "predicted": "Magnesium Deficiency",
+      "confidence": 0.8309090733528137
+    },
+    {
+      "photo_id": "IMG20220324122312",
+      "true": "Magnesium Deficiency",
+      "predicted": "Leaf Miner",
+      "confidence": 0.428190141916275
+    },
+    {
+      "photo_id": "IMG20220324181734",
+      "true": "Magnesium Deficiency",
+      "predicted": "Nitrogen Deficiency",
+      "confidence": 0.8765085339546204
+    },
+    {
+      "photo_id": "IMG20220324111711",
+      "true": "Nitrogen Deficiency",
+      "predicted": "Late Blight",
+      "confidence": 0.5355885028839111
+    },
+    {
+      "photo_id": "IMG20220324115111",
+      "true": "Potassium Deficiency",
+      "predicted": "Late Blight",
+      "confidence": 0.365446001291275
+    },
+    {
+      "photo_id": "IMG20220325112941",
+      "true": "Potassium Deficiency",
+      "predicted": "Nitrogen Deficiency",
+      "confidence": 0.6658682823181152
+    },
+    {
+      "photo_id": "IMG20220323101907",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Early Blight",
+      "confidence": 0.6683428287506104
+    },
+    {
+      "photo_id": "IMG20220323103331",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Healthy",
+      "confidence": 0.6911252737045288
+    },
+    {
+      "photo_id": "IMG20220323185738",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Early Blight",
+      "confidence": 0.7200857996940613
+    },
+    {
+      "photo_id": "IMG20220324183458",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Leaf Miner",
+      "confidence": 0.547616183757782
+    },
+    {
+      "photo_id": "IMG20220324183502",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Leaf Miner",
+      "confidence": 0.8132966756820679
+    },
+    {
+      "photo_id": "IMG20220325142211",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Late Blight",
+      "confidence": 0.3523979187011719
+    },
+    {
+      "photo_id": "IMG20220323102229",
+      "true": "Early Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.9609842300415039
+    },
+    {
+      "photo_id": "IMG20220324180120",
+      "true": "Early Blight",
+      "predicted": "Leaf Miner",
+      "confidence": 0.37668129801750183
+    },
+    {
+      "photo_id": "IMG20220323181342",
+      "true": "Late Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.8204292058944702
+    },
+    {
+      "photo_id": "IMG20220323111936",
+      "true": "Leaf Miner",
+      "predicted": "Magnesium Deficiency",
+      "confidence": 0.706236720085144
+    },
+    {
+      "photo_id": "IMG20220325120321",
+      "true": "Leaf Miner",
+      "predicted": "Healthy",
+      "confidence": 0.7220268845558167
+    },
+    {
+      "photo_id": "IMG20220323180110",
+      "true": "Nitrogen Deficiency",
+      "predicted": "Magnesium Deficiency",
+      "confidence": 0.7344635128974915
+    },
+    {
+      "photo_id": "IMG20220323095610",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Leaf Miner",
+      "confidence": 0.41236037015914917
+    },
+    {
+      "photo_id": "IMG20220324121558",
+      "true": "Late Blight",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.9227480292320251
+    },
+    {
+      "photo_id": "IMG20220325113515",
+      "true": "Leaf Miner",
+      "predicted": "Spotted Wilt Virus",
+      "confidence": 0.5732981562614441
+    },
+    {
+      "photo_id": "IMG20220323124855",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Late Blight",
+      "confidence": 0.764034628868103
+    },
+    {
+      "photo_id": "IMG20220324180558",
+      "true": "Spotted Wilt Virus",
+      "predicted": "Early Blight",
+      "confidence": 0.561108410358429
+    }
+  ],
+  "black_corner_copies_in_official_test": 30
+}

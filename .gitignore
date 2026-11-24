@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Data: the Tomato-Village images have no redistribution licence (download them from the authors, see README)
+Dataset/
+data/features.npz
+
+# Model weights live in the GitHub release (scripts/download_weights.py), never in git
+*.pt
+*.pth
+*.onnx
+*.joblib
+experiments/models/
+experiments/cv/**/*.npz
+
+# Old artefacts kept locally only
+_attic/
+deploy/
+submission/
+reports/*.pdf
+reports/*.docx
+reports/*.pptx
+reports/deck/node_modules/
+reports/screenshots/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Figures that show many dataset photographs (not redistributed; see README)
+reports/figures/eda/augmentation_family.png
+reports/figures/eda/leaf_masks.png
+reports/figures/eda/mean_images.png
+reports/figures/eda/near_duplicates.png
+reports/figures/eda/samples_compact.png
+reports/figures/eda/samples_grid.png
+reports/figures/interpretability/gradcam_*.png
+reports/figures/workflow.png
+
+# Personal study notes and university-report tooling (kept locally)
+PROJECT_NOTES.md
+docs/VIVA_PREP.md
+docs/API_CONTRACT.md
+reports/*.py
+reports/deck/
+reports/report_details.json
+scripts/11_build_report.py
+scripts/make_submission.py
+scripts/make_workflow_figure.py
+
+# Original study's Streamlit demo and its old UI checks (that demo lives in its own repository)
+scripts/12_e2e_screenshots.py
+scripts/14_verify_deployment.py
+scripts/15_build_streamlit_app.py
+scripts/16_test_streamlit_app.py
+scripts/17_publish_streamlit.py
+scripts/18_check_live_app.py
+experiments/results/streamlit_check.json
+experiments/results/live_check.json
+
+# Run artefacts
+experiments/logs/
+experiments/queue*.txt
+experiments/results/final_benchmark_dryrun.json
+.onnx_cache/
+.streamlit/secrets.toml
+
+# Out-of-dataset evaluation photos (PlantVillage, Lorem Picsum): downloaded by scripts/37, not redistributed
+data/external_ood/
+
+# classical-model feature cache (scripts/43), rebuilt from the dataset
+data/features_classical.npz

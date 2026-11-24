@@ -1,0 +1,68 @@
+{
+  "total_images": 4525,
+  "unique_photos": 2103,
+  "augmented_families": 346,
+  "augmented_copies": 2422,
+  "families_crossing_splits": 327,
+  "val_images": 902,
+  "val_images_with_train_sibling": 552,
+  "test_images": 461,
+  "test_images_with_train_sibling": 282,
+  "per_class_test_leakage": [
+    {
+      "key": "early_blight",
+      "test_images": 50,
+      "test_images_with_train_sibling": 50
+    },
+    {
+      "key": "healthy",
+      "test_images": 22,
+      "test_images_with_train_sibling": 0
+    },
+    {
+      "key": "late_blight",
+      "test_images": 92,
+      "test_images_with_train_sibling": 92
+    },
+    {
+      "key": "leaf_miner",
+      "test_images": 104,
+      "test_images_with_train_sibling": 0
+    },
+    {
+      "key": "magnesium_deficiency",
+      "test_images": 95,
+      "test_images_with_train_sibling": 95
+    },
+    {
+      "key": "nitrogen_deficiency",
+      "test_images": 37,
+      "test_images_with_train_sibling": 37
+    },
+    {
+      "key": "potassium_deficiency",
+      "test_images": 8,
+      "test_images_with_train_sibling": 8
+    },
+    {
+      "key": "spotted_wilt_virus",
+      "test_images": 53,
+      "test_images_with_train_sibling": 0
+    }
+  ],
+  "corrupt_files": 0,
+  "byte_identical_duplicate_files": 0,
+  "jpeg_quality_counts": {
+    "90": 4525
+  },
+  "mean_bytes": {
+    "original": {
+      "file": 254267.6918687589,
+      "metadata": 241926.19067998097
+    },
+    "copy": {
+      "file": 11401.637489677953,
+      "metadata": 18.0
+    }
+  }
+}

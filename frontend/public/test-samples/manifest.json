@@ -1,0 +1,51 @@
+{
+  "note": "Demo examples: for each condition, the held-out test photo (never used for training or model selection) on which the served models give the clearest correct result \u2014 a confident correct diagnosis; ties go to the most typical photo. They show how the app works, NOT how often it is right: the unbiased test results are in the Model lab.",
+  "rule": "demo",
+  "samples": [
+    {
+      "key": "healthy",
+      "name": "Healthy",
+      "file": "/test-samples/healthy.jpg",
+      "photo_id": "IMG20220325133916",
+      "typicality": 0.7326664328575134,
+      "class_test_photos": 27,
+      "demo_score": 4.0
+    },
+    {
+      "key": "leaf_miner",
+      "name": "Leaf Miner",
+      "file": "/test-samples/leaf_miner.jpg",
+      "photo_id": "IMG20220324114600",
+      "typicality": 0.7501891255378723,
+      "class_test_photos": 139,
+      "demo_score": 4.0
+    },
+    {
+      "key": "magnesium_deficiency",
+      "name": "Magnesium Deficiency",
+      "file": "/test-samples/magnesium_deficiency.jpg",
+      "photo_id": "IMG20220323183119",
+      "typicality": 0.7581899166107178,
+      "class_test_photos": 14,
+      "demo_score": 4.0
+    },
+    {
+      "key": "nitrogen_deficiency",
+      "name": "Nitrogen Deficiency",
+      "file": "/test-samples/nitrogen_deficiency.jpg",
+      "photo_id": "IMG20220324111154",
+      "typicality": 0.5815491080284119,
+      "class_test_photos": 7,
+      "demo_score": 4.0
+    },
+    {
+      "key": "spotted_wilt_virus",
+      "name": "Spotted Wilt Virus",
+      "file": "/test-samples/spotted_wilt_virus.jpg",
+      "photo_id": "IMG20220323123709",
+      "typicality": 0.7279871702194214,
+      "class_test_photos": 78,
+      "demo_score": 4.0
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "classes": [
+    {
+      "index": 1,
+      "key": "healthy",
+      "folder": "Healthy",
+      "name": "Healthy",
+      "category": "Healthy",
+      "is_healthy": true,
+      "cause": "No disease, pest damage or nutrient disorder visible",
+      "summary": "A healthy tomato leaf has an even green colour and none of the lesions, mines, yellowing patterns or scorched margins seen in the other classes. Good cultural practices keep plants vigorous and reduce the risk of foliar diseases.",
+      "symptoms": [
+        "Even green colour across the leaf blade",
+        "No spots, lesions or concentric rings",
+        "No winding mines or tunnels inside the leaf",
+        "No interveinal or marginal yellowing, bronzing or scorch"
+      ],
+      "visual_characteristics": [
+        "Uniform green tissue with normally coloured veins",
+        "Intact leaf margins without browning or drying",
+        "Smooth surface free of spots, trails or dead patches"
+      ],
+      "management": [
+        "Grow tomatoes in full sun (at least six hours of direct sun daily)",
+        "Test soil before planting and fertilise according to the results; avoid excess fertiliser, which favours leafy growth over fruit",
+        "Water at soil level (about one inch per week), preferably in the morning, keeping leaves dry",
+        "Mulch to conserve moisture and reduce soil splashing onto leaves",
+        "Stake or cage plants, space them for good air circulation, and remove lower leaves that touch the soil",
+        "Rotate crops and include disease-resistant varieties"
+      ],
+      "images": [
+        "/samples/healthy-1.jpg",
+        "/samples/healthy-2.jpg",
+        "/samples/healthy-3.jpg"
+      ],
+      "references": [
+        {
+          "title": "Growing Tomatoes at Home",
+          "publisher": "NC State Extension (N.C. Cooperative Extension)",
+          "url": "https://extensiongardener.ces.ncsu.edu/2021/04/growing-tomatoes-at-home/"
+        },
+        {
+          "title": "Growing Tomatoes in the Home Garden",
+          "publisher": "Iowa State University Extension and Outreach",
+          "url": "https://yardandgarden.extension.iastate.edu/how-to/growing-tomatoes-home-garden"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "key": "leaf_miner",
+      "folder": "Leaf Miner",
+      "name": "Leaf Miner",
+      "category": "Insect pest",
+      "is_healthy": false,
+      "cause": "Larvae of Liriomyza leafminer flies (e.g., Liriomyza sativae and L. trifolii)",
+      "summary": "Leafminer larvae feed inside the leaf, between the upper and lower surfaces, leaving winding white trails. The serpentine mines visible in this dataset's photos are typical of Liriomyza leafminers. Heavy mining can make leaves drop early.",
+      "symptoms": [
+        "Slender, white, winding (serpentine) trails inside the leaf",
+        "Mines widen as the larva grows",
+        "Heavily mined leaflets show large whitish blotches",
+        "Damaged leaves drop prematurely; early defoliation can reduce yield and expose fruit to sunburn",
+        "A related tomato pest, Tuta absoluta (tomato leafminer moth), instead makes clear patch-like mines often partly filled with frass, and its larvae also damage fruit"
+      ],
+      "visual_characteristics": [
+        "Thin, pale, meandering lines (mines) across green leaf tissue",
+        "Trails that become wider along their length",
+        "Whitish blotches where mines merge on heavily infested leaflets"
+      ],
+      "management": [
+        "Inspect transplants for mines before planting and destroy any infested plants",
+        "Conserve parasitic wasps, which often control leafminers, by avoiding unnecessary broad-spectrum insecticides that can trigger outbreaks",
+        "Monitor leafminer activity (e.g., trays under plants to catch dropping pupae) before deciding on any treatment",
+        "In home gardens, remove older infested leaves and keep plants vigorous with proper irrigation; leafminers rarely require treatment there",
+        "Remove old plantings right after the final harvest",
+        "Confirm the pest's identity with your local extension service (e.g., Krishi Vigyan Kendra) before treating, since other pests such as Tuta absoluta also mine tomato leaves"
+      ],
+      "images": [
+        "/samples/leaf_miner-1.jpg",
+        "/samples/leaf_miner-2.jpg",
+        "/samples/leaf_miner-3.jpg"
+      ],
+      "references": [
+        {
+          "title": "Leafminers - Tomato: Agriculture Pest Management Guidelines",
+          "publisher": "University of California Statewide IPM Program (UC IPM)",
+          "url": "https://ipm.ucanr.edu/agriculture/tomato/leafminers/"
+        },
+        {
+          "title": "Vegetable Leafminers",
+          "publisher": "University of California Statewide IPM Program (UC IPM)",
+          "url": "https://ipm.ucanr.edu/home-and-landscape/vegetable-leafminers"
+        },
+        {
+          "title": "Tuta absoluta (Tomato Leafminer) - Fact Sheet",
+          "publisher": "Canadian Food Inspection Agency",
+          "url": "https://inspection.canada.ca/en/plant-health/invasive-species/insects/tomato-leafminer/fact-sheet"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "key": "magnesium_deficiency",
+      "folder": "Magnesium Deficiency",
+      "name": "Magnesium Deficiency",
+      "category": "Nutrient deficiency",
+      "is_healthy": false,
+      "cause": "Insufficient magnesium uptake: low soil magnesium, low soil pH (below 6.0), or excess soil potassium reducing uptake",
+      "summary": "Magnesium deficiency appears first on older, lower leaves as yellowing between the veins while the veins stay green. It is often most noticeable during heavy fruit set.",
+      "symptoms": [
+        "Interveinal chlorosis (yellowing between the veins) starting on the oldest, lower leaves",
+        "Veins and midribs remain green",
+        "Symptoms progress from older leaves toward younger leaves",
+        "Affected tissue may later turn brown and die (necrosis)",
+        "Often most noticeable during heavy fruit set"
+      ],
+      "visual_characteristics": [
+        "Green veins contrasting with yellowed tissue between them",
+        "Mottled yellow-green pattern across the leaf blade",
+        "Brown necrotic spots or patches within the yellow areas in advanced cases"
+      ],
+      "management": [
+        "Test soil before planting (pH and magnesium); correct low pH well in advance, since pH changes take time",
+        "Confirm a suspected deficiency with a leaf tissue test during the season",
+        "Avoid excessive potassium and phosphorus fertilisation, which can reduce magnesium uptake",
+        "Where a deficiency is confirmed, apply a magnesium source (e.g., magnesium sulfate) as advised by your local extension service (e.g., Krishi Vigyan Kendra)",
+        "Similar yellowing can have other causes, so confirm the diagnosis before treating"
+      ],
+      "images": [
+        "/samples/magnesium_deficiency-1.jpg",
+        "/samples/magnesium_deficiency-2.jpg",
+        "/samples/magnesium_deficiency-3.jpg"
+      ],
+      "references": [
+        {
+          "title": "Interveinal Chlorosis (Scouting Guides for Problems of Vegetables)",
+          "publisher": "University of Kentucky, Martin-Gatton College of Agriculture, Food and Environment",
+          "url": "https://veggiescout.mgcafe.uky.edu/interveinal-chlorosis"
+        },
+        {
+          "title": "Nutrient Disorders (Vegetable MD Online)",
+          "publisher": "Cornell University (Cornell Vegetables)",
+          "url": "https://www.vegetables.cornell.edu/?p=2568"
+        },
+        {
+          "title": "Nutritional Deficiencies in Vegetables (Bulletin 1569)",
+          "publisher": "University of Georgia Cooperative Extension",
+          "url": "https://fieldreport.caes.uga.edu/publications/B1569/"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "key": "nitrogen_deficiency",
+      "folder": "Nitrogen Deficiency",
+      "name": "Nitrogen Deficiency",
+      "category": "Nutrient deficiency",
+      "is_healthy": false,
+      "cause": "Insufficient nitrogen available to the plant",
+      "summary": "Nitrogen deficiency causes a general yellowing that starts on the oldest, lower leaves and moves up the plant. Growth is restricted, and severely deficient plants become pale green overall.",
+      "symptoms": [
+        "General yellowing of older, lower leaves first",
+        "Younger leaves become yellowish-green as the deficiency progresses",
+        "Restricted shoot growth, a spindly appearance and stunting",
+        "Under severe deficiency, the whole plant becomes pale green"
+      ],
+      "visual_characteristics": [
+        "Fairly uniform pale green to yellow colour across the leaf rather than a sharp vein-versus-interveinal pattern",
+        "Lighter overall leaf colour than healthy leaves",
+        "Few or no distinct spots, lesions or mines"
+      ],
+      "management": [
+        "Base fertiliser decisions on soil and, where possible, leaf tissue testing",
+        "Supply nitrogen according to the crop recommendation, splitting applications through the season rather than applying it all at once",
+        "Avoid over-correcting: excess nitrogen promotes leafy growth at the expense of fruit",
+        "Quick corrective measures such as foliar nitrogen sprays exist; follow your local extension service (e.g., Krishi Vigyan Kendra) for products and rates",
+        "Several disorders cause yellowing, so confirm the diagnosis before treating"
+      ],
+      "images": [
+        "/samples/nitrogen_deficiency-1.jpg",
+        "/samples/nitrogen_deficiency-2.jpg",
+        "/samples/nitrogen_deficiency-3.jpg"
+      ],
+      "references": [
+        {
+          "title": "Nutritional Deficiencies in Vegetables (Bulletin 1569)",
+          "publisher": "University of Georgia Cooperative Extension",
+          "url": "https://fieldreport.caes.uga.edu/publications/B1569/"
+        },
+        {
+          "title": "Nutrient Disorders (Vegetable MD Online)",
+          "publisher": "Cornell University (Cornell Vegetables)",
+          "url": "https://www.vegetables.cornell.edu/?p=2568"
+        },
+        {
+          "title": "Deficiencies and Disorders - Tomato: Nitrogen",
+          "publisher": "TNAU Agritech Portal, Tamil Nadu Agricultural University",
+          "url": "https://agritech.tnau.ac.in/horticulture/plant_nutri/tomato_nitro.html"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "key": "spotted_wilt_virus",
+      "folder": "Spotted Wilt Virus",
+      "name": "Spotted Wilt Virus",
+      "category": "Viral disease",
+      "is_healthy": false,
+      "cause": "Tomato spotted wilt virus (TSWV; genus Orthotospovirus), spread by thrips such as the western flower thrips (Frankliniella occidentalis), onion thrips and chili thrips",
+      "summary": "Tomato spotted wilt is caused by Tomato spotted wilt virus, the type member of the genus Orthotospovirus, which thrips carry persistently and spread while feeding. Young leaves develop bronzing and necrotic spots, and infected fruit shows chlorotic blotches, often with concentric rings.",
+      "symptoms": [
+        "Bronzing on the upper surface of young leaves",
+        "Distinct dark necrotic spots that develop on the bronzed leaves",
+        "Leaves may cup downward, and shoot tips may die back",
+        "Ripe fruit shows chlorotic spots and blotches, often with concentric rings",
+        "Green fruit can show slightly raised areas with faint concentric zones"
+      ],
+      "visual_characteristics": [
+        "Bronze or brownish discolouration on the leaf surface",
+        "Small dark necrotic spots scattered on the leaf",
+        "Leaf blade curled or cupped downward",
+        "Early symptoms can be subtle, with much of the leaf still green"
+      ],
+      "management": [
+        "Plant resistant varieties carrying the Sw-5 gene where available (some virus isolates can overcome this resistance)",
+        "Use virus-free and thrips-free transplants",
+        "Monitor and manage thrips, which spread the virus",
+        "Remove infected plants early (especially at the seedling stage) and control weeds that can host the virus and thrips",
+        "Avoid planting near infected crops, and destroy old plants and volunteers after harvest",
+        "Infected plants cannot be cured, so focus on prevention and seek thrips-management advice from your local extension service (e.g., Krishi Vigyan Kendra)"
+      ],
+      "images": [
+        "/samples/spotted_wilt_virus-1.jpg",
+        "/samples/spotted_wilt_virus-2.jpg",
+        "/samples/spotted_wilt_virus-3.jpg"
+      ],
+      "references": [
+        {
+          "title": "Tomato Spotted Wilt - Tomato: Agriculture Pest Management Guidelines",
+          "publisher": "University of California Statewide IPM Program (UC IPM)",
+          "url": "https://ipm.ucanr.edu/agriculture/tomato/tomato-spotted-wilt/"
+        },
+        {
+          "title": "Current Status and Potential of RNA Interference for the Management of Tomato Spotted Wilt Virus and Thrips Vectors (Pathogens, 10(3), 320)",
+          "publisher": "Nilon, A., Robinson, K., Pappu, H.R. & Mitter, N. (2021), MDPI",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8001667"
+        }
+      ]
+    }
+  ],
+  "disclaimer": "This information is for general education only. It summarises published extension and research sources and is not a substitute for diagnosis by a qualified plant pathologist or agronomist. Confirm any diagnosis and treatment with your local agricultural extension service (in India, a Krishi Vigyan Kendra or State Agricultural University) before acting. Predictions from this application come from an experimental machine-learning model and may be wrong."
+}

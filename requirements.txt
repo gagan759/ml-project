@@ -1,0 +1,26 @@
+# Tomato Care — the Streamlit app. Streamlit Community Cloud installs this file (repository root, entry point
+# streamlit_app.py). CPU-only PyTorch: the default PyPI build would also pull ~2 GB of CUDA libraries.
+# Other environments: requirements-serve.txt (REST API / Docker), requirements-train.txt (full pipeline),
+# requirements-dev.txt (tests and tooling).
+# Community Cloud reinstalls and restarts the app whenever this file changes (2026-11-19: five conditions, deep learning + classical ML).
+torch @ https://download.pytorch.org/whl/cpu/torch-2.7.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl ; python_version == "3.10" and sys_platform == "linux" and platform_machine == "x86_64"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.7.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl ; python_version == "3.11" and sys_platform == "linux" and platform_machine == "x86_64"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.7.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl ; python_version == "3.12" and sys_platform == "linux" and platform_machine == "x86_64"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.7.0%2Bcpu-cp313-cp313-manylinux_2_28_x86_64.whl ; python_version == "3.13" and sys_platform == "linux" and platform_machine == "x86_64"
+torch==2.7.0 ; sys_platform != "linux" or platform_machine != "x86_64"
+torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.22.0%2Bcpu-cp310-cp310-manylinux_2_28_x86_64.whl ; python_version == "3.10" and sys_platform == "linux" and platform_machine == "x86_64"
+torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.22.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl ; python_version == "3.11" and sys_platform == "linux" and platform_machine == "x86_64"
+torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.22.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl ; python_version == "3.12" and sys_platform == "linux" and platform_machine == "x86_64"
+torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.22.0%2Bcpu-cp313-cp313-manylinux_2_28_x86_64.whl ; python_version == "3.13" and sys_platform == "linux" and platform_machine == "x86_64"
+torchvision==0.22.0 ; sys_platform != "linux" or platform_machine != "x86_64"
+streamlit==1.65.0
+altair==6.2.2
+numpy==2.2.6
+pandas==2.3.3
+pillow==12.3.0
+scipy==1.15.3
+scikit-learn==1.7.2
+scikit-image==0.25.2
+opencv-python-headless==5.1.0.95
+joblib==1.6.0
+matplotlib==3.10.9

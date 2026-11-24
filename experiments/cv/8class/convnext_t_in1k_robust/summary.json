@@ -1,0 +1,156 @@
+{
+  "recipe": {
+    "name": "convnext_t_in1k_robust",
+    "arch": "convnext_tiny",
+    "label": "ConvNeXt-Tiny (ImageNet-1k), robust recipe",
+    "input_size": 256,
+    "eval_resize": "resize",
+    "aug": "robust",
+    "batch": 16,
+    "head_epochs": 5,
+    "head_lr": 0.001,
+    "epochs": 30,
+    "lr": 0.0001,
+    "weight_decay": 0.05,
+    "layer_decay": null,
+    "warmup_epochs": 2,
+    "label_smoothing": 0.1,
+    "class_weighting": "balanced",
+    "ema_decay": 0.998,
+    "model_kwargs": {}
+  },
+  "task": "8class",
+  "classes": [
+    "early_blight",
+    "healthy",
+    "late_blight",
+    "leaf_miner",
+    "magnesium_deficiency",
+    "nitrogen_deficiency",
+    "potassium_deficiency",
+    "spotted_wilt_virus"
+  ],
+  "photos": 1813,
+  "views": {
+    "1": {
+      "accuracy": 0.8532818532818532,
+      "precision_macro": 0.6373070212226261,
+      "recall_macro": 0.607203634886977,
+      "f1_macro": 0.6157312519263284,
+      "f1_weighted": 0.8463008639198486,
+      "temperature": 0.9293462680040425,
+      "ece_raw": 0.039948850639265523,
+      "ece_calibrated": 0.043942251319700754,
+      "nll_calibrated": 0.5311842993490793
+    },
+    "8": {
+      "accuracy": 0.8483177054605626,
+      "precision_macro": 0.6342294534245843,
+      "recall_macro": 0.6061432015921074,
+      "f1_macro": 0.6145711822469984,
+      "f1_weighted": 0.8418845561998759,
+      "temperature": 0.9117497370613359,
+      "ece_raw": 0.046375997810704034,
+      "ece_calibrated": 0.049630722927638496,
+      "nll_calibrated": 0.5215796522669127
+    }
+  },
+  "per_fold": [
+    {
+      "fold": 0,
+      "held_photos": 354,
+      "train_seconds": 422.2526139000256,
+      "held_1view": {
+        "accuracy": 0.864406779661017,
+        "precision_macro": 0.6474116161616161,
+        "recall_macro": 0.6125689530198044,
+        "f1_macro": 0.6120108173451382,
+        "f1_weighted": 0.8559104117702905
+      },
+      "held_tta8": {
+        "accuracy": 0.8559322033898306,
+        "precision_macro": 0.6255001429054785,
+        "recall_macro": 0.6015088272150966,
+        "f1_macro": 0.603192290425996,
+        "f1_weighted": 0.847567277163319
+      }
+    },
+    {
+      "fold": 1,
+      "held_photos": 372,
+      "train_seconds": 449.9738704999909,
+      "held_1view": {
+        "accuracy": 0.8682795698924731,
+        "precision_macro": 0.6768733656253199,
+        "recall_macro": 0.6304322874713042,
+        "f1_macro": 0.6498954204217391,
+        "f1_weighted": 0.8618501148535309
+      },
+      "held_tta8": {
+        "accuracy": 0.8602150537634409,
+        "precision_macro": 0.6674363810279607,
+        "recall_macro": 0.6372117894669966,
+        "f1_macro": 0.6491153269583079,
+        "f1_weighted": 0.8551428890666964
+      }
+    },
+    {
+      "fold": 2,
+      "held_photos": 360,
+      "train_seconds": 419.8759731000173,
+      "held_1view": {
+        "accuracy": 0.8277777777777777,
+        "precision_macro": 0.5695384493806523,
+        "recall_macro": 0.5967158969486549,
+        "f1_macro": 0.5806351330585175,
+        "f1_weighted": 0.8269160450261939
+      },
+      "held_tta8": {
+        "accuracy": 0.8194444444444444,
+        "precision_macro": 0.5645083562271063,
+        "recall_macro": 0.6036658449286816,
+        "f1_macro": 0.5774755913661666,
+        "f1_weighted": 0.8180472401283568
+      }
+    },
+    {
+      "fold": 3,
+      "held_photos": 366,
+      "train_seconds": 418.59338530001696,
+      "held_1view": {
+        "accuracy": 0.8743169398907104,
+        "precision_macro": 0.6647203460586641,
+        "recall_macro": 0.6045259587581888,
+        "f1_macro": 0.6123971662882858,
+        "f1_weighted": 0.8626401168317892
+      },
+      "held_tta8": {
+        "accuracy": 0.8743169398907104,
+        "precision_macro": 0.6779474311887876,
+        "recall_macro": 0.6057730762297027,
+        "f1_macro": 0.6164727110244126,
+        "f1_weighted": 0.8630038403105094
+      }
+    },
+    {
+      "fold": 4,
+      "held_photos": 361,
+      "train_seconds": 417.85118279999006,
+      "held_1view": {
+        "accuracy": 0.8310249307479224,
+        "precision_macro": 0.6660761465019884,
+        "recall_macro": 0.6027788101317513,
+        "f1_macro": 0.610401907522173,
+        "f1_weighted": 0.8216868411785064
+      },
+      "held_tta8": {
+        "accuracy": 0.8310249307479224,
+        "precision_macro": 0.682038059865139,
+        "recall_macro": 0.5977726676256088,
+        "f1_macro": 0.6073759920843322,
+        "f1_weighted": 0.8207343902735524
+      }
+    }
+  ],
+  "train_minutes_total": 35.47578376000068
+}

@@ -1,0 +1,79 @@
+{
+  "seed_used": 81,
+  "candidate_splits": 200,
+  "balance_score": 0.5564868563119583,
+  "leaf_groups": 1786,
+  "photos": 2103,
+  "largest_group": 10,
+  "split_totals": {
+    "train": 1502,
+    "val": 311,
+    "test": 290
+  },
+  "per_class": [
+    {
+      "key": "early_blight",
+      "name": "Early Blight",
+      "train": 44,
+      "val": 10,
+      "test": 8,
+      "groups": 53
+    },
+    {
+      "key": "healthy",
+      "name": "Healthy",
+      "train": 154,
+      "val": 35,
+      "test": 27,
+      "groups": 168
+    },
+    {
+      "key": "late_blight",
+      "name": "Late Blight",
+      "train": 84,
+      "val": 14,
+      "test": 15,
+      "groups": 98
+    },
+    {
+      "key": "leaf_miner",
+      "name": "Leaf Miner",
+      "train": 729,
+      "val": 156,
+      "test": 139,
+      "groups": 857
+    },
+    {
+      "key": "magnesium_deficiency",
+      "name": "Magnesium Deficiency",
+      "train": 87,
+      "val": 16,
+      "test": 14,
+      "groups": 102
+    },
+    {
+      "key": "nitrogen_deficiency",
+      "name": "Nitrogen Deficiency",
+      "train": 32,
+      "val": 6,
+      "test": 7,
+      "groups": 41
+    },
+    {
+      "key": "potassium_deficiency",
+      "name": "Potassium Deficiency",
+      "train": 6,
+      "val": 1,
+      "test": 2,
+      "groups": 7
+    },
+    {
+      "key": "spotted_wilt_virus",
+      "name": "Spotted Wilt Virus",
+      "train": 366,
+      "val": 73,
+      "test": 78,
+      "groups": 460
+    }
+  ]
+}

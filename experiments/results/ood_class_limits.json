@@ -1,0 +1,171 @@
+{
+  "balanced_5class": {
+    "scales": {
+      "healthy": 1.4821,
+      "leaf_miner": 0.5182,
+      "magnesium_deficiency": 2.0,
+      "nitrogen_deficiency": 1.7176,
+      "spotted_wilt_virus": 0.7425
+    },
+    "flagged_in_before": 0.0501813784764208,
+    "flagged_in_after": 0.0562273276904474,
+    "per_class": [
+      {
+        "key": "healthy",
+        "photos": 189,
+        "before": 0.07407407407407407,
+        "after": 0.09523809523809523
+      },
+      {
+        "key": "leaf_miner",
+        "photos": 885,
+        "before": 0.03954802259887006,
+        "after": 0.04745762711864407
+      },
+      {
+        "key": "magnesium_deficiency",
+        "photos": 103,
+        "before": 0.14563106796116504,
+        "after": 0.10679611650485436
+      },
+      {
+        "key": "nitrogen_deficiency",
+        "photos": 38,
+        "before": 0.05263157894736842,
+        "after": 0.0
+      },
+      {
+        "key": "spotted_wilt_virus",
+        "photos": 439,
+        "before": 0.0387243735763098,
+        "after": 0.05011389521640091
+      }
+    ],
+    "probes_flagged_before": 0.9666666666666667,
+    "probes_flagged_after": 0.8,
+    "probes_A_before": 0.9333333333333333,
+    "probes_A_after": 0.8,
+    "adopted": false,
+    "oos_flagged_before": 0.12578616352201258,
+    "oos_flagged_after": 0.15723270440251572
+  },
+  "calibrated_5class": {
+    "scales": {
+      "healthy": 1.2874,
+      "leaf_miner": 0.8222,
+      "magnesium_deficiency": 1.8181,
+      "nitrogen_deficiency": 1.0524,
+      "spotted_wilt_virus": 0.8372
+    },
+    "flagged_in_before": 0.0501813784764208,
+    "flagged_in_after": 0.05441354292623942,
+    "per_class": [
+      {
+        "key": "healthy",
+        "photos": 189,
+        "before": 0.07407407407407407,
+        "after": 0.08465608465608465
+      },
+      {
+        "key": "leaf_miner",
+        "photos": 885,
+        "before": 0.03954802259887006,
+        "after": 0.04180790960451977
+      },
+      {
+        "key": "magnesium_deficiency",
+        "photos": 103,
+        "before": 0.14563106796116504,
+        "after": 0.1262135922330097
+      },
+      {
+        "key": "nitrogen_deficiency",
+        "photos": 38,
+        "before": 0.05263157894736842,
+        "after": 0.07894736842105263
+      },
+      {
+        "key": "spotted_wilt_virus",
+        "photos": 439,
+        "before": 0.0387243735763098,
+        "after": 0.04783599088838269
+      }
+    ],
+    "probes_flagged_before": 0.9666666666666667,
+    "probes_flagged_after": 0.8333333333333334,
+    "probes_A_before": 0.9333333333333333,
+    "probes_A_after": 0.8666666666666667,
+    "adopted": false,
+    "oos_flagged_before": 0.12578616352201258,
+    "oos_flagged_after": 0.1509433962264151
+  },
+  "balanced_8class": {
+    "scales": {
+      "early_blight": 1.1506,
+      "healthy": 0.904,
+      "late_blight": 1.1327,
+      "leaf_miner": 0.8033,
+      "magnesium_deficiency": 1.1307,
+      "nitrogen_deficiency": 1.0914,
+      "potassium_deficiency": 1.026,
+      "spotted_wilt_virus": 0.9818
+    },
+    "flagged_in_before": 0.05019305019305019,
+    "flagged_in_after": 0.05846662989520132,
+    "per_class": [
+      {
+        "key": "early_blight",
+        "photos": 54,
+        "before": 0.14814814814814814,
+        "after": 0.09259259259259259
+      },
+      {
+        "key": "healthy",
+        "photos": 189,
+        "before": 0.026455026455026454,
+        "after": 0.07407407407407407
+      },
+      {
+        "key": "late_blight",
+        "photos": 98,
+        "before": 0.16326530612244897,
+        "after": 0.10204081632653061
+      },
+      {
+        "key": "leaf_miner",
+        "photos": 885,
+        "before": 0.01694915254237288,
+        "after": 0.03728813559322034
+      },
+      {
+        "key": "magnesium_deficiency",
+        "photos": 103,
+        "before": 0.11650485436893204,
+        "after": 0.0970873786407767
+      },
+      {
+        "key": "nitrogen_deficiency",
+        "photos": 38,
+        "before": 0.15789473684210525,
+        "after": 0.10526315789473684
+      },
+      {
+        "key": "potassium_deficiency",
+        "photos": 7,
+        "before": 0.0,
+        "after": 0.0
+      },
+      {
+        "key": "spotted_wilt_virus",
+        "photos": 439,
+        "before": 0.06605922551252848,
+        "after": 0.0683371298405467
+      }
+    ],
+    "probes_flagged_before": 1.0,
+    "probes_flagged_after": 1.0,
+    "probes_A_before": 1.0,
+    "probes_A_after": 1.0,
+    "adopted": true
+  }
+}

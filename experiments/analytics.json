@@ -1,0 +1,5626 @@
+{
+  "generated_at": "2026-11-18T15:37:02+00:00",
+  "dataset": {
+    "name": "Tomato-Village (Variant-a, multiclass)",
+    "citation": "Gehlot, M., Saxena, R.K. & Gandhi, G.C. (2023). \"Tomato-Village\": a dataset for end-to-end tomato disease detection in a real-world environment. Multimedia Systems.",
+    "doi": "10.1007/s00530-023-01158-y",
+    "image_size": "256x256",
+    "total_images": 4525,
+    "unique_photos": 2103,
+    "augmented_copies": 2422,
+    "num_classes": 8,
+    "official_split": {
+      "train": 3162,
+      "val": 902,
+      "test": 461
+    },
+    "clean_split": {
+      "train": 1502,
+      "val": 311,
+      "test": 290
+    },
+    "class_distribution": [
+      {
+        "key": "early_blight",
+        "name": "Early Blight",
+        "images": 496,
+        "photos": 62,
+        "official": {
+          "train": 347,
+          "val": 99,
+          "test": 50
+        },
+        "clean": {
+          "train": 44,
+          "val": 10,
+          "test": 8
+        }
+      },
+      {
+        "key": "healthy",
+        "name": "Healthy",
+        "images": 216,
+        "photos": 216,
+        "official": {
+          "train": 151,
+          "val": 43,
+          "test": 22
+        },
+        "clean": {
+          "train": 154,
+          "val": 35,
+          "test": 27
+        }
+      },
+      {
+        "key": "late_blight",
+        "name": "Late Blight",
+        "images": 904,
+        "photos": 113,
+        "official": {
+          "train": 632,
+          "val": 180,
+          "test": 92
+        },
+        "clean": {
+          "train": 84,
+          "val": 14,
+          "test": 15
+        }
+      },
+      {
+        "key": "leaf_miner",
+        "name": "Leaf Miner",
+        "images": 1024,
+        "photos": 1024,
+        "official": {
+          "train": 716,
+          "val": 204,
+          "test": 104
+        },
+        "clean": {
+          "train": 729,
+          "val": 156,
+          "test": 139
+        }
+      },
+      {
+        "key": "magnesium_deficiency",
+        "name": "Magnesium Deficiency",
+        "images": 936,
+        "photos": 117,
+        "official": {
+          "train": 654,
+          "val": 187,
+          "test": 95
+        },
+        "clean": {
+          "train": 87,
+          "val": 16,
+          "test": 14
+        }
+      },
+      {
+        "key": "nitrogen_deficiency",
+        "name": "Nitrogen Deficiency",
+        "images": 360,
+        "photos": 45,
+        "official": {
+          "train": 251,
+          "val": 72,
+          "test": 37
+        },
+        "clean": {
+          "train": 32,
+          "val": 6,
+          "test": 7
+        }
+      },
+      {
+        "key": "potassium_deficiency",
+        "name": "Potassium Deficiency",
+        "images": 72,
+        "photos": 9,
+        "official": {
+          "train": 50,
+          "val": 14,
+          "test": 8
+        },
+        "clean": {
+          "train": 6,
+          "val": 1,
+          "test": 2
+        }
+      },
+      {
+        "key": "spotted_wilt_virus",
+        "name": "Spotted Wilt Virus",
+        "images": 517,
+        "photos": 517,
+        "official": {
+          "train": 361,
+          "val": 103,
+          "test": 53
+        },
+        "clean": {
+          "train": 366,
+          "val": 73,
+          "test": 78
+        }
+      }
+    ],
+    "leakage": {
+      "augmented_families": 346,
+      "families_crossing_splits": 327,
+      "val_images": 902,
+      "val_images_with_train_sibling": 552,
+      "test_images": 461,
+      "test_images_with_train_sibling": 282,
+      "near_duplicate_pairs_merged": 340,
+      "leaf_groups": 1786
+    }
+  },
+  "models": [
+    {
+      "key": "logreg",
+      "name": "Logistic Regression",
+      "family": "Machine Learning",
+      "kind": "classical",
+      "feature_set": "Color",
+      "best_params": {
+        "C": 1.0,
+        "pca": "none"
+      },
+      "train_time_s": 0.37475889999768697,
+      "tuning_time_s": 1.1669156000134535,
+      "inference_ms_per_image": 5.666700002620928,
+      "params": null,
+      "val": {
+        "accuracy": 0.48231511254019294,
+        "precision_macro": 0.35258617538222803,
+        "recall_macro": 0.4317102275578303,
+        "f1_macro": 0.35515539894935,
+        "f1_weighted": 0.5284655161958081
+      },
+      "test": {
+        "accuracy": 0.5,
+        "precision_macro": 0.3712657149560431,
+        "recall_macro": 0.4254331058962354,
+        "f1_macro": 0.3651848385041663,
+        "f1_weighted": 0.5466965675426991,
+        "accuracy_ci": [
+          0.43537414965986393,
+          0.5614035087719298
+        ],
+        "f1_macro_ci": [
+          0.29007001500032387,
+          0.4246847746994646
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.07317073170731707,
+          "recall": 0.375,
+          "f1": 0.12244897959183673,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.265625,
+          "recall": 0.6296296296296297,
+          "f1": 0.37362637362637363,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.4666666666666667,
+          "recall": 0.4666666666666667,
+          "f1": 0.4666666666666667,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.8536585365853658,
+          "recall": 0.5035971223021583,
+          "f1": 0.6334841628959276,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.2631578947368421,
+          "recall": 0.35714285714285715,
+          "f1": 0.30303030303030304,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.36363636363636365,
+          "recall": 0.5714285714285714,
+          "f1": 0.4444444444444444,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.6842105263157895,
+          "recall": 0.5,
+          "f1": 0.5777777777777777,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          4,
+          17,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0,
+          7
+        ],
+        [
+          11,
+          41,
+          0,
+          70,
+          9,
+          1,
+          0,
+          7
+        ],
+        [
+          2,
+          0,
+          1,
+          0,
+          5,
+          4,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          2,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          20,
+          5,
+          6,
+          5,
+          2,
+          1,
+          0,
+          39
+        ]
+      ],
+      "selected": false,
+      "description": "Multinomial (softmax) logistic regression: a linear model that learns one weight vector per class over standardised handcrafted features and turns the class scores into probabilities.",
+      "strengths": [
+        "Fast to train and to run",
+        "Coefficients are directly interpretable",
+        "Gives probabilities natively"
+      ],
+      "limitations": [
+        "Linear decision boundaries in feature space",
+        "Only as good as the handcrafted features",
+        "Needs scaling and regularisation for high-dimensional HOG vectors"
+      ]
+    },
+    {
+      "key": "svm",
+      "name": "SVM (RBF kernel)",
+      "family": "Machine Learning",
+      "kind": "classical",
+      "feature_set": "Color",
+      "best_params": {
+        "C": 100.0,
+        "gamma": 0.0001,
+        "pca": "none"
+      },
+      "train_time_s": 0.9028222000051755,
+      "tuning_time_s": 2.3362441000062972,
+      "inference_ms_per_image": 5.726949995732866,
+      "params": null,
+      "val": {
+        "accuracy": 0.6977491961414791,
+        "precision_macro": 0.45169061942959,
+        "recall_macro": 0.35409414358472574,
+        "f1_macro": 0.36119110068039373,
+        "f1_weighted": 0.6542738448207204
+      },
+      "test": {
+        "accuracy": 0.6896551724137931,
+        "precision_macro": 0.45096652282473,
+        "recall_macro": 0.37605183252665264,
+        "f1_macro": 0.38943241389349176,
+        "f1_weighted": 0.6595630533689588,
+        "accuracy_ci": [
+          0.632297520946109,
+          0.7464800958528951
+        ],
+        "f1_macro_ci": [
+          0.3045659338556046,
+          0.461620820452961
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.5833333333333334,
+          "recall": 0.25925925925925924,
+          "f1": 0.358974358974359,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.6666666666666666,
+          "recall": 0.26666666666666666,
+          "f1": 0.38095238095238093,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.7391304347826086,
+          "recall": 0.8561151079136691,
+          "f1": 0.7933333333333333,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.4444444444444444,
+          "recall": 0.5714285714285714,
+          "f1": 0.5,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.5,
+          "recall": 0.2857142857142857,
+          "f1": 0.36363636363636365,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.6741573033707865,
+          "recall": 0.7692307692307693,
+          "f1": 0.718562874251497,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          7,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          11
+        ],
+        [
+          0,
+          4,
+          0,
+          119,
+          4,
+          1,
+          0,
+          11
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          8,
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          4,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          17,
+          0,
+          0,
+          0,
+          60
+        ]
+      ],
+      "selected": false,
+      "description": "Support Vector Machine with an RBF kernel: finds a maximum-margin boundary in an implicit high-dimensional space (kernel trick); C trades margin width against training errors, gamma sets how local each support vector's influence is.",
+      "strengths": [
+        "Strong on small, high-dimensional datasets",
+        "Non-linear boundaries via the kernel trick",
+        "Only support vectors define the model"
+      ],
+      "limitations": [
+        "Sensitive to C and gamma",
+        "Probabilities need extra Platt scaling",
+        "Training cost grows quickly with the number of samples"
+      ]
+    },
+    {
+      "key": "rf",
+      "name": "Random Forest",
+      "family": "Machine Learning",
+      "kind": "classical",
+      "feature_set": "Color",
+      "best_params": {
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "n_estimators": 600
+      },
+      "train_time_s": 1.5533546000078786,
+      "tuning_time_s": 41.84956920001423,
+      "inference_ms_per_image": 17.980400007218122,
+      "params": null,
+      "val": {
+        "accuracy": 0.6977491961414791,
+        "precision_macro": 0.410728157970805,
+        "recall_macro": 0.36564405200963424,
+        "f1_macro": 0.3681398411484268,
+        "f1_weighted": 0.6589878405621548
+      },
+      "test": {
+        "accuracy": 0.7,
+        "precision_macro": 0.4924027994431305,
+        "recall_macro": 0.4084657914693886,
+        "f1_macro": 0.43082238422368335,
+        "f1_weighted": 0.671051602629895,
+        "accuracy_ci": [
+          0.6402468250358605,
+          0.7576845697862402
+        ],
+        "f1_macro_ci": [
+          0.3390613359630563,
+          0.4961617409134325
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.7,
+          "recall": 0.25925925925925924,
+          "f1": 0.3783783783783784,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "f1": 0.5,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.7305389221556886,
+          "recall": 0.8776978417266187,
+          "f1": 0.7973856209150327,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.5714285714285714,
+          "recall": 0.5714285714285714,
+          "f1": 0.5714285714285714,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.6,
+          "recall": 0.42857142857142855,
+          "f1": 0.5,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.6705882352941176,
+          "recall": 0.7307692307692307,
+          "f1": 0.6993865030674846,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          7,
+          0,
+          20,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          9
+        ],
+        [
+          0,
+          3,
+          0,
+          122,
+          1,
+          1,
+          0,
+          12
+        ],
+        [
+          0,
+          0,
+          1,
+          2,
+          8,
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          3,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          19,
+          1,
+          0,
+          0,
+          57
+        ]
+      ],
+      "selected": false,
+      "description": "Random Forest: an ensemble of decision trees, each trained on a bootstrap sample (bagging) and a random subset of features at every split; the forest averages the trees' votes.",
+      "strengths": [
+        "No feature scaling needed",
+        "Robust to noisy, irrelevant features",
+        "Built-in feature importances"
+      ],
+      "limitations": [
+        "Large model files",
+        "Many weak HOG features dilute the useful colour features",
+        "Less effective than kernels on smooth high-dimensional data"
+      ]
+    },
+    {
+      "key": "custom_cnn",
+      "name": "Custom CNN",
+      "family": "Deep Learning",
+      "kind": "cnn",
+      "feature_set": "Learned features (end-to-end CNN)",
+      "best_params": {
+        "best_epoch": 25,
+        "epochs_run": 37,
+        "trainable_params": 1175272,
+        "input_size": 224
+      },
+      "train_time_s": 615.5691550000047,
+      "tuning_time_s": null,
+      "inference_ms_per_image": 13.939399999799207,
+      "params": 1175272,
+      "val": {
+        "accuracy": 0.4565916398713826,
+        "precision_macro": 0.41288794944152885,
+        "recall_macro": 0.5636938475337449,
+        "f1_macro": 0.4177641610200834,
+        "f1_weighted": 0.48445730629524897
+      },
+      "test": {
+        "accuracy": 0.4517241379310345,
+        "precision_macro": 0.3572987572225904,
+        "recall_macro": 0.462916626405835,
+        "f1_macro": 0.34944183608505053,
+        "f1_weighted": 0.4849584882033892,
+        "accuracy_ci": [
+          0.3869837749831574,
+          0.512280701754386
+        ],
+        "f1_macro_ci": [
+          0.2811200953550758,
+          0.4037470133453773
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.2558139534883721,
+          "recall": 0.8148148148148148,
+          "f1": 0.3893805309734513,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.36363636363636365,
+          "recall": 0.8,
+          "f1": 0.5,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.8947368421052632,
+          "recall": 0.3669064748201439,
+          "f1": 0.5204081632653061,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.2608695652173913,
+          "recall": 0.42857142857142855,
+          "f1": 0.32432432432432434,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.375,
+          "recall": 0.8571428571428571,
+          "f1": 0.5217391304347826,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.7083333333333334,
+          "recall": 0.4358974358974359,
+          "f1": 0.5396825396825397,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          2,
+          1,
+          2,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          3,
+          22,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          12,
+          0,
+          0,
+          1,
+          0,
+          2
+        ],
+        [
+          13,
+          50,
+          1,
+          51,
+          15,
+          0,
+          1,
+          8
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          6,
+          6,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          9,
+          12,
+          18,
+          2,
+          1,
+          2,
+          0,
+          34
+        ]
+      ],
+      "selected": false,
+      "description": "A convolutional network trained from scratch: 4 blocks of two 3x3 convolutions + BatchNorm + ReLU and 2x2 max-pooling (32-64-128-256 filters), global average pooling, dropout 0.4 and a linear softmax classifier.",
+      "strengths": [
+        "Learns its own features end to end",
+        "Small (~1.2M parameters)",
+        "No pretrained weights needed"
+      ],
+      "limitations": [
+        "Needs many labelled images; here only ~1,500 training photos",
+        "Slower to converge and more prone to overfitting than transfer learning"
+      ]
+    },
+    {
+      "key": "mobilenetv2_fe",
+      "name": "MobileNetV2 (feature extraction)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features (ImageNet-pretrained MobileNetV2, 224px)",
+      "best_params": {
+        "best_epoch": 8,
+        "epochs_run": 13,
+        "trainable_params": 10248,
+        "input_size": 224
+      },
+      "train_time_s": 114.72366940000211,
+      "tuning_time_s": null,
+      "inference_ms_per_image": 17.27424999990035,
+      "params": 2234120,
+      "val": {
+        "accuracy": 0.6366559485530546,
+        "precision_macro": 0.49450152207001524,
+        "recall_macro": 0.6126200355010286,
+        "f1_macro": 0.5251407136514452,
+        "f1_weighted": 0.6615651497188617
+      },
+      "test": {
+        "accuracy": 0.6241379310344828,
+        "precision_macro": 0.4335926942452992,
+        "recall_macro": 0.5002310148218422,
+        "f1_macro": 0.45188984896531803,
+        "f1_weighted": 0.6516581532571076,
+        "accuracy_ci": [
+          0.5612117346938775,
+          0.6875054824561403
+        ],
+        "f1_macro_ci": [
+          0.37387436427853876,
+          0.5109913006659588
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.047619047619047616,
+          "recall": 0.125,
+          "f1": 0.06896551724137931,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.37777777777777777,
+          "recall": 0.6296296296296297,
+          "f1": 0.4722222222222222,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.36,
+          "recall": 0.6,
+          "f1": 0.45,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.8932038834951457,
+          "recall": 0.6618705035971223,
+          "f1": 0.7603305785123967,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.6,
+          "recall": 0.8571428571428571,
+          "f1": 0.7058823529411765,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.6901408450704225,
+          "recall": 0.6282051282051282,
+          "f1": 0.6577181208053692,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          2,
+          17,
+          0,
+          5,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          9,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          7,
+          23,
+          1,
+          92,
+          5,
+          1,
+          0,
+          10
+        ],
+        [
+          3,
+          0,
+          1,
+          0,
+          7,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          8,
+          4,
+          12,
+          5,
+          0,
+          0,
+          0,
+          49
+        ]
+      ],
+      "selected": false,
+      "description": "MobileNetV2 pretrained on ImageNet used as a frozen feature extractor: only the new 8-class head (1280 -> 8) is trained.",
+      "strengths": [
+        "Reuses general visual features learned from 1.2M ImageNet images",
+        "Very fast to train",
+        "Hardly any parameters to overfit"
+      ],
+      "limitations": [
+        "ImageNet features are not specialised for leaf lesions",
+        "Backbone cannot adapt to this domain"
+      ]
+    },
+    {
+      "key": "mobilenetv2_ft",
+      "name": "MobileNetV2 (fine-tuned)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features (ImageNet-pretrained MobileNetV2, 224px)",
+      "best_params": {
+        "best_epoch": 38,
+        "epochs_run": 43,
+        "trainable_params": 2234120,
+        "input_size": 224
+      },
+      "train_time_s": 448.2810223000124,
+      "tuning_time_s": null,
+      "inference_ms_per_image": 17.777300003217533,
+      "params": 2234120,
+      "val": {
+        "accuracy": 0.7652733118971061,
+        "precision_macro": 0.6061398285356618,
+        "recall_macro": 0.663818665638015,
+        "f1_macro": 0.6201998587386075,
+        "f1_weighted": 0.775236854916088
+      },
+      "test": {
+        "accuracy": 0.7482758620689656,
+        "precision_macro": 0.6324645748987854,
+        "recall_macro": 0.6135932279817171,
+        "f1_macro": 0.6062946260320957,
+        "f1_weighted": 0.762419549925271,
+        "accuracy_ci": [
+          0.6996466431095406,
+          0.797945205479452
+        ],
+        "f1_macro_ci": [
+          0.4681436081150365,
+          0.6917628497425483
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.5789473684210527,
+          "recall": 0.8148148148148148,
+          "f1": 0.676923076923077,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.4444444444444444,
+          "recall": 0.5333333333333333,
+          "f1": 0.48484848484848486,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.9401709401709402,
+          "recall": 0.7913669064748201,
+          "f1": 0.859375,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.8461538461538461,
+          "recall": 0.7857142857142857,
+          "f1": 0.8148148148148148,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.5,
+          "recall": 0.7142857142857143,
+          "f1": 0.5882352941176471,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.75,
+          "recall": 0.7692307692307693,
+          "f1": 0.759493670886076,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          1,
+          22,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
+          2,
+          0,
+          5
+        ],
+        [
+          4,
+          13,
+          0,
+          110,
+          2,
+          1,
+          0,
+          9
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          11,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          6,
+          3,
+          8,
+          1,
+          0,
+          0,
+          0,
+          60
+        ]
+      ],
+      "selected": false,
+      "description": "MobileNetV2 (inverted residual blocks with depthwise-separable convolutions) pretrained on ImageNet, then fine-tuned end to end with a 10x smaller learning rate after training the head.",
+      "strengths": [
+        "Adapts pretrained features to leaf symptoms",
+        "Lightweight enough for CPU inference",
+        "Best use of a small dataset"
+      ],
+      "limitations": [
+        "More compute-intensive to train than the classical models",
+        "Less interpretable than handcrafted features",
+        "Trained on leaves photographed on white paper only"
+      ]
+    },
+    {
+      "key": "efficientnet_b0_v2",
+      "name": "EfficientNet-B0 (fine-tuned)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features (ImageNet-pretrained EfficientNet-B0, 256px)",
+      "best_params": {
+        "best_epoch": 35,
+        "epochs_run": 35,
+        "trainable_params": 4017796,
+        "input_size": 256
+      },
+      "train_time_s": 214.91980380000314,
+      "tuning_time_s": null,
+      "inference_ms_per_image": 24.105099990265444,
+      "params": 4017796,
+      "val": {
+        "accuracy": 0.77491961414791,
+        "precision_macro": 0.5988834139524783,
+        "recall_macro": 0.6240282691053238,
+        "f1_macro": 0.599819602649198,
+        "f1_weighted": 0.7801316421787794
+      },
+      "test": {
+        "accuracy": 0.7862068965517242,
+        "precision_macro": 0.5168356983647644,
+        "recall_macro": 0.5452824096034528,
+        "f1_macro": 0.524901139607238,
+        "f1_weighted": 0.7817810617388959,
+        "accuracy_ci": [
+          0.7379224749327464,
+          0.8339103402741267
+        ],
+        "f1_macro_ci": [
+          0.4398581719887478,
+          0.5931716735313629
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.2,
+          "recall": 0.125,
+          "f1": 0.15384615384615385,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.6875,
+          "recall": 0.8148148148148148,
+          "f1": 0.7457627118644068,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.4166666666666667,
+          "recall": 0.3333333333333333,
+          "f1": 0.37037037037037035,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.9508196721311475,
+          "recall": 0.8345323741007195,
+          "f1": 0.8888888888888888,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.6428571428571429,
+          "recall": 0.6428571428571429,
+          "f1": 0.6428571428571429,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.5,
+          "recall": 0.7142857142857143,
+          "f1": 0.5882352941176471,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.7368421052631579,
+          "recall": 0.8974358974358975,
+          "f1": 0.8092485549132948,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          5
+        ],
+        [
+          1,
+          22,
+          0,
+          3,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          10
+        ],
+        [
+          1,
+          9,
+          2,
+          116,
+          3,
+          1,
+          0,
+          7
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          9,
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          4,
+          1,
+          0,
+          0,
+          0,
+          70
+        ]
+      ],
+      "selected": false,
+      "description": "EfficientNet-B0 pretrained on ImageNet (compound-scaled MBConv blocks with squeeze-and-excitation), fine-tuned at the native 256x256 resolution with a cosine learning-rate schedule and label smoothing.",
+      "strengths": [
+        "Strong accuracy per parameter (5.3M)",
+        "Uses the full 256x256 resolution",
+        "Label smoothing reduces over-confidence"
+      ],
+      "limitations": [
+        "Overfits the small training set quickly",
+        "Slower than MobileNetV2 on a CPU"
+      ]
+    },
+    {
+      "key": "convnext_tiny_v2",
+      "name": "ConvNeXt-Tiny (fine-tuned)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features (ImageNet-pretrained ConvNeXt-Tiny, 256px)",
+      "best_params": {
+        "best_epoch": 30,
+        "epochs_run": 35,
+        "trainable_params": 27826280,
+        "input_size": 256
+      },
+      "train_time_s": 379.0299560999847,
+      "tuning_time_s": null,
+      "inference_ms_per_image": 36.51599999284372,
+      "params": 27826280,
+      "val": {
+        "accuracy": 0.8745980707395499,
+        "precision_macro": 0.7512656683043588,
+        "recall_macro": 0.7043780420492749,
+        "f1_macro": 0.718488191823432,
+        "f1_weighted": 0.8738743112372139
+      },
+      "test": {
+        "accuracy": 0.8206896551724138,
+        "precision_macro": 0.5468015419333878,
+        "recall_macro": 0.5396754757366269,
+        "f1_macro": 0.5406474686395031,
+        "f1_weighted": 0.8112694154438219,
+        "accuracy_ci": [
+          0.7687074829931972,
+          0.8686895551257253
+        ],
+        "f1_macro_ci": [
+          0.4638671057432155,
+          0.5996358635952411
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.7931034482758621,
+          "recall": 0.8518518518518519,
+          "f1": 0.8214285714285714,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.5454545454545454,
+          "recall": 0.4,
+          "f1": 0.46153846153846156,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.9142857142857143,
+          "recall": 0.920863309352518,
+          "f1": 0.9175627240143369,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.8333333333333334,
+          "recall": 0.7142857142857143,
+          "f1": 0.7692307692307693,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.5,
+          "recall": 0.5714285714285714,
+          "f1": 0.5333333333333333,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.788235294117647,
+          "recall": 0.8589743589743589,
+          "f1": 0.8220858895705522,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          23,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0,
+          9
+        ],
+        [
+          1,
+          4,
+          1,
+          128,
+          1,
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          10,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          2,
+          2,
+          3,
+          0,
+          0,
+          0,
+          67
+        ]
+      ],
+      "selected": false,
+      "description": "ConvNeXt-Tiny pretrained on ImageNet: a modernised ResNet with 7x7 depthwise convolutions, LayerNorm and GELU (28M parameters), fine-tuned at 256x256 with a cosine schedule and label smoothing.",
+      "strengths": [
+        "Strongest pretrained features of the models tried",
+        "Large receptive field for lesion patterns"
+      ],
+      "limitations": [
+        "Largest model here (about 28M parameters)",
+        "Slowest to train and to run on a CPU"
+      ]
+    },
+    {
+      "key": "convnext_tiny_v2_tta",
+      "name": "ConvNeXt-Tiny (fine-tuned) + TTA",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features; averaged over 8 test-time views",
+      "best_params": {
+        "members": [
+          "convnext_tiny_v2"
+        ],
+        "tta_views": [
+          8
+        ]
+      },
+      "train_time_s": 379.0299560999847,
+      "tuning_time_s": null,
+      "inference_ms_per_image": 210.9906499972567,
+      "params": 27826280,
+      "val": {
+        "accuracy": 0.8810289389067524,
+        "precision_macro": 0.7770559570933767,
+        "recall_macro": 0.7014975036379145,
+        "f1_macro": 0.7219887554793216,
+        "f1_weighted": 0.879518720542806
+      },
+      "test": {
+        "accuracy": 0.8482758620689655,
+        "precision_macro": 0.5706311870626386,
+        "recall_macro": 0.6036215350064271,
+        "f1_macro": 0.5858631410166775,
+        "f1_weighted": 0.8382864025659794,
+        "accuracy_ci": [
+          0.8013687290211376,
+          0.8928633004926109
+        ],
+        "f1_macro_ci": [
+          0.5130260213770788,
+          0.6398713121857552
+        ]
+      },
+      "per_class": [
+        {
+          "key": "early_blight",
+          "name": "Early Blight",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 8
+        },
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.8064516129032258,
+          "recall": 0.9259259259259259,
+          "f1": 0.8620689655172413,
+          "support": 27
+        },
+        {
+          "key": "late_blight",
+          "name": "Late Blight",
+          "precision": 0.5714285714285714,
+          "recall": 0.5333333333333333,
+          "f1": 0.5517241379310345,
+          "support": 15
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.9407407407407408,
+          "recall": 0.9136690647482014,
+          "f1": 0.927007299270073,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.8,
+          "recall": 0.8571428571428571,
+          "f1": 0.8275862068965517,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.625,
+          "recall": 0.7142857142857143,
+          "f1": 0.6666666666666666,
+          "support": 7
+        },
+        {
+          "key": "potassium_deficiency",
+          "name": "Potassium Deficiency",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.8214285714285714,
+          "recall": 0.8846153846153846,
+          "f1": 0.8518518518518519,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          25,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          5,
+          1,
+          127,
+          2,
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          12,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          2,
+          3,
+          0,
+          0,
+          0,
+          69
+        ]
+      ],
+      "selected": true,
+      "description": "ConvNeXt-Tiny (fine-tuned) + TTA: the calibrated probabilities of convnext_tiny_v2 are averaged over the 8 flips/rotations of the photo (test-time augmentation).",
+      "strengths": [
+        "Chosen on validation macro-F1 among all candidates",
+        "Averaging reduces the variance of single models",
+        "A detached leaf has no 'up', so flips/rotations are valid views"
+      ],
+      "limitations": [
+        "Several forward passes per photo (slower inference)",
+        "Less transparent than a single model"
+      ]
+    }
+  ],
+  "ml_validation_grid": [
+    {
+      "model": "Logistic Regression",
+      "model_key": "logreg",
+      "feature_set": "HOG",
+      "cv_f1_macro": 0.23095998518549576,
+      "val_accuracy": 0.3729903536977492,
+      "val_f1_macro": 0.18875984372640542
+    },
+    {
+      "model": "Logistic Regression",
+      "model_key": "logreg",
+      "feature_set": "Color",
+      "cv_f1_macro": 0.4067746710297088,
+      "val_accuracy": 0.48231511254019294,
+      "val_f1_macro": 0.35515539894935
+    },
+    {
+      "model": "Logistic Regression",
+      "model_key": "logreg",
+      "feature_set": "HOG + Color",
+      "cv_f1_macro": 0.34089697708538125,
+      "val_accuracy": 0.5401929260450161,
+      "val_f1_macro": 0.3411989126843735
+    },
+    {
+      "model": "SVM (RBF kernel)",
+      "model_key": "svm",
+      "feature_set": "HOG",
+      "cv_f1_macro": 0.21930490886264292,
+      "val_accuracy": 0.5691318327974276,
+      "val_f1_macro": 0.15726932175141894
+    },
+    {
+      "model": "SVM (RBF kernel)",
+      "model_key": "svm",
+      "feature_set": "Color",
+      "cv_f1_macro": 0.4147266488575637,
+      "val_accuracy": 0.6977491961414791,
+      "val_f1_macro": 0.36119110068039373
+    },
+    {
+      "model": "SVM (RBF kernel)",
+      "model_key": "svm",
+      "feature_set": "HOG + Color",
+      "cv_f1_macro": 0.32553381397961123,
+      "val_accuracy": 0.6463022508038585,
+      "val_f1_macro": 0.3560842921501959
+    },
+    {
+      "model": "Random Forest",
+      "model_key": "rf",
+      "feature_set": "HOG",
+      "cv_f1_macro": 0.14285542653695202,
+      "val_accuracy": 0.5337620578778135,
+      "val_f1_macro": 0.12511812511812512
+    },
+    {
+      "model": "Random Forest",
+      "model_key": "rf",
+      "feature_set": "Color",
+      "cv_f1_macro": 0.44149640403312673,
+      "val_accuracy": 0.6977491961414791,
+      "val_f1_macro": 0.3681398411484268
+    },
+    {
+      "model": "Random Forest",
+      "model_key": "rf",
+      "feature_set": "HOG + Color",
+      "cv_f1_macro": 0.24107492014810936,
+      "val_accuracy": 0.6752411575562701,
+      "val_f1_macro": 0.30350612292436185
+    }
+  ],
+  "training_curves": {
+    "custom_cnn": [
+      {
+        "epoch": 1,
+        "stage": "scratch",
+        "train_loss": 2.0765369341630593,
+        "val_loss": 2.7698200860590796,
+        "train_acc": 0.24500665778961384,
+        "val_acc": 0.09646302250803858,
+        "val_f1_macro": 0.04752950522680768,
+        "lr": 0.001
+      },
+      {
+        "epoch": 2,
+        "stage": "scratch",
+        "train_loss": 1.7279700613847269,
+        "val_loss": 1.5971828373298769,
+        "train_acc": 0.3455392809587217,
+        "val_acc": 0.3762057877813505,
+        "val_f1_macro": 0.2922242322679037,
+        "lr": 0.001
+      },
+      {
+        "epoch": 3,
+        "stage": "scratch",
+        "train_loss": 1.6747379283930426,
+        "val_loss": 2.389587124060971,
+        "train_acc": 0.3575233022636485,
+        "val_acc": 0.04180064308681672,
+        "val_f1_macro": 0.0448266393792848,
+        "lr": 0.001
+      },
+      {
+        "epoch": 4,
+        "stage": "scratch",
+        "train_loss": 1.638527340800086,
+        "val_loss": 1.7796406500592492,
+        "train_acc": 0.3262316910785619,
+        "val_acc": 0.12540192926045016,
+        "val_f1_macro": 0.16016379543775827,
+        "lr": 0.001
+      },
+      {
+        "epoch": 5,
+        "stage": "scratch",
+        "train_loss": 1.6169274767610269,
+        "val_loss": 1.4965050960277055,
+        "train_acc": 0.3548601864181092,
+        "val_acc": 0.2765273311897106,
+        "val_f1_macro": 0.24323249131140665,
+        "lr": 0.001
+      },
+      {
+        "epoch": 6,
+        "stage": "scratch",
+        "train_loss": 1.5719441221493697,
+        "val_loss": 1.591468125294259,
+        "train_acc": 0.3422103861517976,
+        "val_acc": 0.2990353697749196,
+        "val_f1_macro": 0.26698020940510603,
+        "lr": 0.001
+      },
+      {
+        "epoch": 7,
+        "stage": "scratch",
+        "train_loss": 1.5215622867629943,
+        "val_loss": 1.5857752312417965,
+        "train_acc": 0.3601864181091877,
+        "val_acc": 0.3022508038585209,
+        "val_f1_macro": 0.22220872996420443,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 8,
+        "stage": "scratch",
+        "train_loss": 1.5216036847682195,
+        "val_loss": 1.4636070003846835,
+        "train_acc": 0.3801597869507324,
+        "val_acc": 0.3536977491961415,
+        "val_f1_macro": 0.2601226407774071,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 9,
+        "stage": "scratch",
+        "train_loss": 1.4861198716093793,
+        "val_loss": 1.41469661445863,
+        "train_acc": 0.3601864181091877,
+        "val_acc": 0.2797427652733119,
+        "val_f1_macro": 0.27855942411228474,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 10,
+        "stage": "scratch",
+        "train_loss": 1.4859191890404164,
+        "val_loss": 1.3823386392409396,
+        "train_acc": 0.40346205059920104,
+        "val_acc": 0.3987138263665595,
+        "val_f1_macro": 0.3208364552114552,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 11,
+        "stage": "scratch",
+        "train_loss": 1.4335810357181433,
+        "val_loss": 1.551934528580816,
+        "train_acc": 0.41611185086551267,
+        "val_acc": 0.3022508038585209,
+        "val_f1_macro": 0.28741529473236793,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 12,
+        "stage": "scratch",
+        "train_loss": 1.411612975613255,
+        "val_loss": 1.6162457201641856,
+        "train_acc": 0.40878828229027964,
+        "val_acc": 0.3536977491961415,
+        "val_f1_macro": 0.22570010690052997,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 13,
+        "stage": "scratch",
+        "train_loss": 1.3965596236814355,
+        "val_loss": 1.4957884964068986,
+        "train_acc": 0.4560585885486019,
+        "val_acc": 0.33762057877813506,
+        "val_f1_macro": 0.3030822177433662,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 14,
+        "stage": "scratch",
+        "train_loss": 1.4083253794440258,
+        "val_loss": 1.3784051616092203,
+        "train_acc": 0.44274300932090543,
+        "val_acc": 0.3440514469453376,
+        "val_f1_macro": 0.37643894405996325,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 15,
+        "stage": "scratch",
+        "train_loss": 1.4012466167482969,
+        "val_loss": 1.3904622475050654,
+        "train_acc": 0.4434087882822903,
+        "val_acc": 0.5434083601286174,
+        "val_f1_macro": 0.37043976629405106,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 16,
+        "stage": "scratch",
+        "train_loss": 1.4049186423996316,
+        "val_loss": 1.3523326790217802,
+        "train_acc": 0.47203728362183756,
+        "val_acc": 0.5659163987138264,
+        "val_f1_macro": 0.3784937210472834,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 17,
+        "stage": "scratch",
+        "train_loss": 1.394964738628677,
+        "val_loss": 1.4962343314836264,
+        "train_acc": 0.46604527296937415,
+        "val_acc": 0.2797427652733119,
+        "val_f1_macro": 0.29515071789883707,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 18,
+        "stage": "scratch",
+        "train_loss": 1.4046379342060114,
+        "val_loss": 1.4092586270482594,
+        "train_acc": 0.47470039946737685,
+        "val_acc": 0.3183279742765273,
+        "val_f1_macro": 0.3209083765400281,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 19,
+        "stage": "scratch",
+        "train_loss": 1.3709571990128682,
+        "val_loss": 1.3143409195436926,
+        "train_acc": 0.40279627163781623,
+        "val_acc": 0.4855305466237942,
+        "val_f1_macro": 0.3911623864415952,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 20,
+        "stage": "scratch",
+        "train_loss": 1.3211460381785975,
+        "val_loss": 1.3580081976494989,
+        "train_acc": 0.4673768308921438,
+        "val_acc": 0.3536977491961415,
+        "val_f1_macro": 0.3524696108049796,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 21,
+        "stage": "scratch",
+        "train_loss": 1.408512641840705,
+        "val_loss": 1.425880355083674,
+        "train_acc": 0.4187749667110519,
+        "val_acc": 0.4694533762057878,
+        "val_f1_macro": 0.3676613139234622,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 22,
+        "stage": "scratch",
+        "train_loss": 1.3794273703139568,
+        "val_loss": 1.3215016011639806,
+        "train_acc": 0.46537949400798934,
+        "val_acc": 0.41479099678456594,
+        "val_f1_macro": 0.33936709998217696,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 23,
+        "stage": "scratch",
+        "train_loss": 1.3607190445799644,
+        "val_loss": 1.4356497614330035,
+        "train_acc": 0.44940079893475365,
+        "val_acc": 0.4437299035369775,
+        "val_f1_macro": 0.3057633825363531,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 24,
+        "stage": "scratch",
+        "train_loss": 1.2789336479456224,
+        "val_loss": 1.3090311193006214,
+        "train_acc": 0.4993342210386152,
+        "val_acc": 0.40836012861736337,
+        "val_f1_macro": 0.34125158359814045,
+        "lr": 0.00025
+      },
+      {
+        "epoch": 25,
+        "stage": "scratch",
+        "train_loss": 1.3143323950380206,
+        "val_loss": 1.3155129070833949,
+        "train_acc": 0.46537949400798934,
+        "val_acc": 0.4565916398713826,
+        "val_f1_macro": 0.4177641610200834,
+        "lr": 0.00025
+      },
+      {
+        "epoch": 26,
+        "stage": "scratch",
+        "train_loss": 1.350542432776145,
+        "val_loss": 1.4706206628363998,
+        "train_acc": 0.4573901464713715,
+        "val_acc": 0.49517684887459806,
+        "val_f1_macro": 0.3192445392260296,
+        "lr": 0.00025
+      },
+      {
+        "epoch": 27,
+        "stage": "scratch",
+        "train_loss": 1.2691978373317998,
+        "val_loss": 1.4914222008928992,
+        "train_acc": 0.46870838881491345,
+        "val_acc": 0.3665594855305466,
+        "val_f1_macro": 0.2709614946457052,
+        "lr": 0.00025
+      },
+      {
+        "epoch": 28,
+        "stage": "scratch",
+        "train_loss": 1.3152988887182406,
+        "val_loss": 1.5239453568719208,
+        "train_acc": 0.4986684420772304,
+        "val_acc": 0.3215434083601286,
+        "val_f1_macro": 0.2754539663515468,
+        "lr": 0.00025
+      },
+      {
+        "epoch": 29,
+        "stage": "scratch",
+        "train_loss": 1.297044158775543,
+        "val_loss": 1.401950726938401,
+        "train_acc": 0.4993342210386152,
+        "val_acc": 0.31189710610932475,
+        "val_f1_macro": 0.272948939849129,
+        "lr": 0.00025
+      },
+      {
+        "epoch": 30,
+        "stage": "scratch",
+        "train_loss": 1.2945635725115332,
+        "val_loss": 1.291586158743242,
+        "train_acc": 0.5006657789613849,
+        "val_acc": 0.4694533762057878,
+        "val_f1_macro": 0.3755363964105306,
+        "lr": 0.000125
+      },
+      {
+        "epoch": 31,
+        "stage": "scratch",
+        "train_loss": 1.2582235493450444,
+        "val_loss": 1.2936132467827997,
+        "train_acc": 0.4933422103861518,
+        "val_acc": 0.45016077170418006,
+        "val_f1_macro": 0.3577793977593222,
+        "lr": 0.000125
+      },
+      {
+        "epoch": 32,
+        "stage": "scratch",
+        "train_loss": 1.2603457689920214,
+        "val_loss": 1.3225381635009668,
+        "train_acc": 0.5186418109187749,
+        "val_acc": 0.3858520900321543,
+        "val_f1_macro": 0.3565727075948043,
+        "lr": 0.000125
+      },
+      {
+        "epoch": 33,
+        "stage": "scratch",
+        "train_loss": 1.3037384730998114,
+        "val_loss": 1.3122056944960567,
+        "train_acc": 0.4633821571238349,
+        "val_acc": 0.43086816720257237,
+        "val_f1_macro": 0.3706494108763392,
+        "lr": 0.000125
+      },
+      {
+        "epoch": 34,
+        "stage": "scratch",
+        "train_loss": 1.2134359590858024,
+        "val_loss": 1.288412280021373,
+        "train_acc": 0.5066577896138482,
+        "val_acc": 0.4437299035369775,
+        "val_f1_macro": 0.33919113899232356,
+        "lr": 6.25e-05
+      },
+      {
+        "epoch": 35,
+        "stage": "scratch",
+        "train_loss": 1.2522851816030063,
+        "val_loss": 1.3322605749418497,
+        "train_acc": 0.5059920106524634,
+        "val_acc": 0.40192926045016075,
+        "val_f1_macro": 0.31132376331051825,
+        "lr": 6.25e-05
+      },
+      {
+        "epoch": 36,
+        "stage": "scratch",
+        "train_loss": 1.244502035501635,
+        "val_loss": 1.3219299312573154,
+        "train_acc": 0.48934753661784286,
+        "val_acc": 0.4115755627009646,
+        "val_f1_macro": 0.34913735446110106,
+        "lr": 6.25e-05
+      },
+      {
+        "epoch": 37,
+        "stage": "scratch",
+        "train_loss": 1.2788287358341142,
+        "val_loss": 1.3225025632373772,
+        "train_acc": 0.5093209054593875,
+        "val_acc": 0.4212218649517685,
+        "val_f1_macro": 0.3179010302326128,
+        "lr": 6.25e-05
+      }
+    ],
+    "mobilenetv2": [
+      {
+        "epoch": 1,
+        "stage": "frozen",
+        "train_loss": 1.9321287198961972,
+        "val_loss": 1.6885982840007525,
+        "train_acc": 0.3828229027962716,
+        "val_acc": 0.6913183279742765,
+        "val_f1_macro": 0.3950567654050551,
+        "lr": 0.001
+      },
+      {
+        "epoch": 2,
+        "stage": "frozen",
+        "train_loss": 1.5442202957905085,
+        "val_loss": 1.4731172790864657,
+        "train_acc": 0.611185086551265,
+        "val_acc": 0.6109324758842444,
+        "val_f1_macro": 0.4207270113970236,
+        "lr": 0.001
+      },
+      {
+        "epoch": 3,
+        "stage": "frozen",
+        "train_loss": 1.3873621249167167,
+        "val_loss": 1.3344618415525873,
+        "train_acc": 0.6418109187749668,
+        "val_acc": 0.6237942122186495,
+        "val_f1_macro": 0.4258762845746613,
+        "lr": 0.001
+      },
+      {
+        "epoch": 4,
+        "stage": "frozen",
+        "train_loss": 1.2561651628598391,
+        "val_loss": 1.3023261537122572,
+        "train_acc": 0.6371504660452729,
+        "val_acc": 0.5369774919614148,
+        "val_f1_macro": 0.43418024945345757,
+        "lr": 0.001
+      },
+      {
+        "epoch": 5,
+        "stage": "frozen",
+        "train_loss": 1.1821357219736681,
+        "val_loss": 1.2435331766245066,
+        "train_acc": 0.6264980026631158,
+        "val_acc": 0.5980707395498392,
+        "val_f1_macro": 0.43294212948943134,
+        "lr": 0.001
+      },
+      {
+        "epoch": 6,
+        "stage": "frozen",
+        "train_loss": 1.1223611758647365,
+        "val_loss": 1.1758862354364426,
+        "train_acc": 0.6205059920106525,
+        "val_acc": 0.6237942122186495,
+        "val_f1_macro": 0.46294535068631454,
+        "lr": 0.001
+      },
+      {
+        "epoch": 7,
+        "stage": "frozen",
+        "train_loss": 1.0643574766090484,
+        "val_loss": 1.1612196558924732,
+        "train_acc": 0.644474034620506,
+        "val_acc": 0.639871382636656,
+        "val_f1_macro": 0.46954793470418466,
+        "lr": 0.001
+      },
+      {
+        "epoch": 8,
+        "stage": "frozen",
+        "train_loss": 1.0502944740252234,
+        "val_loss": 1.1091881561125974,
+        "train_acc": 0.6697736351531292,
+        "val_acc": 0.6495176848874598,
+        "val_f1_macro": 0.5349259504014512,
+        "lr": 0.001
+      },
+      {
+        "epoch": 9,
+        "stage": "frozen",
+        "train_loss": 1.017390399258559,
+        "val_loss": 1.0966342281298622,
+        "train_acc": 0.6424766977363515,
+        "val_acc": 0.6334405144694534,
+        "val_f1_macro": 0.5117606054692897,
+        "lr": 0.001
+      },
+      {
+        "epoch": 10,
+        "stage": "frozen",
+        "train_loss": 0.9782353076096698,
+        "val_loss": 1.0770661861566868,
+        "train_acc": 0.6524633821571239,
+        "val_acc": 0.6752411575562701,
+        "val_f1_macro": 0.4727340340062898,
+        "lr": 0.001
+      },
+      {
+        "epoch": 11,
+        "stage": "frozen",
+        "train_loss": 0.9639259329172329,
+        "val_loss": 1.0728965691048233,
+        "train_acc": 0.6737683089214381,
+        "val_acc": 0.6591639871382636,
+        "val_f1_macro": 0.4405710835058661,
+        "lr": 0.001
+      },
+      {
+        "epoch": 12,
+        "stage": "frozen",
+        "train_loss": 0.9439831218929011,
+        "val_loss": 1.0782389882293162,
+        "train_acc": 0.670439414114514,
+        "val_acc": 0.6237942122186495,
+        "val_f1_macro": 0.4402496575255709,
+        "lr": 0.001
+      },
+      {
+        "epoch": 13,
+        "stage": "frozen",
+        "train_loss": 0.8831214114289467,
+        "val_loss": 1.0779255410099335,
+        "train_acc": 0.6810918774966711,
+        "val_acc": 0.6720257234726688,
+        "val_f1_macro": 0.4743826903510941,
+        "lr": 0.0005
+      },
+      {
+        "epoch": 14,
+        "stage": "finetune",
+        "train_loss": 1.5842726952861375,
+        "val_loss": 1.3032123827857602,
+        "train_acc": 0.41544607190412786,
+        "val_acc": 0.5980707395498392,
+        "val_f1_macro": 0.42442081907150286,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 15,
+        "stage": "finetune",
+        "train_loss": 1.0788911095313163,
+        "val_loss": 1.116137384601728,
+        "train_acc": 0.6211717709720372,
+        "val_acc": 0.6559485530546624,
+        "val_f1_macro": 0.45268428577252107,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 16,
+        "stage": "finetune",
+        "train_loss": 0.8852105980389287,
+        "val_loss": 1.061373818725635,
+        "train_acc": 0.6624500665778962,
+        "val_acc": 0.684887459807074,
+        "val_f1_macro": 0.48472267168225813,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 17,
+        "stage": "finetune",
+        "train_loss": 0.801305510312041,
+        "val_loss": 1.054510749421319,
+        "train_acc": 0.6784287616511319,
+        "val_acc": 0.6752411575562701,
+        "val_f1_macro": 0.5020962985048765,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 18,
+        "stage": "finetune",
+        "train_loss": 0.7468513604327938,
+        "val_loss": 0.9722470271242393,
+        "train_acc": 0.7077230359520639,
+        "val_acc": 0.7395498392282959,
+        "val_f1_macro": 0.5737349963006164,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 19,
+        "stage": "finetune",
+        "train_loss": 0.703075445603118,
+        "val_loss": 0.9335219085791486,
+        "train_acc": 0.6950732356857523,
+        "val_acc": 0.7106109324758842,
+        "val_f1_macro": 0.5400159423070273,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 20,
+        "stage": "finetune",
+        "train_loss": 0.6243327671932317,
+        "val_loss": 1.0109138864412952,
+        "train_acc": 0.7343541944074568,
+        "val_acc": 0.7331189710610932,
+        "val_f1_macro": 0.5431404559019289,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 21,
+        "stage": "finetune",
+        "train_loss": 0.5661201462764714,
+        "val_loss": 1.0733670667053419,
+        "train_acc": 0.7583222370173103,
+        "val_acc": 0.7395498392282959,
+        "val_f1_macro": 0.5630331791614447,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 22,
+        "stage": "finetune",
+        "train_loss": 0.49115063053631436,
+        "val_loss": 1.0810297838744627,
+        "train_acc": 0.7896138482023968,
+        "val_acc": 0.7363344051446945,
+        "val_f1_macro": 0.5594867171409614,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 23,
+        "stage": "finetune",
+        "train_loss": 0.46984237404701396,
+        "val_loss": 0.9710459256862137,
+        "train_acc": 0.7856191744340879,
+        "val_acc": 0.7459807073954984,
+        "val_f1_macro": 0.5766497554984653,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 24,
+        "stage": "finetune",
+        "train_loss": 0.43002939121066014,
+        "val_loss": 1.0103215243655386,
+        "train_acc": 0.8042609853528628,
+        "val_acc": 0.7459807073954984,
+        "val_f1_macro": 0.5785899454496055,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 25,
+        "stage": "finetune",
+        "train_loss": 0.42983653343787365,
+        "val_loss": 1.072573582842419,
+        "train_acc": 0.8029294274300932,
+        "val_acc": 0.7459807073954984,
+        "val_f1_macro": 0.5926521621975664,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 26,
+        "stage": "finetune",
+        "train_loss": 0.41017612144251797,
+        "val_loss": 1.1377280732059785,
+        "train_acc": 0.8102529960053262,
+        "val_acc": 0.752411575562701,
+        "val_f1_macro": 0.6028559335659929,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 27,
+        "stage": "finetune",
+        "train_loss": 0.38545147933750434,
+        "val_loss": 1.0601948434516932,
+        "train_acc": 0.8129161118508655,
+        "val_acc": 0.7556270096463023,
+        "val_f1_macro": 0.6116158726424593,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 28,
+        "stage": "finetune",
+        "train_loss": 0.3719108974965371,
+        "val_loss": 1.1239421267984764,
+        "train_acc": 0.8209054593874834,
+        "val_acc": 0.7427652733118971,
+        "val_f1_macro": 0.567629712205068,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 29,
+        "stage": "finetune",
+        "train_loss": 0.3776438330286511,
+        "val_loss": 1.1959202964206217,
+        "train_acc": 0.8302263648468708,
+        "val_acc": 0.7652733118971061,
+        "val_f1_macro": 0.5785801368517887,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 30,
+        "stage": "finetune",
+        "train_loss": 0.37518834272094476,
+        "val_loss": 1.0393007683217335,
+        "train_acc": 0.8302263648468708,
+        "val_acc": 0.7684887459807074,
+        "val_f1_macro": 0.5969891484317725,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 31,
+        "stage": "finetune",
+        "train_loss": 0.32860314282532854,
+        "val_loss": 1.192626657209979,
+        "train_acc": 0.8348868175765646,
+        "val_acc": 0.7588424437299035,
+        "val_f1_macro": 0.6107703145979037,
+        "lr": 5e-05
+      },
+      {
+        "epoch": 32,
+        "stage": "finetune",
+        "train_loss": 0.3025689322288122,
+        "val_loss": 1.2021950226504703,
+        "train_acc": 0.8448735019973369,
+        "val_acc": 0.752411575562701,
+        "val_f1_macro": 0.6054952324224895,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 33,
+        "stage": "finetune",
+        "train_loss": 0.3016617231656327,
+        "val_loss": 1.2485836886133028,
+        "train_acc": 0.8548601864181092,
+        "val_acc": 0.7556270096463023,
+        "val_f1_macro": 0.611940893084781,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 34,
+        "stage": "finetune",
+        "train_loss": 0.2929562654857153,
+        "val_loss": 1.2003418279997407,
+        "train_acc": 0.8515312916111851,
+        "val_acc": 0.7588424437299035,
+        "val_f1_macro": 0.612434141652408,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 35,
+        "stage": "finetune",
+        "train_loss": 0.30251352963212647,
+        "val_loss": 1.1228362118699542,
+        "train_acc": 0.8541944074567244,
+        "val_acc": 0.7491961414790996,
+        "val_f1_macro": 0.5999286180056675,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 36,
+        "stage": "finetune",
+        "train_loss": 0.2748513164596456,
+        "val_loss": 1.1241975834898628,
+        "train_acc": 0.8548601864181092,
+        "val_acc": 0.77491961414791,
+        "val_f1_macro": 0.6166117453415948,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 37,
+        "stage": "finetune",
+        "train_loss": 0.2664730723862959,
+        "val_loss": 1.14022557451794,
+        "train_acc": 0.8735019973368842,
+        "val_acc": 0.7459807073954984,
+        "val_f1_macro": 0.5898244174902947,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 38,
+        "stage": "finetune",
+        "train_loss": 0.28045111690237423,
+        "val_loss": 1.1934522723844965,
+        "train_acc": 0.8615179760319573,
+        "val_acc": 0.7684887459807074,
+        "val_f1_macro": 0.6339332645671928,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 39,
+        "stage": "finetune",
+        "train_loss": 0.2671383108780006,
+        "val_loss": 1.13109547915566,
+        "train_acc": 0.8621837549933422,
+        "val_acc": 0.7459807073954984,
+        "val_f1_macro": 0.5854655510495439,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 40,
+        "stage": "finetune",
+        "train_loss": 0.24201112001459704,
+        "val_loss": 1.1708481311798096,
+        "train_acc": 0.8695073235685752,
+        "val_acc": 0.7620578778135049,
+        "val_f1_macro": 0.6123333214820321,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 41,
+        "stage": "finetune",
+        "train_loss": 0.26031122274309915,
+        "val_loss": 1.1571067920451763,
+        "train_acc": 0.8688415446071904,
+        "val_acc": 0.7459807073954984,
+        "val_f1_macro": 0.5829030563226776,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 42,
+        "stage": "finetune",
+        "train_loss": 0.2534512573141312,
+        "val_loss": 1.1587729630362948,
+        "train_acc": 0.8728362183754993,
+        "val_acc": 0.7556270096463023,
+        "val_f1_macro": 0.5938864742250823,
+        "lr": 2.5e-05
+      },
+      {
+        "epoch": 43,
+        "stage": "finetune",
+        "train_loss": 0.2393096294923724,
+        "val_loss": 1.184880593965291,
+        "train_acc": 0.8735019973368842,
+        "val_acc": 0.752411575562701,
+        "val_f1_macro": 0.6103256698418382,
+        "lr": 1.25e-05
+      }
+    ],
+    "efficientnet_b0": [
+      {
+        "epoch": 1,
+        "stage": "frozen",
+        "train_loss": 1.8966128689630053,
+        "val_loss": 1.621261132108437,
+        "train_acc": 0.414780292942743,
+        "val_acc": 0.6720257234726688,
+        "val_f1_macro": 0.3889291662394989,
+        "lr": 0.001
+      },
+      {
+        "epoch": 2,
+        "stage": "frozen",
+        "train_loss": 1.5026365755083717,
+        "val_loss": 1.4316515577567734,
+        "train_acc": 0.611185086551265,
+        "val_acc": 0.6270096463022508,
+        "val_f1_macro": 0.4660078432478946,
+        "lr": 0.001
+      },
+      {
+        "epoch": 3,
+        "stage": "frozen",
+        "train_loss": 1.3830023532542344,
+        "val_loss": 1.3372079222148638,
+        "train_acc": 0.6358189081225033,
+        "val_acc": 0.6527331189710611,
+        "val_f1_macro": 0.45940043532428754,
+        "lr": 0.001
+      },
+      {
+        "epoch": 4,
+        "stage": "frozen",
+        "train_loss": 1.2640602425157468,
+        "val_loss": 1.3394511006652734,
+        "train_acc": 0.6464713715046605,
+        "val_acc": 0.6205787781350482,
+        "val_f1_macro": 0.47517603364639255,
+        "lr": 0.001
+      },
+      {
+        "epoch": 5,
+        "stage": "frozen",
+        "train_loss": 1.2220489515286788,
+        "val_loss": 1.3114587149052759,
+        "train_acc": 0.6797603195739015,
+        "val_acc": 0.6430868167202572,
+        "val_f1_macro": 0.5010213585899147,
+        "lr": 0.001
+      },
+      {
+        "epoch": 6,
+        "stage": "finetune",
+        "train_loss": 1.7342410855858368,
+        "val_loss": 1.5919692297840424,
+        "train_acc": 0.3175765645805593,
+        "val_acc": 0.4887459807073955,
+        "val_f1_macro": 0.36342901945610373,
+        "lr": 2.9999999999999997e-05
+      },
+      {
+        "epoch": 7,
+        "stage": "finetune",
+        "train_loss": 1.340239731513073,
+        "val_loss": 1.3492469227965622,
+        "train_acc": 0.6218375499334221,
+        "val_acc": 0.5273311897106109,
+        "val_f1_macro": 0.4646797008957168,
+        "lr": 0.000165
+      },
+      {
+        "epoch": 8,
+        "stage": "finetune",
+        "train_loss": 1.1858667424134661,
+        "val_loss": 1.3029717375611185,
+        "train_acc": 0.6950732356857523,
+        "val_acc": 0.5884244372990354,
+        "val_f1_macro": 0.3942873440546916,
+        "lr": 0.0003
+      },
+      {
+        "epoch": 9,
+        "stage": "finetune",
+        "train_loss": 0.9921364595347175,
+        "val_loss": 1.273175578408686,
+        "train_acc": 0.7270306258322237,
+        "val_acc": 0.6720257234726688,
+        "val_f1_macro": 0.49119162539198763,
+        "lr": 0.00029906626316914654
+      },
+      {
+        "epoch": 10,
+        "stage": "finetune",
+        "train_loss": 0.9573426332359466,
+        "val_loss": 1.360852474568358,
+        "train_acc": 0.770306258322237,
+        "val_acc": 0.6881028938906752,
+        "val_f1_macro": 0.5020405458834252,
+        "lr": 0.0002962767949590008
+      },
+      {
+        "epoch": 11,
+        "stage": "finetune",
+        "train_loss": 0.8427266980931857,
+        "val_loss": 1.4397456002005427,
+        "train_acc": 0.8155792276964048,
+        "val_acc": 0.7041800643086816,
+        "val_f1_macro": 0.499873649776866,
+        "lr": 0.0002916666745507926
+      },
+      {
+        "epoch": 12,
+        "stage": "finetune",
+        "train_loss": 0.7904767244855827,
+        "val_loss": 1.3687619649328986,
+        "train_acc": 0.829560585885486,
+        "val_acc": 0.707395498392283,
+        "val_f1_macro": 0.5229755946667711,
+        "lr": 0.00028529387688350927
+      },
+      {
+        "epoch": 13,
+        "stage": "finetune",
+        "train_loss": 0.7440919305449637,
+        "val_loss": 1.3858824412539075,
+        "train_acc": 0.8601864181091877,
+        "val_acc": 0.7202572347266881,
+        "val_f1_macro": 0.551044459211762,
+        "lr": 0.00027723854358540023
+      },
+      {
+        "epoch": 14,
+        "stage": "finetune",
+        "train_loss": 0.7024427026153087,
+        "val_loss": 1.518481946068178,
+        "train_acc": 0.8754993342210386,
+        "val_acc": 0.662379421221865,
+        "val_f1_macro": 0.4586381173634267,
+        "lr": 0.0002676019751465025
+      },
+      {
+        "epoch": 15,
+        "stage": "finetune",
+        "train_loss": 0.6941521636814315,
+        "val_loss": 1.4283813916601935,
+        "train_acc": 0.8848202396804261,
+        "val_acc": 0.7009646302250804,
+        "val_f1_macro": 0.5124426118965744,
+        "lr": 0.00025650535700620235
+      },
+      {
+        "epoch": 16,
+        "stage": "finetune",
+        "train_loss": 0.6624778297230026,
+        "val_loss": 1.3319279614752129,
+        "train_acc": 0.8968042609853528,
+        "val_acc": 0.7491961414790996,
+        "val_f1_macro": 0.5601165386409748,
+        "lr": 0.00024408823557602196
+      },
+      {
+        "epoch": 17,
+        "stage": "finetune",
+        "train_loss": 0.6310185634502559,
+        "val_loss": 1.3642753772796925,
+        "train_acc": 0.9107856191744341,
+        "val_acc": 0.7395498392282959,
+        "val_f1_macro": 0.5295894700908605,
+        "lr": 0.00023050676336252752
+      },
+      {
+        "epoch": 18,
+        "stage": "finetune",
+        "train_loss": 0.636569130039723,
+        "val_loss": 1.4333112025184263,
+        "train_acc": 0.9114513981358189,
+        "val_acc": 0.7556270096463023,
+        "val_f1_macro": 0.5899664691926674,
+        "lr": 0.0002159317352589574
+      },
+      {
+        "epoch": 19,
+        "stage": "finetune",
+        "train_loss": 0.6021877076432168,
+        "val_loss": 1.3721738298606259,
+        "train_acc": 0.9280958721704394,
+        "val_acc": 0.7652733118971061,
+        "val_f1_macro": 0.5885388219713162,
+        "lr": 0.00020054644070034236
+      },
+      {
+        "epoch": 20,
+        "stage": "finetune",
+        "train_loss": 0.601816267449751,
+        "val_loss": 1.4372602965670767,
+        "train_acc": 0.9247669773635153,
+        "val_acc": 0.7395498392282959,
+        "val_f1_macro": 0.5585853200067226,
+        "lr": 0.0001845443586925127
+      },
+      {
+        "epoch": 21,
+        "stage": "finetune",
+        "train_loss": 0.5883156331814081,
+        "val_loss": 1.4127997148458598,
+        "train_acc": 0.9394141145139814,
+        "val_acc": 0.7427652733118971,
+        "val_f1_macro": 0.5500311235605353,
+        "lr": 0.0001681267247013412
+      },
+      {
+        "epoch": 22,
+        "stage": "finetune",
+        "train_loss": 0.5689921207656555,
+        "val_loss": 1.494475981046916,
+        "train_acc": 0.9533954727030626,
+        "val_acc": 0.7363344051446945,
+        "val_f1_macro": 0.5562077689866656,
+        "lr": 0.00015150000000000002
+      },
+      {
+        "epoch": 23,
+        "stage": "finetune",
+        "train_loss": 0.5699020890834011,
+        "val_loss": 1.4367140374382976,
+        "train_acc": 0.9447403462050599,
+        "val_acc": 0.7620578778135049,
+        "val_f1_macro": 0.5704500734955278,
+        "lr": 0.00013487327529865885
+      },
+      {
+        "epoch": 24,
+        "stage": "finetune",
+        "train_loss": 0.5756733119884597,
+        "val_loss": 1.3668912560993451,
+        "train_acc": 0.952063914780293,
+        "val_acc": 0.752411575562701,
+        "val_f1_macro": 0.5654488199708788,
+        "lr": 0.00011845564130748736
+      },
+      {
+        "epoch": 25,
+        "stage": "finetune",
+        "train_loss": 0.5589660602942923,
+        "val_loss": 1.3559698276581105,
+        "train_acc": 0.9474034620505992,
+        "val_acc": 0.7652733118971061,
+        "val_f1_macro": 0.580635212076223,
+        "lr": 0.00010245355929965771
+      },
+      {
+        "epoch": 26,
+        "stage": "finetune",
+        "train_loss": 0.5621563350947973,
+        "val_loss": 1.3827005099636949,
+        "train_acc": 0.9507323568575233,
+        "val_acc": 0.7652733118971061,
+        "val_f1_macro": 0.5824642005112958,
+        "lr": 8.706826474104266e-05
+      },
+      {
+        "epoch": 27,
+        "stage": "finetune",
+        "train_loss": 0.5546289644292128,
+        "val_loss": 1.3863013488303426,
+        "train_acc": 0.9567243675099867,
+        "val_acc": 0.7717041800643086,
+        "val_f1_macro": 0.5935653079455389,
+        "lr": 7.249323663747256e-05
+      },
+      {
+        "epoch": 28,
+        "stage": "finetune",
+        "train_loss": 0.5458935830945498,
+        "val_loss": 1.4036730140735099,
+        "train_acc": 0.9660452729693741,
+        "val_acc": 0.7620578778135049,
+        "val_f1_macro": 0.5750854558892275,
+        "lr": 5.891176442397809e-05
+      },
+      {
+        "epoch": 29,
+        "stage": "finetune",
+        "train_loss": 0.5526799479432494,
+        "val_loss": 1.4041539810094803,
+        "train_acc": 0.9640479360852197,
+        "val_acc": 0.7717041800643086,
+        "val_f1_macro": 0.5872729732735231,
+        "lr": 4.649464299379771e-05
+      },
+      {
+        "epoch": 30,
+        "stage": "finetune",
+        "train_loss": 0.5488148798717164,
+        "val_loss": 1.3894131505604341,
+        "train_acc": 0.9673768308921438,
+        "val_acc": 0.7684887459807074,
+        "val_f1_macro": 0.5729054033886092,
+        "lr": 3.539802485349763e-05
+      },
+      {
+        "epoch": 31,
+        "stage": "finetune",
+        "train_loss": 0.5407149035349667,
+        "val_loss": 1.399886906338658,
+        "train_acc": 0.9693741677762983,
+        "val_acc": 0.7556270096463023,
+        "val_f1_macro": 0.5531018913076708,
+        "lr": 2.5761456414599812e-05
+      },
+      {
+        "epoch": 32,
+        "stage": "finetune",
+        "train_loss": 0.5321578177885113,
+        "val_loss": 1.418502261784299,
+        "train_acc": 0.978029294274301,
+        "val_acc": 0.7588424437299035,
+        "val_f1_macro": 0.5694725206032906,
+        "lr": 1.7706123116490777e-05
+      },
+      {
+        "epoch": 33,
+        "stage": "finetune",
+        "train_loss": 0.5485464473380229,
+        "val_loss": 1.4031251987077031,
+        "train_acc": 0.9613848202396804,
+        "val_acc": 0.7652733118971061,
+        "val_f1_macro": 0.5842091926109807,
+        "lr": 1.1333325449207417e-05
+      },
+      {
+        "epoch": 34,
+        "stage": "finetune",
+        "train_loss": 0.5452548475779802,
+        "val_loss": 1.4089597666761884,
+        "train_acc": 0.9607190412782957,
+        "val_acc": 0.7620578778135049,
+        "val_f1_macro": 0.5841278120737959,
+        "lr": 6.723205040999177e-06
+      },
+      {
+        "epoch": 35,
+        "stage": "finetune",
+        "train_loss": 0.5359518308137927,
+        "val_loss": 1.391065941746212,
+        "train_acc": 0.9727030625832224,
+        "val_acc": 0.77491961414791,
+        "val_f1_macro": 0.599819602649198,
+        "lr": 3.933736830853473e-06
+      }
+    ],
+    "convnext_tiny": [
+      {
+        "epoch": 1,
+        "stage": "frozen",
+        "train_loss": 1.7818105617629862,
+        "val_loss": 1.5871989627359764,
+        "train_acc": 0.4766977363515313,
+        "val_acc": 0.5594855305466238,
+        "val_f1_macro": 0.3601672922062146,
+        "lr": 0.001
+      },
+      {
+        "epoch": 2,
+        "stage": "frozen",
+        "train_loss": 1.3938051546302521,
+        "val_loss": 1.3427990471818438,
+        "train_acc": 0.6850865512649801,
+        "val_acc": 0.6334405144694534,
+        "val_f1_macro": 0.5286970239155615,
+        "lr": 0.001
+      },
+      {
+        "epoch": 3,
+        "stage": "frozen",
+        "train_loss": 1.2738475515426555,
+        "val_loss": 1.2627727398918374,
+        "train_acc": 0.6697736351531292,
+        "val_acc": 0.6977491961414791,
+        "val_f1_macro": 0.5745888068096027,
+        "lr": 0.001
+      },
+      {
+        "epoch": 4,
+        "stage": "frozen",
+        "train_loss": 1.2083681486894224,
+        "val_loss": 1.2233268164361788,
+        "train_acc": 0.7017310252996005,
+        "val_acc": 0.6945337620578779,
+        "val_f1_macro": 0.5574945656758024,
+        "lr": 0.001
+      },
+      {
+        "epoch": 5,
+        "stage": "frozen",
+        "train_loss": 1.1493011087615703,
+        "val_loss": 1.193624543990353,
+        "train_acc": 0.7396804260985352,
+        "val_acc": 0.6784565916398714,
+        "val_f1_macro": 0.5483209464780616,
+        "lr": 0.001
+      },
+      {
+        "epoch": 6,
+        "stage": "finetune",
+        "train_loss": 1.2106525550352114,
+        "val_loss": 1.1538178284451892,
+        "train_acc": 0.7130492676431425,
+        "val_acc": 0.752411575562701,
+        "val_f1_macro": 0.5817234149753504,
+        "lr": 1e-05
+      },
+      {
+        "epoch": 7,
+        "stage": "finetune",
+        "train_loss": 1.1387593567609469,
+        "val_loss": 1.1359362552403638,
+        "train_acc": 0.7077230359520639,
+        "val_acc": 0.797427652733119,
+        "val_f1_macro": 0.6207543146698776,
+        "lr": 5.5e-05
+      },
+      {
+        "epoch": 8,
+        "stage": "finetune",
+        "train_loss": 1.0477511501820205,
+        "val_loss": 1.2991701460344616,
+        "train_acc": 0.7576564580559254,
+        "val_acc": 0.6752411575562701,
+        "val_f1_macro": 0.549946878064727,
+        "lr": 0.0001
+      },
+      {
+        "epoch": 9,
+        "stage": "finetune",
+        "train_loss": 0.9398692599466733,
+        "val_loss": 1.0934709421691404,
+        "train_acc": 0.8089214380825566,
+        "val_acc": 0.7652733118971061,
+        "val_f1_macro": 0.5776050210538128,
+        "lr": 9.968875438971552e-05
+      },
+      {
+        "epoch": 10,
+        "stage": "finetune",
+        "train_loss": 0.8204055083258333,
+        "val_loss": 1.327171898348155,
+        "train_acc": 0.8535286284953395,
+        "val_acc": 0.8070739549839229,
+        "val_f1_macro": 0.6117889000799701,
+        "lr": 9.875893165300026e-05
+      },
+      {
+        "epoch": 11,
+        "stage": "finetune",
+        "train_loss": 0.7560580488686238,
+        "val_loss": 1.2049241165639504,
+        "train_acc": 0.8608521970705726,
+        "val_acc": 0.7845659163987139,
+        "val_f1_macro": 0.6113524884487507,
+        "lr": 9.722222485026419e-05
+      },
+      {
+        "epoch": 12,
+        "stage": "finetune",
+        "train_loss": 0.7116617032595862,
+        "val_loss": 1.0678589899823596,
+        "train_acc": 0.8934753661784287,
+        "val_acc": 0.8327974276527331,
+        "val_f1_macro": 0.6336226646034214,
+        "lr": 9.509795896116974e-05
+      },
+      {
+        "epoch": 13,
+        "stage": "finetune",
+        "train_loss": 0.6288418202362112,
+        "val_loss": 1.0530380075767491,
+        "train_acc": 0.9214380825565912,
+        "val_acc": 0.8231511254019293,
+        "val_f1_macro": 0.6677064837884411,
+        "lr": 9.241284786180005e-05
+      },
+      {
+        "epoch": 14,
+        "stage": "finetune",
+        "train_loss": 0.5971584777222493,
+        "val_loss": 1.1541402278605766,
+        "train_acc": 0.9340878828229028,
+        "val_acc": 0.864951768488746,
+        "val_f1_macro": 0.695541578097679,
+        "lr": 8.920065838216747e-05
+      },
+      {
+        "epoch": 15,
+        "stage": "finetune",
+        "train_loss": 0.597672623657831,
+        "val_loss": 1.1719596543112751,
+        "train_acc": 0.9414114513981359,
+        "val_acc": 0.8488745980707395,
+        "val_f1_macro": 0.6927267352239945,
+        "lr": 8.550178566873408e-05
+      },
+      {
+        "epoch": 16,
+        "stage": "finetune",
+        "train_loss": 0.5753995604743652,
+        "val_loss": 1.3333086124187115,
+        "train_acc": 0.9660452729693741,
+        "val_acc": 0.8553054662379421,
+        "val_f1_macro": 0.6885971356614725,
+        "lr": 8.13627451920073e-05
+      },
+      {
+        "epoch": 17,
+        "stage": "finetune",
+        "train_loss": 0.5664045832922233,
+        "val_loss": 1.1300001355229468,
+        "train_acc": 0.9560585885486018,
+        "val_acc": 0.8456591639871383,
+        "val_f1_macro": 0.6947623263056032,
+        "lr": 7.683558778750915e-05
+      },
+      {
+        "epoch": 18,
+        "stage": "finetune",
+        "train_loss": 0.5656321801136083,
+        "val_loss": 1.1087619591372573,
+        "train_acc": 0.9553928095872171,
+        "val_acc": 0.8520900321543409,
+        "val_f1_macro": 0.6769766591531273,
+        "lr": 7.197724508631912e-05
+      },
+      {
+        "epoch": 19,
+        "stage": "finetune",
+        "train_loss": 0.5458249333060375,
+        "val_loss": 1.177666605093855,
+        "train_acc": 0.9653794940079894,
+        "val_acc": 0.8617363344051447,
+        "val_f1_macro": 0.680736658964699,
+        "lr": 6.684881356678078e-05
+      },
+      {
+        "epoch": 20,
+        "stage": "finetune",
+        "train_loss": 0.5276795271312825,
+        "val_loss": 1.224656394056952,
+        "train_acc": 0.9773635153129161,
+        "val_acc": 0.8617363344051447,
+        "val_f1_macro": 0.6942262378733745,
+        "lr": 6.151478623083756e-05
+      },
+      {
+        "epoch": 21,
+        "stage": "finetune",
+        "train_loss": 0.5219766784127003,
+        "val_loss": 1.2485585573018556,
+        "train_acc": 0.9793608521970706,
+        "val_acc": 0.8617363344051447,
+        "val_f1_macro": 0.7015243291690496,
+        "lr": 5.604224156711373e-05
+      },
+      {
+        "epoch": 22,
+        "stage": "finetune",
+        "train_loss": 0.5215722544691693,
+        "val_loss": 1.1863017890997638,
+        "train_acc": 0.9826897470039947,
+        "val_acc": 0.8681672025723473,
+        "val_f1_macro": 0.7071669343728166,
+        "lr": 5.05e-05
+      },
+      {
+        "epoch": 23,
+        "stage": "finetune",
+        "train_loss": 0.512282719069251,
+        "val_loss": 1.1901157780092246,
+        "train_acc": 0.9846870838881492,
+        "val_acc": 0.8778135048231511,
+        "val_f1_macro": 0.7111987624282006,
+        "lr": 4.4957758432886274e-05
+      },
+      {
+        "epoch": 24,
+        "stage": "finetune",
+        "train_loss": 0.509159638148332,
+        "val_loss": 1.152730212334268,
+        "train_acc": 0.9880159786950732,
+        "val_acc": 0.8681672025723473,
+        "val_f1_macro": 0.7083694813957973,
+        "lr": 3.948521376916244e-05
+      },
+      {
+        "epoch": 25,
+        "stage": "finetune",
+        "train_loss": 0.5030233406830088,
+        "val_loss": 1.1433557406115762,
+        "train_acc": 0.9873501997336884,
+        "val_acc": 0.8617363344051447,
+        "val_f1_macro": 0.6997608129080521,
+        "lr": 3.4151186433219223e-05
+      },
+      {
+        "epoch": 26,
+        "stage": "finetune",
+        "train_loss": 0.5045231463271038,
+        "val_loss": 1.0920232070603937,
+        "train_acc": 0.9840213049267643,
+        "val_acc": 0.8713826366559485,
+        "val_f1_macro": 0.6999398015676339,
+        "lr": 2.9022754913680878e-05
+      },
+      {
+        "epoch": 27,
+        "stage": "finetune",
+        "train_loss": 0.5039559119789007,
+        "val_loss": 1.1496728087544825,
+        "train_acc": 0.9880159786950732,
+        "val_acc": 0.8681672025723473,
+        "val_f1_macro": 0.6844609261484658,
+        "lr": 2.4164412212490847e-05
+      },
+      {
+        "epoch": 28,
+        "stage": "finetune",
+        "train_loss": 0.4971379908756632,
+        "val_loss": 1.1531909340064241,
+        "train_acc": 0.9920106524633822,
+        "val_acc": 0.8713826366559485,
+        "val_f1_macro": 0.708982646120435,
+        "lr": 1.9637254807992694e-05
+      },
+      {
+        "epoch": 29,
+        "stage": "finetune",
+        "train_loss": 0.4978437769746336,
+        "val_loss": 1.1512056876608796,
+        "train_acc": 0.992676431424767,
+        "val_acc": 0.8681672025723473,
+        "val_f1_macro": 0.7067558335416557,
+        "lr": 1.54982143312659e-05
+      },
+      {
+        "epoch": 30,
+        "stage": "finetune",
+        "train_loss": 0.49514566717071634,
+        "val_loss": 1.156302275381671,
+        "train_acc": 0.9953395472703063,
+        "val_acc": 0.8745980707395499,
+        "val_f1_macro": 0.718488191823432,
+        "lr": 1.1799341617832541e-05
+      },
+      {
+        "epoch": 31,
+        "stage": "finetune",
+        "train_loss": 0.49547855490533393,
+        "val_loss": 1.1274553295883718,
+        "train_acc": 0.9906790945406125,
+        "val_acc": 0.8713826366559485,
+        "val_f1_macro": 0.7095026598115843,
+        "lr": 8.587152138199936e-06
+      },
+      {
+        "epoch": 32,
+        "stage": "finetune",
+        "train_loss": 0.4930424069993188,
+        "val_loss": 1.1241153363629552,
+        "train_acc": 0.9940079893475366,
+        "val_acc": 0.864951768488746,
+        "val_f1_macro": 0.7079426015777645,
+        "lr": 5.902041038830258e-06
+      },
+      {
+        "epoch": 33,
+        "stage": "finetune",
+        "train_loss": 0.49087319877271485,
+        "val_loss": 1.1390003080920008,
+        "train_acc": 0.9946737683089214,
+        "val_acc": 0.864951768488746,
+        "val_f1_macro": 0.7079426015777645,
+        "lr": 3.777775149735805e-06
+      },
+      {
+        "epoch": 34,
+        "stage": "finetune",
+        "train_loss": 0.4906505396696286,
+        "val_loss": 1.137930777295226,
+        "train_acc": 0.996005326231691,
+        "val_acc": 0.8681672025723473,
+        "val_f1_macro": 0.710213005884277,
+        "lr": 2.2410683469997256e-06
+      },
+      {
+        "epoch": 35,
+        "stage": "finetune",
+        "train_loss": 0.4911854346487398,
+        "val_loss": 1.1419008655946739,
+        "train_acc": 0.9946737683089214,
+        "val_acc": 0.8681672025723473,
+        "val_f1_macro": 0.710213005884277,
+        "lr": 1.3112456102844914e-06
+      }
+    ]
+  },
+  "selection": {
+    "model_key": "convnext_tiny_v2_tta",
+    "criterion": "highest validation macro-F1 among all candidates incl. TTA and ensembles (ties: validation accuracy)",
+    "reasons": [
+      "Highest validation macro-F1 of all 15 candidates, including test-time augmentation and ensembles (0.722; runner-up ConvNeXt-Tiny (fine-tuned) 0.718). The test set was not used to choose.",
+      "Held-out test: accuracy 0.848, macro-F1 0.586 (95% CI 0.513-0.640).",
+      "Practical: 211.0 ms per image on CPU, 27.83M parameters."
+    ]
+  },
+  "leakage_benchmark": [
+    {
+      "model": "Logistic Regression",
+      "protocol": "Official split (leaky)",
+      "accuracy": 0.544468546637744,
+      "f1_macro": 0.5102623737226446
+    },
+    {
+      "model": "Logistic Regression",
+      "protocol": "Group-aware split (ours)",
+      "accuracy": 0.5,
+      "f1_macro": 0.3651848385041663
+    },
+    {
+      "model": "SVM (RBF kernel)",
+      "protocol": "Official split (leaky)",
+      "accuracy": 0.6203904555314533,
+      "f1_macro": 0.5145987870297069
+    },
+    {
+      "model": "SVM (RBF kernel)",
+      "protocol": "Group-aware split (ours)",
+      "accuracy": 0.6896551724137931,
+      "f1_macro": 0.38943241389349176
+    },
+    {
+      "model": "Random Forest",
+      "protocol": "Official split (leaky)",
+      "accuracy": 0.8351409978308026,
+      "f1_macro": 0.7798316274666757
+    },
+    {
+      "model": "Random Forest",
+      "protocol": "Group-aware split (ours)",
+      "accuracy": 0.7,
+      "f1_macro": 0.43082238422368335
+    },
+    {
+      "model": "MobileNetV2 (fine-tuned)",
+      "protocol": "Official split (leaky)",
+      "accuracy": 0.9392624728850325,
+      "f1_macro": 0.9318535795949676
+    },
+    {
+      "model": "MobileNetV2 (fine-tuned)",
+      "protocol": "Group-aware split (ours)",
+      "accuracy": 0.7482758620689656,
+      "f1_macro": 0.6062946260320957
+    },
+    {
+      "model": "ConvNeXt-Tiny (fine-tuned)",
+      "protocol": "Official split (leaky)",
+      "accuracy": 0.9761388286334056,
+      "f1_macro": 0.9754530367688262
+    },
+    {
+      "model": "ConvNeXt-Tiny (fine-tuned)",
+      "protocol": "Group-aware split (ours)",
+      "accuracy": 0.8206896551724138,
+      "f1_macro": 0.5406474686395031
+    }
+  ],
+  "five_class": {
+    "classes": [
+      "healthy",
+      "leaf_miner",
+      "magnesium_deficiency",
+      "nitrogen_deficiency",
+      "spotted_wilt_virus"
+    ],
+    "class_names": [
+      "Healthy",
+      "Leaf Miner",
+      "Magnesium Deficiency",
+      "Nitrogen Deficiency",
+      "Spotted Wilt Virus"
+    ],
+    "rule": "Healthy plus the four conditions with the highest validation F1 under the selected 8-class model (validation data only; the test set played no part)",
+    "dropped": [
+      "early_blight",
+      "late_blight",
+      "potassium_deficiency"
+    ],
+    "split": {
+      "train": 1368,
+      "val": 286,
+      "test": 265,
+      "test_leaf_groups": 235,
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "train": 154,
+          "val": 35,
+          "test": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "train": 729,
+          "val": 156,
+          "test": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "train": 87,
+          "val": 16,
+          "test": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "train": 32,
+          "val": 6,
+          "test": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "train": 366,
+          "val": 73,
+          "test": 78
+        }
+      ]
+    },
+    "selected": "ensemble_5class",
+    "validation_ranking": [
+      {
+        "key": "ensemble_5class",
+        "name": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+        "type": "ensemble",
+        "family": "Deep Learning",
+        "val_f1_macro": 0.9118918918918919,
+        "val_accuracy": 0.9195804195804196
+      },
+      {
+        "key": "convnext_tiny_5class",
+        "name": "ConvNeXt-Tiny (5-class)",
+        "type": "single",
+        "family": "Deep Learning",
+        "val_f1_macro": 0.901279213636092,
+        "val_accuracy": 0.9090909090909091
+      },
+      {
+        "key": "convnext_tiny_5class_tta",
+        "name": "ConvNeXt-Tiny (5-class) + TTA",
+        "type": "tta",
+        "family": "Deep Learning",
+        "val_f1_macro": 0.8923293126475501,
+        "val_accuracy": 0.9125874125874126
+      },
+      {
+        "key": "efficientnet_b0_5class_tta",
+        "name": "EfficientNet-B0 (5-class) + TTA",
+        "type": "tta",
+        "family": "Deep Learning",
+        "val_f1_macro": 0.8559377454130077,
+        "val_accuracy": 0.8846153846153846
+      },
+      {
+        "key": "efficientnet_b0_5class",
+        "name": "EfficientNet-B0 (5-class)",
+        "type": "single",
+        "family": "Deep Learning",
+        "val_f1_macro": 0.8499969063379315,
+        "val_accuracy": 0.8776223776223776
+      },
+      {
+        "key": "rf_5class",
+        "name": "Random Forest (5-class)",
+        "type": "single",
+        "family": "Machine Learning",
+        "val_f1_macro": 0.5954418933166294,
+        "val_accuracy": 0.7657342657342657
+      },
+      {
+        "key": "logreg_5class",
+        "name": "Logistic Regression (5-class)",
+        "type": "single",
+        "family": "Machine Learning",
+        "val_f1_macro": 0.5936622762471482,
+        "val_accuracy": 0.6713286713286714
+      },
+      {
+        "key": "svm_5class",
+        "name": "SVM (RBF kernel) (5-class)",
+        "type": "single",
+        "family": "Machine Learning",
+        "val_f1_macro": 0.5481787836821393,
+        "val_accuracy": 0.7482517482517482
+      }
+    ],
+    "ml_vs_dl": {
+      "diff": 0.2344402431085849,
+      "ci": [
+        0.14077965172913406,
+        0.34372249949507133
+      ],
+      "share_of_resamples_a_not_better": 0.0,
+      "dl_model": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+      "ml_model": "Random Forest (5-class)",
+      "accuracy_gain": 0.16981132075471705
+    },
+    "calibration": {
+      "temperature": null,
+      "member_temperatures": [
+        0.7516078098110994,
+        0.7494280837502144
+      ],
+      "ece_before": 0.0829715726904222,
+      "ece_after": 0.03915826899156933,
+      "confidence_threshold": 0.6,
+      "coverage": 0.9169811320754717,
+      "accuracy_kept": 0.9382716049382716,
+      "accuracy_rejected": 0.5909090909090909
+    },
+    "eight_class_model_on_same_photos": {
+      "model": "ConvNeXt-Tiny (fine-tuned) + TTA",
+      "photos": 265,
+      "accuracy": 0.8981132075471698,
+      "predicted_out_of_scope": 7
+    },
+    "selective": {
+      "target_accuracy": 0.95,
+      "threshold": 0.77,
+      "rule": "lowest calibrated-confidence threshold with validation accuracy on kept photos >= 95% (coverage >= 50%); chosen on validation, reported once on test",
+      "val": {
+        "threshold": 0.77,
+        "coverage": 0.8671328671328671,
+        "accuracy_kept": 0.9516129032258065,
+        "accuracy_rejected": 0.7105263157894737
+      },
+      "test": {
+        "threshold": 0.77,
+        "coverage": 0.8528301886792453,
+        "accuracy_kept": 0.9601769911504425,
+        "accuracy_rejected": 0.6153846153846154
+      }
+    },
+    "models": [
+      {
+        "key": "logreg_5class",
+        "name": "Logistic Regression (5-class)",
+        "family": "Machine Learning",
+        "type": "single",
+        "feature_set": "Color",
+        "best_params": {
+          "C": 0.01,
+          "pca": "none"
+        },
+        "train_time_s": 0.02174839997314848,
+        "inference_ms_per_image": 5.646249992423691,
+        "params": null,
+        "val": {
+          "accuracy": 0.6713286713286714,
+          "precision_macro": 0.5750997473068227,
+          "recall_macro": 0.672631843042802,
+          "f1_macro": 0.5936622762471482,
+          "f1_weighted": 0.6935461065895848
+        },
+        "test": {
+          "accuracy": 0.6113207547169811,
+          "precision_macro": 0.5582400649463246,
+          "recall_macro": 0.6784565021975093,
+          "f1_macro": 0.5763945748383407,
+          "f1_weighted": 0.636345434713696,
+          "accuracy_ci": [
+            0.5437262357414449,
+            0.6777840909090909
+          ],
+          "f1_macro_ci": [
+            0.4744930662197331,
+            0.6521540956663172
+          ]
+        },
+        "per_class": [
+          {
+            "key": "healthy",
+            "name": "Healthy",
+            "precision": 0.2602739726027397,
+            "recall": 0.7037037037037037,
+            "f1": 0.38,
+            "support": 27
+          },
+          {
+            "key": "leaf_miner",
+            "name": "Leaf Miner",
+            "precision": 0.875,
+            "recall": 0.5035971223021583,
+            "f1": 0.639269406392694,
+            "support": 139
+          },
+          {
+            "key": "magnesium_deficiency",
+            "name": "Magnesium Deficiency",
+            "precision": 0.36363636363636365,
+            "recall": 0.5714285714285714,
+            "f1": 0.4444444444444444,
+            "support": 14
+          },
+          {
+            "key": "nitrogen_deficiency",
+            "name": "Nitrogen Deficiency",
+            "precision": 0.5454545454545454,
+            "recall": 0.8571428571428571,
+            "f1": 0.6666666666666666,
+            "support": 7
+          },
+          {
+            "key": "spotted_wilt_virus",
+            "name": "Spotted Wilt Virus",
+            "precision": 0.7468354430379747,
+            "recall": 0.7564102564102564,
+            "f1": 0.7515923566878981,
+            "support": 78
+          }
+        ],
+        "confusion_matrix": [
+          [
+            19,
+            7,
+            0,
+            0,
+            1
+          ],
+          [
+            43,
+            70,
+            9,
+            1,
+            16
+          ],
+          [
+            0,
+            0,
+            8,
+            3,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            6,
+            0
+          ],
+          [
+            11,
+            3,
+            4,
+            1,
+            59
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "key": "svm_5class",
+        "name": "SVM (RBF kernel) (5-class)",
+        "family": "Machine Learning",
+        "type": "single",
+        "feature_set": "Color",
+        "best_params": {
+          "C": 10.0,
+          "gamma": 0.01,
+          "pca": "none"
+        },
+        "train_time_s": 0.24886629998218268,
+        "inference_ms_per_image": 6.1990999965928495,
+        "params": null,
+        "val": {
+          "accuracy": 0.7482517482517482,
+          "precision_macro": 0.5946209567806664,
+          "recall_macro": 0.5233595514074966,
+          "f1_macro": 0.5481787836821393,
+          "f1_weighted": 0.7303322053627118
+        },
+        "test": {
+          "accuracy": 0.7471698113207547,
+          "precision_macro": 0.6030526315789474,
+          "recall_macro": 0.5388114416891395,
+          "f1_macro": 0.561635779864446,
+          "f1_weighted": 0.7404916711014775,
+          "accuracy_ci": [
+            0.6940298507462687,
+            0.8
+          ],
+          "f1_macro_ci": [
+            0.449882065921512,
+            0.6640014144292563
+          ]
+        },
+        "per_class": [
+          {
+            "key": "healthy",
+            "name": "Healthy",
+            "precision": 0.5789473684210527,
+            "recall": 0.4074074074074074,
+            "f1": 0.4782608695652174,
+            "support": 27
+          },
+          {
+            "key": "leaf_miner",
+            "name": "Leaf Miner",
+            "precision": 0.7763157894736842,
+            "recall": 0.8489208633093526,
+            "f1": 0.8109965635738832,
+            "support": 139
+          },
+          {
+            "key": "magnesium_deficiency",
+            "name": "Magnesium Deficiency",
+            "precision": 0.3333333333333333,
+            "recall": 0.35714285714285715,
+            "f1": 0.3448275862068966,
+            "support": 14
+          },
+          {
+            "key": "nitrogen_deficiency",
+            "name": "Nitrogen Deficiency",
+            "precision": 0.5,
+            "recall": 0.2857142857142857,
+            "f1": 0.36363636363636365,
+            "support": 7
+          },
+          {
+            "key": "spotted_wilt_virus",
+            "name": "Spotted Wilt Virus",
+            "precision": 0.8266666666666667,
+            "recall": 0.7948717948717948,
+            "f1": 0.8104575163398693,
+            "support": 78
+          }
+        ],
+        "confusion_matrix": [
+          [
+            11,
+            16,
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            118,
+            5,
+            0,
+            8
+          ],
+          [
+            0,
+            3,
+            5,
+            2,
+            4
+          ],
+          [
+            0,
+            0,
+            4,
+            2,
+            1
+          ],
+          [
+            0,
+            15,
+            1,
+            0,
+            62
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "key": "rf_5class",
+        "name": "Random Forest (5-class)",
+        "family": "Machine Learning",
+        "type": "single",
+        "feature_set": "Color",
+        "best_params": {
+          "max_depth": 20,
+          "max_features": "sqrt",
+          "min_samples_leaf": 2,
+          "n_estimators": 600
+        },
+        "train_time_s": 0.857820500008529,
+        "inference_ms_per_image": 16.417049992014654,
+        "params": null,
+        "val": {
+          "accuracy": 0.7657342657342657,
+          "precision_macro": 0.7091694253458959,
+          "recall_macro": 0.5485243865723317,
+          "f1_macro": 0.5954418933166294,
+          "f1_weighted": 0.7382216332901118
+        },
+        "test": {
+          "accuracy": 0.7396226415094339,
+          "precision_macro": 0.66703933747412,
+          "recall_macro": 0.5758244686302241,
+          "f1_macro": 0.600990112644248,
+          "f1_weighted": 0.7265370818711717,
+          "accuracy_ci": [
+            0.6813146997929607,
+            0.7947785112897053
+          ],
+          "f1_macro_ci": [
+            0.47989742083691084,
+            0.6946702069520857
+          ]
+        },
+        "per_class": [
+          {
+            "key": "healthy",
+            "name": "Healthy",
+            "precision": 0.7272727272727273,
+            "recall": 0.2962962962962963,
+            "f1": 0.42105263157894735,
+            "support": 27
+          },
+          {
+            "key": "leaf_miner",
+            "name": "Leaf Miner",
+            "precision": 0.7393939393939394,
+            "recall": 0.8776978417266187,
+            "f1": 0.8026315789473685,
+            "support": 139
+          },
+          {
+            "key": "magnesium_deficiency",
+            "name": "Magnesium Deficiency",
+            "precision": 0.5714285714285714,
+            "recall": 0.5714285714285714,
+            "f1": 0.5714285714285714,
+            "support": 14
+          },
+          {
+            "key": "nitrogen_deficiency",
+            "name": "Nitrogen Deficiency",
+            "precision": 0.5,
+            "recall": 0.42857142857142855,
+            "f1": 0.46153846153846156,
+            "support": 7
+          },
+          {
+            "key": "spotted_wilt_virus",
+            "name": "Spotted Wilt Virus",
+            "precision": 0.7971014492753623,
+            "recall": 0.7051282051282052,
+            "f1": 0.7482993197278912,
+            "support": 78
+          }
+        ],
+        "confusion_matrix": [
+          [
+            8,
+            19,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            122,
+            2,
+            1,
+            11
+          ],
+          [
+            0,
+            2,
+            8,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            3,
+            3,
+            1
+          ],
+          [
+            0,
+            22,
+            1,
+            0,
+            55
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "key": "convnext_tiny_5class",
+        "name": "ConvNeXt-Tiny (5-class)",
+        "family": "Deep Learning",
+        "type": "single",
+        "feature_set": "Learned features (ImageNet-pretrained ConvNeXt-Tiny, 256px)",
+        "best_params": {
+          "best_epoch": 21,
+          "epochs_run": 31,
+          "tta_views": 1
+        },
+        "train_time_s": 306.07278320001205,
+        "inference_ms_per_image": 35.95875001337845,
+        "params": 27823973,
+        "val": {
+          "accuracy": 0.9090909090909091,
+          "precision_macro": 0.913759374627991,
+          "recall_macro": 0.9011505845752421,
+          "f1_macro": 0.901279213636092,
+          "f1_weighted": 0.9108261805436557
+        },
+        "test": {
+          "accuracy": 0.8981132075471698,
+          "precision_macro": 0.8013854662298734,
+          "recall_macro": 0.8386006213344344,
+          "f1_macro": 0.8169831507838887,
+          "f1_weighted": 0.8990969705743778,
+          "accuracy_ci": [
+            0.8582361546499477,
+            0.9341085271317829
+          ],
+          "f1_macro_ci": [
+            0.7148436286962868,
+            0.889654853597408
+          ]
+        },
+        "per_class": [
+          {
+            "key": "healthy",
+            "name": "Healthy",
+            "precision": 0.6896551724137931,
+            "recall": 0.7407407407407407,
+            "f1": 0.7142857142857143,
+            "support": 27
+          },
+          {
+            "key": "leaf_miner",
+            "name": "Leaf Miner",
+            "precision": 0.9545454545454546,
+            "recall": 0.9064748201438849,
+            "f1": 0.9298892988929889,
+            "support": 139
+          },
+          {
+            "key": "magnesium_deficiency",
+            "name": "Magnesium Deficiency",
+            "precision": 0.7692307692307693,
+            "recall": 0.7142857142857143,
+            "f1": 0.7407407407407407,
+            "support": 14
+          },
+          {
+            "key": "nitrogen_deficiency",
+            "name": "Nitrogen Deficiency",
+            "precision": 0.6666666666666666,
+            "recall": 0.8571428571428571,
+            "f1": 0.75,
+            "support": 7
+          },
+          {
+            "key": "spotted_wilt_virus",
+            "name": "Spotted Wilt Virus",
+            "precision": 0.926829268292683,
+            "recall": 0.9743589743589743,
+            "f1": 0.95,
+            "support": 78
+          }
+        ],
+        "confusion_matrix": [
+          [
+            20,
+            6,
+            0,
+            0,
+            1
+          ],
+          [
+            7,
+            126,
+            2,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            10,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            6,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            76
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "key": "convnext_tiny_5class_tta",
+        "name": "ConvNeXt-Tiny (5-class) + TTA",
+        "family": "Deep Learning",
+        "type": "tta",
+        "feature_set": "Learned features (ImageNet-pretrained ConvNeXt-Tiny, 256px); averaged over 8 test-time views",
+        "best_params": {
+          "best_epoch": 21,
+          "epochs_run": 31,
+          "tta_views": 8
+        },
+        "train_time_s": 306.07278320001205,
+        "inference_ms_per_image": 207.95799999905284,
+        "params": 27823973,
+        "val": {
+          "accuracy": 0.9125874125874126,
+          "precision_macro": 0.9188601901580856,
+          "recall_macro": 0.8903188820312108,
+          "f1_macro": 0.8923293126475501,
+          "f1_weighted": 0.9129384078070641
+        },
+        "test": {
+          "accuracy": 0.909433962264151,
+          "precision_macro": 0.8184558639164917,
+          "recall_macro": 0.8548542850701123,
+          "f1_macro": 0.8337766546627305,
+          "f1_weighted": 0.9101835399781425,
+          "accuracy_ci": [
+            0.8702204943386589,
+            0.9431871783876501
+          ],
+          "f1_macro_ci": [
+            0.7322120894215742,
+            0.905567432596388
+          ]
+        },
+        "per_class": [
+          {
+            "key": "healthy",
+            "name": "Healthy",
+            "precision": 0.7586206896551724,
+            "recall": 0.8148148148148148,
+            "f1": 0.7857142857142857,
+            "support": 27
+          },
+          {
+            "key": "leaf_miner",
+            "name": "Leaf Miner",
+            "precision": 0.9477611940298507,
+            "recall": 0.9136690647482014,
+            "f1": 0.9304029304029304,
+            "support": 139
+          },
+          {
+            "key": "magnesium_deficiency",
+            "name": "Magnesium Deficiency",
+            "precision": 0.7692307692307693,
+            "recall": 0.7142857142857143,
+            "f1": 0.7407407407407407,
+            "support": 14
+          },
+          {
+            "key": "nitrogen_deficiency",
+            "name": "Nitrogen Deficiency",
+            "precision": 0.6666666666666666,
+            "recall": 0.8571428571428571,
+            "f1": 0.75,
+            "support": 7
+          },
+          {
+            "key": "spotted_wilt_virus",
+            "name": "Spotted Wilt Virus",
+            "precision": 0.95,
+            "recall": 0.9743589743589743,
+            "f1": 0.9620253164556962,
+            "support": 78
+          }
+        ],
+        "confusion_matrix": [
+          [
+            22,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            127,
+            2,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            10,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            6,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            0,
+            76
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "key": "efficientnet_b0_5class",
+        "name": "EfficientNet-B0 (5-class)",
+        "family": "Deep Learning",
+        "type": "single",
+        "feature_set": "Learned features (ImageNet-pretrained EfficientNet-B0, 256px)",
+        "best_params": {
+          "best_epoch": 24,
+          "epochs_run": 34,
+          "tta_views": 1
+        },
+        "train_time_s": 185.11227440001676,
+        "inference_ms_per_image": 26.987699995515868,
+        "params": 4013953,
+        "val": {
+          "accuracy": 0.8776223776223776,
+          "precision_macro": 0.8225702371221475,
+          "recall_macro": 0.8964570475186914,
+          "f1_macro": 0.8499969063379315,
+          "f1_weighted": 0.8827243947579115
+        },
+        "test": {
+          "accuracy": 0.8830188679245283,
+          "precision_macro": 0.8009336240970424,
+          "recall_macro": 0.8251839553997827,
+          "f1_macro": 0.8096430586997723,
+          "f1_weighted": 0.8832705285446485,
+          "accuracy_ci": [
+            0.8389482240605837,
+            0.9213556515176924
+          ],
+          "f1_macro_ci": [
+            0.7045058660205988,
+            0.885690739342154
+          ]
+        },
+        "per_class": [
+          {
+            "key": "healthy",
+            "name": "Healthy",
+            "precision": 0.7586206896551724,
+            "recall": 0.8148148148148148,
+            "f1": 0.7857142857142857,
+            "support": 27
+          },
+          {
+            "key": "leaf_miner",
+            "name": "Leaf Miner",
+            "precision": 0.9202898550724637,
+            "recall": 0.9136690647482014,
+            "f1": 0.9169675090252708,
+            "support": 139
+          },
+          {
+            "key": "magnesium_deficiency",
+            "name": "Magnesium Deficiency",
+            "precision": 0.75,
+            "recall": 0.6428571428571429,
+            "f1": 0.6923076923076923,
+            "support": 14
+          },
+          {
+            "key": "nitrogen_deficiency",
+            "name": "Nitrogen Deficiency",
+            "precision": 0.6666666666666666,
+            "recall": 0.8571428571428571,
+            "f1": 0.75,
+            "support": 7
+          },
+          {
+            "key": "spotted_wilt_virus",
+            "name": "Spotted Wilt Virus",
+            "precision": 0.9090909090909091,
+            "recall": 0.8974358974358975,
+            "f1": 0.9032258064516129,
+            "support": 78
+          }
+        ],
+        "confusion_matrix": [
+          [
+            22,
+            4,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            127,
+            1,
+            1,
+            5
+          ],
+          [
+            0,
+            1,
+            9,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            6,
+            0
+          ],
+          [
+            2,
+            6,
+            0,
+            0,
+            70
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "key": "efficientnet_b0_5class_tta",
+        "name": "EfficientNet-B0 (5-class) + TTA",
+        "family": "Deep Learning",
+        "type": "tta",
+        "feature_set": "Learned features (ImageNet-pretrained EfficientNet-B0, 256px); averaged over 8 test-time views",
+        "best_params": {
+          "best_epoch": 24,
+          "epochs_run": 34,
+          "tta_views": 8
+        },
+        "train_time_s": 185.11227440001676,
+        "inference_ms_per_image": 113.6467499891296,
+        "params": 4013953,
+        "val": {
+          "accuracy": 0.8846153846153846,
+          "precision_macro": 0.8386252074783103,
+          "recall_macro": 0.9040152541522405,
+          "f1_macro": 0.8559377454130077,
+          "f1_weighted": 0.8906137840170824
+        },
+        "test": {
+          "accuracy": 0.8943396226415095,
+          "precision_macro": 0.7883881922675026,
+          "recall_macro": 0.8420050772568759,
+          "f1_macro": 0.8123062972227277,
+          "f1_weighted": 0.8959795758981449,
+          "accuracy_ci": [
+            0.8554588428442029,
+            0.927542771935332
+          ],
+          "f1_macro_ci": [
+            0.7102909999944715,
+            0.8841012320409678
+          ]
+        },
+        "per_class": [
+          {
+            "key": "healthy",
+            "name": "Healthy",
+            "precision": 0.7241379310344828,
+            "recall": 0.7777777777777778,
+            "f1": 0.75,
+            "support": 27
+          },
+          {
+            "key": "leaf_miner",
+            "name": "Leaf Miner",
+            "precision": 0.946969696969697,
+            "recall": 0.8992805755395683,
+            "f1": 0.922509225092251,
+            "support": 139
+          },
+          {
+            "key": "magnesium_deficiency",
+            "name": "Magnesium Deficiency",
+            "precision": 0.6666666666666666,
+            "recall": 0.7142857142857143,
+            "f1": 0.6896551724137931,
+            "support": 14
+          },
+          {
+            "key": "nitrogen_deficiency",
+            "name": "Nitrogen Deficiency",
+            "precision": 0.6666666666666666,
+            "recall": 0.8571428571428571,
+            "f1": 0.75,
+            "support": 7
+          },
+          {
+            "key": "spotted_wilt_virus",
+            "name": "Spotted Wilt Virus",
+            "precision": 0.9375,
+            "recall": 0.9615384615384616,
+            "f1": 0.9493670886075949,
+            "support": 78
+          }
+        ],
+        "confusion_matrix": [
+          [
+            21,
+            5,
+            1,
+            0,
+            0
+          ],
+          [
+            6,
+            125,
+            3,
+            1,
+            4
+          ],
+          [
+            0,
+            1,
+            10,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            6,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            75
+          ]
+        ],
+        "selected": false
+      },
+      {
+        "key": "ensemble_5class",
+        "name": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+        "family": "Deep Learning",
+        "type": "ensemble",
+        "feature_set": "Average of calibrated probabilities: ConvNeXt-Tiny (single view) + EfficientNet-B0 (8-view TTA)",
+        "best_params": {
+          "members": [
+            "convnext_tiny_5class",
+            "efficientnet_b0_5class"
+          ]
+        },
+        "train_time_s": 491.1850576000288,
+        "inference_ms_per_image": 149.60550000250805,
+        "params": 31837926,
+        "val": {
+          "accuracy": 0.9195804195804196,
+          "precision_macro": 0.9225532879818594,
+          "recall_macro": 0.9182934417180993,
+          "f1_macro": 0.9118918918918919,
+          "f1_weighted": 0.921986571986572
+        },
+        "test": {
+          "accuracy": 0.909433962264151,
+          "precision_macro": 0.820773603906134,
+          "recall_macro": 0.8559795387133515,
+          "f1_macro": 0.8354303557528329,
+          "f1_weighted": 0.9097497304478105,
+          "accuracy_ci": [
+            0.8725868725868726,
+            0.9427535337996691
+          ],
+          "f1_macro_ci": [
+            0.7380293065546798,
+            0.9068306385669255
+          ]
+        },
+        "per_class": [
+          {
+            "key": "healthy",
+            "name": "Healthy",
+            "precision": 0.7857142857142857,
+            "recall": 0.8148148148148148,
+            "f1": 0.8,
+            "support": 27
+          },
+          {
+            "key": "leaf_miner",
+            "name": "Leaf Miner",
+            "precision": 0.9545454545454546,
+            "recall": 0.9064748201438849,
+            "f1": 0.9298892988929889,
+            "support": 139
+          },
+          {
+            "key": "magnesium_deficiency",
+            "name": "Magnesium Deficiency",
+            "precision": 0.7692307692307693,
+            "recall": 0.7142857142857143,
+            "f1": 0.7407407407407407,
+            "support": 14
+          },
+          {
+            "key": "nitrogen_deficiency",
+            "name": "Nitrogen Deficiency",
+            "precision": 0.6666666666666666,
+            "recall": 0.8571428571428571,
+            "f1": 0.75,
+            "support": 7
+          },
+          {
+            "key": "spotted_wilt_virus",
+            "name": "Spotted Wilt Virus",
+            "precision": 0.927710843373494,
+            "recall": 0.9871794871794872,
+            "f1": 0.9565217391304348,
+            "support": 78
+          }
+        ],
+        "confusion_matrix": [
+          [
+            22,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            126,
+            2,
+            1,
+            5
+          ],
+          [
+            0,
+            1,
+            10,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            6,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            77
+          ]
+        ],
+        "selected": true
+      }
+    ],
+    "curves": {
+      "convnext_tiny": [
+        {
+          "epoch": 1,
+          "stage": "frozen",
+          "train_loss": 1.318361154773779,
+          "val_loss": 1.0712155428799717,
+          "train_acc": 0.6264619883040936,
+          "val_acc": 0.6503496503496503,
+          "val_f1_macro": 0.5885387681943531,
+          "lr": 0.001
+        },
+        {
+          "epoch": 2,
+          "stage": "frozen",
+          "train_loss": 0.9672071083247313,
+          "val_loss": 0.9315963354144063,
+          "train_acc": 0.756578947368421,
+          "val_acc": 0.7727272727272727,
+          "val_f1_macro": 0.6738598057049687,
+          "lr": 0.001
+        },
+        {
+          "epoch": 3,
+          "stage": "frozen",
+          "train_loss": 0.8779494250029848,
+          "val_loss": 0.8844892095018934,
+          "train_acc": 0.7843567251461988,
+          "val_acc": 0.7867132867132867,
+          "val_f1_macro": 0.7051787885555473,
+          "lr": 0.001
+        },
+        {
+          "epoch": 4,
+          "stage": "frozen",
+          "train_loss": 0.8213568479694121,
+          "val_loss": 0.8739033137168084,
+          "train_acc": 0.7967836257309941,
+          "val_acc": 0.7832167832167832,
+          "val_f1_macro": 0.7135008306659456,
+          "lr": 0.001
+        },
+        {
+          "epoch": 5,
+          "stage": "frozen",
+          "train_loss": 0.7917982698881139,
+          "val_loss": 0.8655280270776549,
+          "train_acc": 0.8114035087719298,
+          "val_acc": 0.7902097902097902,
+          "val_f1_macro": 0.7130787370103917,
+          "lr": 0.001
+        },
+        {
+          "epoch": 6,
+          "stage": "finetune",
+          "train_loss": 0.8055510716131556,
+          "val_loss": 0.8107937932848097,
+          "train_acc": 0.7858187134502924,
+          "val_acc": 0.8006993006993007,
+          "val_f1_macro": 0.7665671902855797,
+          "lr": 1e-05
+        },
+        {
+          "epoch": 7,
+          "stage": "finetune",
+          "train_loss": 0.7583209865274485,
+          "val_loss": 0.7856548170109728,
+          "train_acc": 0.8157894736842105,
+          "val_acc": 0.8041958041958042,
+          "val_f1_macro": 0.7235432610045613,
+          "lr": 5.5e-05
+        },
+        {
+          "epoch": 8,
+          "stage": "finetune",
+          "train_loss": 0.6715546919588458,
+          "val_loss": 0.7145735050414825,
+          "train_acc": 0.8618421052631579,
+          "val_acc": 0.8391608391608392,
+          "val_f1_macro": 0.7800493879175151,
+          "lr": 0.0001
+        },
+        {
+          "epoch": 9,
+          "stage": "finetune",
+          "train_loss": 0.6377751130109642,
+          "val_loss": 0.693602921245815,
+          "train_acc": 0.8698830409356725,
+          "val_acc": 0.8671328671328671,
+          "val_f1_macro": 0.854794144822602,
+          "lr": 9.968875438971552e-05
+        },
+        {
+          "epoch": 10,
+          "stage": "finetune",
+          "train_loss": 0.5375662843386332,
+          "val_loss": 0.6103346904257795,
+          "train_acc": 0.9166666666666666,
+          "val_acc": 0.8846153846153846,
+          "val_f1_macro": 0.8831140492147164,
+          "lr": 9.875893165300026e-05
+        },
+        {
+          "epoch": 11,
+          "stage": "finetune",
+          "train_loss": 0.5551537508852997,
+          "val_loss": 0.6274379268809632,
+          "train_acc": 0.9239766081871345,
+          "val_acc": 0.8916083916083916,
+          "val_f1_macro": 0.8732417908888497,
+          "lr": 9.722222485026419e-05
+        },
+        {
+          "epoch": 12,
+          "stage": "finetune",
+          "train_loss": 0.5133506362898308,
+          "val_loss": 0.6529566276740361,
+          "train_acc": 0.9276315789473685,
+          "val_acc": 0.8741258741258742,
+          "val_f1_macro": 0.8424123143292693,
+          "lr": 9.509795896116974e-05
+        },
+        {
+          "epoch": 13,
+          "stage": "finetune",
+          "train_loss": 0.4804359001722949,
+          "val_loss": 0.6450456245379015,
+          "train_acc": 0.9466374269005848,
+          "val_acc": 0.9020979020979021,
+          "val_f1_macro": 0.8820754511850402,
+          "lr": 9.241284786180005e-05
+        },
+        {
+          "epoch": 14,
+          "stage": "finetune",
+          "train_loss": 0.48027046695787307,
+          "val_loss": 0.6678951918245195,
+          "train_acc": 0.952485380116959,
+          "val_acc": 0.8811188811188811,
+          "val_f1_macro": 0.8483182674237741,
+          "lr": 8.920065838216747e-05
+        },
+        {
+          "epoch": 15,
+          "stage": "finetune",
+          "train_loss": 0.4670170742517326,
+          "val_loss": 0.6018106929072133,
+          "train_acc": 0.9656432748538012,
+          "val_acc": 0.9055944055944056,
+          "val_f1_macro": 0.8966069254508083,
+          "lr": 8.550178566873408e-05
+        },
+        {
+          "epoch": 16,
+          "stage": "finetune",
+          "train_loss": 0.44663323418438783,
+          "val_loss": 0.6525036259130998,
+          "train_acc": 0.9714912280701754,
+          "val_acc": 0.8706293706293706,
+          "val_f1_macro": 0.8388595245126315,
+          "lr": 8.13627451920073e-05
+        },
+        {
+          "epoch": 17,
+          "stage": "finetune",
+          "train_loss": 0.4528919341619949,
+          "val_loss": 0.6131112421309197,
+          "train_acc": 0.966374269005848,
+          "val_acc": 0.916083916083916,
+          "val_f1_macro": 0.8815619180592833,
+          "lr": 7.683558778750915e-05
+        },
+        {
+          "epoch": 18,
+          "stage": "finetune",
+          "train_loss": 0.4314866477285909,
+          "val_loss": 0.6071744004746417,
+          "train_acc": 0.9766081871345029,
+          "val_acc": 0.9125874125874126,
+          "val_f1_macro": 0.8999730631408571,
+          "lr": 7.197724508631912e-05
+        },
+        {
+          "epoch": 19,
+          "stage": "finetune",
+          "train_loss": 0.42562091594551044,
+          "val_loss": 0.6205294722026878,
+          "train_acc": 0.97953216374269,
+          "val_acc": 0.8951048951048951,
+          "val_f1_macro": 0.8623084627234724,
+          "lr": 6.684881356678078e-05
+        },
+        {
+          "epoch": 20,
+          "stage": "finetune",
+          "train_loss": 0.42546588931864465,
+          "val_loss": 0.5941168793014713,
+          "train_acc": 0.9802631578947368,
+          "val_acc": 0.9125874125874126,
+          "val_f1_macro": 0.8827903086785597,
+          "lr": 6.151478623083756e-05
+        },
+        {
+          "epoch": 21,
+          "stage": "finetune",
+          "train_loss": 0.42350710222595617,
+          "val_loss": 0.6074323920936852,
+          "train_acc": 0.9831871345029239,
+          "val_acc": 0.9090909090909091,
+          "val_f1_macro": 0.9012792136360921,
+          "lr": 5.604224156711373e-05
+        },
+        {
+          "epoch": 22,
+          "stage": "finetune",
+          "train_loss": 0.4150815679315935,
+          "val_loss": 0.6117704958765657,
+          "train_acc": 0.9897660818713451,
+          "val_acc": 0.9055944055944056,
+          "val_f1_macro": 0.8705561610344996,
+          "lr": 5.05e-05
+        },
+        {
+          "epoch": 23,
+          "stage": "finetune",
+          "train_loss": 0.4150713610718822,
+          "val_loss": 0.6289836591357117,
+          "train_acc": 0.9904970760233918,
+          "val_acc": 0.8916083916083916,
+          "val_f1_macro": 0.8629891020878557,
+          "lr": 4.4957758432886274e-05
+        },
+        {
+          "epoch": 24,
+          "stage": "finetune",
+          "train_loss": 0.41054197745016446,
+          "val_loss": 0.6064674387444983,
+          "train_acc": 0.9926900584795322,
+          "val_acc": 0.9125874125874126,
+          "val_f1_macro": 0.8786666426310257,
+          "lr": 3.948521376916244e-05
+        },
+        {
+          "epoch": 25,
+          "stage": "finetune",
+          "train_loss": 0.4143477629499826,
+          "val_loss": 0.6146206413949287,
+          "train_acc": 0.9824561403508771,
+          "val_acc": 0.9055944055944056,
+          "val_f1_macro": 0.8715411839235472,
+          "lr": 3.4151186433219223e-05
+        },
+        {
+          "epoch": 26,
+          "stage": "finetune",
+          "train_loss": 0.40890673848620634,
+          "val_loss": 0.6066565011347924,
+          "train_acc": 0.9926900584795322,
+          "val_acc": 0.916083916083916,
+          "val_f1_macro": 0.8859065156572543,
+          "lr": 2.9022754913680878e-05
+        },
+        {
+          "epoch": 27,
+          "stage": "finetune",
+          "train_loss": 0.4043855783883591,
+          "val_loss": 0.6035450215523059,
+          "train_acc": 0.9963450292397661,
+          "val_acc": 0.9195804195804196,
+          "val_f1_macro": 0.881034648855207,
+          "lr": 2.4164412212490847e-05
+        },
+        {
+          "epoch": 28,
+          "stage": "finetune",
+          "train_loss": 0.40413239824841596,
+          "val_loss": 0.6096832570912954,
+          "train_acc": 0.9941520467836257,
+          "val_acc": 0.9195804195804196,
+          "val_f1_macro": 0.8829197650389704,
+          "lr": 1.9637254807992694e-05
+        },
+        {
+          "epoch": 29,
+          "stage": "finetune",
+          "train_loss": 0.41051101370861653,
+          "val_loss": 0.5999705628915266,
+          "train_acc": 0.9897660818713451,
+          "val_acc": 0.9125874125874126,
+          "val_f1_macro": 0.8915967520513505,
+          "lr": 1.54982143312659e-05
+        },
+        {
+          "epoch": 30,
+          "stage": "finetune",
+          "train_loss": 0.4059247672557831,
+          "val_loss": 0.5988509771707174,
+          "train_acc": 0.9904970760233918,
+          "val_acc": 0.9195804195804196,
+          "val_f1_macro": 0.8961748946314891,
+          "lr": 1.1799341617832541e-05
+        },
+        {
+          "epoch": 31,
+          "stage": "finetune",
+          "train_loss": 0.40358289849688433,
+          "val_loss": 0.5971980459623404,
+          "train_acc": 0.9941520467836257,
+          "val_acc": 0.9195804195804196,
+          "val_f1_macro": 0.8970354032503869,
+          "lr": 8.587152138199936e-06
+        }
+      ],
+      "efficientnet_b0": [
+        {
+          "epoch": 1,
+          "stage": "frozen",
+          "train_loss": 1.3532677941155016,
+          "val_loss": 1.1110872138630261,
+          "train_acc": 0.5555555555555556,
+          "val_acc": 0.6223776223776224,
+          "val_f1_macro": 0.5664091718096295,
+          "lr": 0.001
+        },
+        {
+          "epoch": 2,
+          "stage": "frozen",
+          "train_loss": 1.0371033151944478,
+          "val_loss": 1.0027380523148117,
+          "train_acc": 0.6739766081871345,
+          "val_acc": 0.6608391608391608,
+          "val_f1_macro": 0.6090166333936675,
+          "lr": 0.001
+        },
+        {
+          "epoch": 3,
+          "stage": "frozen",
+          "train_loss": 0.9303393468522189,
+          "val_loss": 0.9482411046128173,
+          "train_acc": 0.7244152046783626,
+          "val_acc": 0.7377622377622378,
+          "val_f1_macro": 0.6434732227939776,
+          "lr": 0.001
+        },
+        {
+          "epoch": 4,
+          "stage": "frozen",
+          "train_loss": 0.884606653486776,
+          "val_loss": 0.9433188946930678,
+          "train_acc": 0.7463450292397661,
+          "val_acc": 0.7272727272727273,
+          "val_f1_macro": 0.65456529471253,
+          "lr": 0.001
+        },
+        {
+          "epoch": 5,
+          "stage": "frozen",
+          "train_loss": 0.8524202143239696,
+          "val_loss": 0.9172834724813075,
+          "train_acc": 0.756578947368421,
+          "val_acc": 0.7832167832167832,
+          "val_f1_macro": 0.7183454442697534,
+          "lr": 0.001
+        },
+        {
+          "epoch": 6,
+          "stage": "finetune",
+          "train_loss": 1.2839066403651098,
+          "val_loss": 1.1029744831832138,
+          "train_acc": 0.4152046783625731,
+          "val_acc": 0.5734265734265734,
+          "val_f1_macro": 0.4887795275160835,
+          "lr": 2.9999999999999997e-05
+        },
+        {
+          "epoch": 7,
+          "stage": "finetune",
+          "train_loss": 0.8755008895494785,
+          "val_loss": 0.8533146164634011,
+          "train_acc": 0.7207602339181286,
+          "val_acc": 0.7097902097902098,
+          "val_f1_macro": 0.6168542931226442,
+          "lr": 0.000165
+        },
+        {
+          "epoch": 8,
+          "stage": "finetune",
+          "train_loss": 0.7471179662392153,
+          "val_loss": 0.8750957959181779,
+          "train_acc": 0.8128654970760234,
+          "val_acc": 0.7097902097902098,
+          "val_f1_macro": 0.6313830413226874,
+          "lr": 0.0003
+        },
+        {
+          "epoch": 9,
+          "stage": "finetune",
+          "train_loss": 0.6510649490774724,
+          "val_loss": 0.857791289166137,
+          "train_acc": 0.8698830409356725,
+          "val_acc": 0.7657342657342657,
+          "val_f1_macro": 0.7463229160801096,
+          "lr": 0.00029906626316914654
+        },
+        {
+          "epoch": 10,
+          "stage": "finetune",
+          "train_loss": 0.6349221284975085,
+          "val_loss": 0.7979242284814795,
+          "train_acc": 0.8786549707602339,
+          "val_acc": 0.7307692307692307,
+          "val_f1_macro": 0.6784277995600921,
+          "lr": 0.0002962767949590008
+        },
+        {
+          "epoch": 11,
+          "stage": "finetune",
+          "train_loss": 0.5702770533617477,
+          "val_loss": 0.7275754713511967,
+          "train_acc": 0.8808479532163743,
+          "val_acc": 0.8076923076923077,
+          "val_f1_macro": 0.7405815602836879,
+          "lr": 0.0002916666745507926
+        },
+        {
+          "epoch": 12,
+          "stage": "finetune",
+          "train_loss": 0.5472343529176991,
+          "val_loss": 0.6953932530396468,
+          "train_acc": 0.9166666666666666,
+          "val_acc": 0.8181818181818182,
+          "val_f1_macro": 0.7545611809311552,
+          "lr": 0.00028529387688350927
+        },
+        {
+          "epoch": 13,
+          "stage": "finetune",
+          "train_loss": 0.5276164858661897,
+          "val_loss": 0.7149548322170765,
+          "train_acc": 0.9261695906432749,
+          "val_acc": 0.8181818181818182,
+          "val_f1_macro": 0.7858073747156774,
+          "lr": 0.00027723854358540023
+        },
+        {
+          "epoch": 14,
+          "stage": "finetune",
+          "train_loss": 0.527095731936003,
+          "val_loss": 0.6612824997701845,
+          "train_acc": 0.9276315789473685,
+          "val_acc": 0.8426573426573427,
+          "val_f1_macro": 0.8281741443970546,
+          "lr": 0.0002676019751465025
+        },
+        {
+          "epoch": 15,
+          "stage": "finetune",
+          "train_loss": 0.5048216281578555,
+          "val_loss": 0.6359149296800574,
+          "train_acc": 0.9407894736842105,
+          "val_acc": 0.8531468531468531,
+          "val_f1_macro": 0.8042862374569693,
+          "lr": 0.00025650535700620235
+        },
+        {
+          "epoch": 16,
+          "stage": "finetune",
+          "train_loss": 0.49104470014572144,
+          "val_loss": 0.6634352069634658,
+          "train_acc": 0.9444444444444444,
+          "val_acc": 0.8251748251748252,
+          "val_f1_macro": 0.7738445581131003,
+          "lr": 0.00024408823557602196
+        },
+        {
+          "epoch": 17,
+          "stage": "finetune",
+          "train_loss": 0.4855528013748035,
+          "val_loss": 0.6561784510845905,
+          "train_acc": 0.9576023391812866,
+          "val_acc": 0.8531468531468531,
+          "val_f1_macro": 0.8080043971138341,
+          "lr": 0.00023050676336252752
+        },
+        {
+          "epoch": 18,
+          "stage": "finetune",
+          "train_loss": 0.47859868877812434,
+          "val_loss": 0.6947921435316126,
+          "train_acc": 0.9539473684210527,
+          "val_acc": 0.8566433566433567,
+          "val_f1_macro": 0.7631634187890688,
+          "lr": 0.0002159317352589574
+        },
+        {
+          "epoch": 19,
+          "stage": "finetune",
+          "train_loss": 0.470206173888424,
+          "val_loss": 0.7107973446795991,
+          "train_acc": 0.9510233918128655,
+          "val_acc": 0.8356643356643356,
+          "val_f1_macro": 0.8077996704431515,
+          "lr": 0.00020054644070034236
+        },
+        {
+          "epoch": 20,
+          "stage": "finetune",
+          "train_loss": 0.4616721150470756,
+          "val_loss": 0.6490348742141591,
+          "train_acc": 0.9568713450292398,
+          "val_acc": 0.8601398601398601,
+          "val_f1_macro": 0.8100536994351428,
+          "lr": 0.0001845443586925127
+        },
+        {
+          "epoch": 21,
+          "stage": "finetune",
+          "train_loss": 0.45768551885733133,
+          "val_loss": 0.6393799450430837,
+          "train_acc": 0.9641812865497076,
+          "val_acc": 0.8741258741258742,
+          "val_f1_macro": 0.8163202136494574,
+          "lr": 0.0001681267247013412
+        },
+        {
+          "epoch": 22,
+          "stage": "finetune",
+          "train_loss": 0.4630859567407976,
+          "val_loss": 0.6401539663751642,
+          "train_acc": 0.9649122807017544,
+          "val_acc": 0.8531468531468531,
+          "val_f1_macro": 0.8130292016820475,
+          "lr": 0.00015150000000000002
+        },
+        {
+          "epoch": 23,
+          "stage": "finetune",
+          "train_loss": 0.44008623629982707,
+          "val_loss": 0.6266229317321644,
+          "train_acc": 0.9751461988304093,
+          "val_acc": 0.8811188811188811,
+          "val_f1_macro": 0.8298268832907387,
+          "lr": 0.00013487327529865885
+        },
+        {
+          "epoch": 24,
+          "stage": "finetune",
+          "train_loss": 0.4372284957888531,
+          "val_loss": 0.6431519287032681,
+          "train_acc": 0.9839181286549707,
+          "val_acc": 0.8776223776223776,
+          "val_f1_macro": 0.8499969063379315,
+          "lr": 0.00011845564130748736
+        },
+        {
+          "epoch": 25,
+          "stage": "finetune",
+          "train_loss": 0.4501344762001818,
+          "val_loss": 0.6558999229561199,
+          "train_acc": 0.9736842105263158,
+          "val_acc": 0.8636363636363636,
+          "val_f1_macro": 0.8067609945731128,
+          "lr": 0.00010245355929965771
+        },
+        {
+          "epoch": 26,
+          "stage": "finetune",
+          "train_loss": 0.44201185323341546,
+          "val_loss": 0.6545413157323023,
+          "train_acc": 0.9744152046783626,
+          "val_acc": 0.8706293706293706,
+          "val_f1_macro": 0.8201505010606394,
+          "lr": 8.706826474104266e-05
+        },
+        {
+          "epoch": 27,
+          "stage": "finetune",
+          "train_loss": 0.43834907095334685,
+          "val_loss": 0.6626740450208838,
+          "train_acc": 0.9817251461988304,
+          "val_acc": 0.8671328671328671,
+          "val_f1_macro": 0.8316641695184259,
+          "lr": 7.249323663747256e-05
+        },
+        {
+          "epoch": 28,
+          "stage": "finetune",
+          "train_loss": 0.43719988311940466,
+          "val_loss": 0.6536797468478863,
+          "train_acc": 0.9780701754385965,
+          "val_acc": 0.8671328671328671,
+          "val_f1_macro": 0.8225480898716911,
+          "lr": 5.891176442397809e-05
+        },
+        {
+          "epoch": 29,
+          "stage": "finetune",
+          "train_loss": 0.42957163972464224,
+          "val_loss": 0.6709518943216417,
+          "train_acc": 0.9817251461988304,
+          "val_acc": 0.8636363636363636,
+          "val_f1_macro": 0.8225986772219572,
+          "lr": 4.649464299379771e-05
+        },
+        {
+          "epoch": 30,
+          "stage": "finetune",
+          "train_loss": 0.42821331034626875,
+          "val_loss": 0.6636363382522876,
+          "train_acc": 0.9890350877192983,
+          "val_acc": 0.8706293706293706,
+          "val_f1_macro": 0.830595238095238,
+          "lr": 3.539802485349763e-05
+        },
+        {
+          "epoch": 31,
+          "stage": "finetune",
+          "train_loss": 0.4306130193130315,
+          "val_loss": 0.6619536855837682,
+          "train_acc": 0.9846491228070176,
+          "val_acc": 0.8671328671328671,
+          "val_f1_macro": 0.8259847984696901,
+          "lr": 2.5761456414599812e-05
+        },
+        {
+          "epoch": 32,
+          "stage": "finetune",
+          "train_loss": 0.4371250515792802,
+          "val_loss": 0.650813821104023,
+          "train_acc": 0.97953216374269,
+          "val_acc": 0.8671328671328671,
+          "val_f1_macro": 0.8225480898716911,
+          "lr": 1.7706123116490777e-05
+        },
+        {
+          "epoch": 33,
+          "stage": "finetune",
+          "train_loss": 0.43300055202684906,
+          "val_loss": 0.6543436073339902,
+          "train_acc": 0.9846491228070176,
+          "val_acc": 0.8601398601398601,
+          "val_f1_macro": 0.8178136686183205,
+          "lr": 1.1333325449207417e-05
+        },
+        {
+          "epoch": 34,
+          "stage": "finetune",
+          "train_loss": 0.4325839268882372,
+          "val_loss": 0.6565522812046372,
+          "train_acc": 0.9846491228070176,
+          "val_acc": 0.8706293706293706,
+          "val_f1_macro": 0.8365536817151085,
+          "lr": 6.723205040999177e-06
+        }
+      ]
+    }
+  },
+  "deployment_scope": {
+    "default_model": "ensemble_5class",
+    "classes": [
+      "healthy",
+      "leaf_miner",
+      "magnesium_deficiency",
+      "nitrogen_deficiency",
+      "spotted_wilt_virus"
+    ],
+    "note": "The web app's default model is the focused 5-class model (Healthy plus the four conditions recognised most reliably on validation data). The 8-class models stay available in the model selector."
+  },
+  "deployment_check": {
+    "generated_at": "2026-11-18T15:35:07+00:00",
+    "path": "POST /api/predict with each original photo's file bytes (FastAPI TestClient, no explanation)",
+    "device": "cpu",
+    "model_key": "ensemble_5class",
+    "model_name": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+    "classes": [
+      "healthy",
+      "leaf_miner",
+      "magnesium_deficiency",
+      "nitrogen_deficiency",
+      "spotted_wilt_virus"
+    ],
+    "threshold": 0.77,
+    "val": {
+      "in_scope": {
+        "photos": 286,
+        "answered": 248,
+        "answered_correct": 236,
+        "referred": 38,
+        "referred_correct": 27,
+        "coverage": 0.8671328671328671,
+        "accuracy_answered": 0.9516129032258065,
+        "accuracy_referred": 0.7105263157894737,
+        "accuracy_all": 0.9195804195804196,
+        "confusion_matrix": [
+          [
+            34,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            15,
+            140,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            12,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            71
+          ]
+        ],
+        "borderline": [
+          {
+            "path": "val/Leaf Miner/IMG20220325134125.jpg",
+            "true": "leaf_miner",
+            "pred": "healthy",
+            "confidence": 0.7694077491760254,
+            "uncertain": true
+          }
+        ]
+      },
+      "out_of_scope": {
+        "photos": 25,
+        "referred": 8,
+        "answered": 17,
+        "by_class": {
+          "early_blight": {
+            "photos": 10,
+            "referred": 1,
+            "answered_as": {
+              "leaf_miner": 1,
+              "spotted_wilt_virus": 8
+            }
+          },
+          "late_blight": {
+            "photos": 14,
+            "referred": 7,
+            "answered_as": {
+              "spotted_wilt_virus": 6,
+              "nitrogen_deficiency": 1
+            }
+          },
+          "potassium_deficiency": {
+            "photos": 1,
+            "referred": 0,
+            "answered_as": {
+              "magnesium_deficiency": 1
+            }
+          }
+        }
+      }
+    },
+    "test": {
+      "in_scope": {
+        "photos": 265,
+        "answered": 225,
+        "answered_correct": 216,
+        "referred": 40,
+        "referred_correct": 25,
+        "coverage": 0.8490566037735849,
+        "accuracy_answered": 0.96,
+        "accuracy_referred": 0.625,
+        "accuracy_all": 0.909433962264151,
+        "confusion_matrix": [
+          [
+            22,
+            5,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            126,
+            2,
+            1,
+            5
+          ],
+          [
+            0,
+            1,
+            10,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            6,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            77
+          ]
+        ],
+        "borderline": [
+          {
+            "path": "train/Spotted Wilt Virus/IMG20220323185738.jpg",
+            "true": "spotted_wilt_virus",
+            "pred": "spotted_wilt_virus",
+            "confidence": 0.7693102955818176,
+            "uncertain": true
+          },
+          {
+            "path": "train/Spotted Wilt Virus/IMG20220323094227.jpg",
+            "true": "spotted_wilt_virus",
+            "pred": "spotted_wilt_virus",
+            "confidence": 0.7746888399124146,
+            "uncertain": false
+          }
+        ]
+      },
+      "out_of_scope": {
+        "photos": 25,
+        "referred": 3,
+        "answered": 22,
+        "by_class": {
+          "early_blight": {
+            "photos": 8,
+            "referred": 1,
+            "answered_as": {
+              "spotted_wilt_virus": 6,
+              "leaf_miner": 1
+            }
+          },
+          "late_blight": {
+            "photos": 15,
+            "referred": 2,
+            "answered_as": {
+              "spotted_wilt_virus": 13
+            }
+          },
+          "potassium_deficiency": {
+            "photos": 2,
+            "referred": 0,
+            "answered_as": {
+              "spotted_wilt_virus": 1,
+              "nitrogen_deficiency": 1
+            }
+          }
+        }
+      }
+    },
+    "mean_request_ms": 188.8201366057724,
+    "comparison_with_offline": {
+      "val": {
+        "same_predictions": true,
+        "offline_accuracy_all": 0.9195804195804196,
+        "deployed_accuracy_all": 0.9195804195804196,
+        "offline_answered": 248,
+        "deployed_answered": 248,
+        "offline_answered_correct": 236,
+        "deployed_answered_correct": 236,
+        "offline_coverage": 0.8671328671328671,
+        "deployed_coverage": 0.8671328671328671,
+        "offline_accuracy_answered": 0.9516129032258065,
+        "deployed_accuracy_answered": 0.9516129032258065
+      },
+      "test": {
+        "same_predictions": true,
+        "offline_accuracy_all": 0.909433962264151,
+        "deployed_accuracy_all": 0.909433962264151,
+        "offline_answered": 226,
+        "deployed_answered": 225,
+        "offline_answered_correct": 217,
+        "deployed_answered_correct": 216,
+        "offline_coverage": 0.8528301886792453,
+        "deployed_coverage": 0.8490566037735849,
+        "offline_accuracy_answered": 0.9601769911504425,
+        "deployed_accuracy_answered": 0.96
+      }
+    }
+  },
+  "calibration": {
+    "model_key": "convnext_tiny_v2_tta",
+    "temperature": 0.8957107571387836,
+    "ece_before": 0.08823064226454821,
+    "ece_after": 0.07371748306475127,
+    "confidence_threshold": 0.6,
+    "threshold_rule": "Predictions whose top probability is below 0.60 are shown as 'Uncertain'."
+  }
+}

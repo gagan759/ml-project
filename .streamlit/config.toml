@@ -1,0 +1,58 @@
+# Tomato Care — Streamlit theme and server settings (light and dark themes; the viewer's system setting picks one).
+
+[theme]
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "Sora:https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&display=swap"
+codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+baseFontSize = 15
+headingFontWeights = [700, 650, 600, 600, 600, 600]
+baseRadius = "0.8rem"
+buttonRadius = "0.65rem"
+showWidgetBorder = true
+chartCategoricalColors = ["#22a262", "#0891b2", "#f29a16", "#f0543f", "#7c3aed", "#64748b", "#46be7d", "#db2777"]
+
+[theme.light]
+primaryColor = "#15834e"
+backgroundColor = "#f6f8f4"
+secondaryBackgroundColor = "#ecf2ea"
+textColor = "#0e1a14"
+borderColor = "#d9e3d6"
+linkColor = "#15834e"
+greenColor = "#15834e"
+redColor = "#db3a25"
+orangeColor = "#d6760b"
+blueColor = "#0e7490"
+violetColor = "#7c3aed"
+codeBackgroundColor = "#ecf2ea"
+dataframeHeaderBackgroundColor = "#ecf2ea"
+
+[theme.light.sidebar]
+backgroundColor = "#ecf2ea"
+
+[theme.dark]
+primaryColor = "#46be7d"
+backgroundColor = "#070c09"
+secondaryBackgroundColor = "#111a15"
+textColor = "#e9f0ec"
+borderColor = "#24332b"
+linkColor = "#7dd8a4"
+greenColor = "#46be7d"
+redColor = "#fb7a69"
+orangeColor = "#f8b73e"
+blueColor = "#38bdf8"
+violetColor = "#a78bfa"
+codeBackgroundColor = "#111a15"
+dataframeHeaderBackgroundColor = "#111a15"
+
+[theme.dark.sidebar]
+backgroundColor = "#0b120e"
+
+[server]
+maxUploadSize = 10          # MB, same limit as the REST API
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "viewer"
+showErrorDetails = "none"

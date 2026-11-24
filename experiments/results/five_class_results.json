@@ -1,0 +1,1486 @@
+{
+  "classes": [
+    "healthy",
+    "leaf_miner",
+    "magnesium_deficiency",
+    "nitrogen_deficiency",
+    "spotted_wilt_virus"
+  ],
+  "class_names": [
+    "Healthy",
+    "Leaf Miner",
+    "Magnesium Deficiency",
+    "Nitrogen Deficiency",
+    "Spotted Wilt Virus"
+  ],
+  "rule": "Healthy plus the four conditions with the highest validation F1 under the selected 8-class model (validation data only; the test set played no part)",
+  "val_f1_8class_model": {
+    "early_blight": 0.7777777777777777,
+    "healthy": 0.8,
+    "late_blight": 0.6666666666666666,
+    "leaf_miner": 0.9292929292929293,
+    "magnesium_deficiency": 0.7999999999999999,
+    "nitrogen_deficiency": 0.9090909090909091,
+    "potassium_deficiency": 0.0,
+    "spotted_wilt_virus": 0.8930817610062893
+  },
+  "dropped": [
+    "early_blight",
+    "late_blight",
+    "potassium_deficiency"
+  ],
+  "split": {
+    "train": 1368,
+    "val": 286,
+    "test": 265,
+    "test_leaf_groups": 235,
+    "per_class": [
+      {
+        "key": "healthy",
+        "name": "Healthy",
+        "train": 154,
+        "val": 35,
+        "test": 27
+      },
+      {
+        "key": "leaf_miner",
+        "name": "Leaf Miner",
+        "train": 729,
+        "val": 156,
+        "test": 139
+      },
+      {
+        "key": "magnesium_deficiency",
+        "name": "Magnesium Deficiency",
+        "train": 87,
+        "val": 16,
+        "test": 14
+      },
+      {
+        "key": "nitrogen_deficiency",
+        "name": "Nitrogen Deficiency",
+        "train": 32,
+        "val": 6,
+        "test": 7
+      },
+      {
+        "key": "spotted_wilt_virus",
+        "name": "Spotted Wilt Virus",
+        "train": 366,
+        "val": 73,
+        "test": 78
+      }
+    ]
+  },
+  "models": [
+    {
+      "name": "Logistic Regression (5-class)",
+      "family": "Machine Learning",
+      "type": "single",
+      "feature_set": "Color",
+      "best_params": {
+        "C": 0.01,
+        "pca": "none"
+      },
+      "cv_f1_macro": 0.5942487684000254,
+      "train_time_s": 0.02174839997314848,
+      "inference_ms_per_image": 5.646249992423691,
+      "path": "ml/logreg_5class.joblib",
+      "key": "logreg_5class",
+      "val": {
+        "accuracy": 0.6713286713286714,
+        "precision_macro": 0.5750997473068227,
+        "recall_macro": 0.672631843042802,
+        "f1_macro": 0.5936622762471482,
+        "f1_weighted": 0.6935461065895848
+      },
+      "val_confusion_matrix": [
+        [
+          26,
+          7,
+          0,
+          0,
+          2
+        ],
+        [
+          52,
+          90,
+          9,
+          0,
+          5
+        ],
+        [
+          0,
+          2,
+          8,
+          4,
+          2
+        ],
+        [
+          0,
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          1,
+          2,
+          64
+        ]
+      ],
+      "test": {
+        "accuracy": 0.6113207547169811,
+        "precision_macro": 0.5582400649463246,
+        "recall_macro": 0.6784565021975093,
+        "f1_macro": 0.5763945748383407,
+        "f1_weighted": 0.636345434713696,
+        "accuracy_ci": [
+          0.5437262357414449,
+          0.6777840909090909
+        ],
+        "f1_macro_ci": [
+          0.4744930662197331,
+          0.6521540956663172
+        ]
+      },
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.2602739726027397,
+          "recall": 0.7037037037037037,
+          "f1": 0.38,
+          "support": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.875,
+          "recall": 0.5035971223021583,
+          "f1": 0.639269406392694,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.36363636363636365,
+          "recall": 0.5714285714285714,
+          "f1": 0.4444444444444444,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.5454545454545454,
+          "recall": 0.8571428571428571,
+          "f1": 0.6666666666666666,
+          "support": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.7468354430379747,
+          "recall": 0.7564102564102564,
+          "f1": 0.7515923566878981,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          19,
+          7,
+          0,
+          0,
+          1
+        ],
+        [
+          43,
+          70,
+          9,
+          1,
+          16
+        ],
+        [
+          0,
+          0,
+          8,
+          3,
+          3
+        ],
+        [
+          0,
+          0,
+          1,
+          6,
+          0
+        ],
+        [
+          11,
+          3,
+          4,
+          1,
+          59
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "SVM (RBF kernel) (5-class)",
+      "family": "Machine Learning",
+      "type": "single",
+      "feature_set": "Color",
+      "best_params": {
+        "C": 10.0,
+        "gamma": 0.01,
+        "pca": "none"
+      },
+      "cv_f1_macro": 0.6035877026365553,
+      "train_time_s": 0.24886629998218268,
+      "inference_ms_per_image": 6.1990999965928495,
+      "path": "ml/svm_5class.joblib",
+      "key": "svm_5class",
+      "val": {
+        "accuracy": 0.7482517482517482,
+        "precision_macro": 0.5946209567806664,
+        "recall_macro": 0.5233595514074966,
+        "f1_macro": 0.5481787836821393,
+        "f1_weighted": 0.7303322053627118
+      },
+      "val_confusion_matrix": [
+        [
+          9,
+          22,
+          1,
+          0,
+          3
+        ],
+        [
+          11,
+          137,
+          2,
+          0,
+          6
+        ],
+        [
+          0,
+          5,
+          5,
+          2,
+          4
+        ],
+        [
+          0,
+          0,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          10,
+          1,
+          0,
+          61
+        ]
+      ],
+      "test": {
+        "accuracy": 0.7471698113207547,
+        "precision_macro": 0.6030526315789474,
+        "recall_macro": 0.5388114416891395,
+        "f1_macro": 0.561635779864446,
+        "f1_weighted": 0.7404916711014775,
+        "accuracy_ci": [
+          0.6940298507462687,
+          0.8
+        ],
+        "f1_macro_ci": [
+          0.449882065921512,
+          0.6640014144292563
+        ]
+      },
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.5789473684210527,
+          "recall": 0.4074074074074074,
+          "f1": 0.4782608695652174,
+          "support": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.7763157894736842,
+          "recall": 0.8489208633093526,
+          "f1": 0.8109965635738832,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.3333333333333333,
+          "recall": 0.35714285714285715,
+          "f1": 0.3448275862068966,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.5,
+          "recall": 0.2857142857142857,
+          "f1": 0.36363636363636365,
+          "support": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.8266666666666667,
+          "recall": 0.7948717948717948,
+          "f1": 0.8104575163398693,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          11,
+          16,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          118,
+          5,
+          0,
+          8
+        ],
+        [
+          0,
+          3,
+          5,
+          2,
+          4
+        ],
+        [
+          0,
+          0,
+          4,
+          2,
+          1
+        ],
+        [
+          0,
+          15,
+          1,
+          0,
+          62
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "Random Forest (5-class)",
+      "family": "Machine Learning",
+      "type": "single",
+      "feature_set": "Color",
+      "best_params": {
+        "max_depth": 20,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "n_estimators": 600
+      },
+      "cv_f1_macro": 0.6447298362045814,
+      "train_time_s": 0.857820500008529,
+      "inference_ms_per_image": 16.417049992014654,
+      "path": "ml/rf_5class.joblib",
+      "key": "rf_5class",
+      "val": {
+        "accuracy": 0.7657342657342657,
+        "precision_macro": 0.7091694253458959,
+        "recall_macro": 0.5485243865723317,
+        "f1_macro": 0.5954418933166294,
+        "f1_weighted": 0.7382216332901118
+      },
+      "val_confusion_matrix": [
+        [
+          6,
+          28,
+          0,
+          0,
+          1
+        ],
+        [
+          8,
+          144,
+          3,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          5,
+          0,
+          7
+        ],
+        [
+          0,
+          0,
+          1,
+          3,
+          2
+        ],
+        [
+          0,
+          11,
+          1,
+          0,
+          61
+        ]
+      ],
+      "test": {
+        "accuracy": 0.7396226415094339,
+        "precision_macro": 0.66703933747412,
+        "recall_macro": 0.5758244686302241,
+        "f1_macro": 0.600990112644248,
+        "f1_weighted": 0.7265370818711717,
+        "accuracy_ci": [
+          0.6813146997929607,
+          0.7947785112897053
+        ],
+        "f1_macro_ci": [
+          0.47989742083691084,
+          0.6946702069520857
+        ]
+      },
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.7272727272727273,
+          "recall": 0.2962962962962963,
+          "f1": 0.42105263157894735,
+          "support": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.7393939393939394,
+          "recall": 0.8776978417266187,
+          "f1": 0.8026315789473685,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.5714285714285714,
+          "recall": 0.5714285714285714,
+          "f1": 0.5714285714285714,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.5,
+          "recall": 0.42857142857142855,
+          "f1": 0.46153846153846156,
+          "support": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.7971014492753623,
+          "recall": 0.7051282051282052,
+          "f1": 0.7482993197278912,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          8,
+          19,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          122,
+          2,
+          1,
+          11
+        ],
+        [
+          0,
+          2,
+          8,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          3,
+          3,
+          1
+        ],
+        [
+          0,
+          22,
+          1,
+          0,
+          55
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "ConvNeXt-Tiny (5-class)",
+      "family": "Deep Learning",
+      "type": "single",
+      "arch": "convnext_tiny",
+      "input_size": 256,
+      "feature_set": "Learned features (ImageNet-pretrained ConvNeXt-Tiny, 256px)",
+      "best_params": {
+        "best_epoch": 21,
+        "epochs_run": 31,
+        "tta_views": 1
+      },
+      "train_time_s": 306.07278320001205,
+      "params": 27823973,
+      "members": [
+        {
+          "key": "convnext_tiny_5class",
+          "path": "dl/clean/convnext_tiny_5class.pt",
+          "temperature": 0.7516078098110994,
+          "tta_views": 1
+        }
+      ],
+      "temperature": 0.7516078098110994,
+      "inference_ms_per_image": 35.95875001337845,
+      "key": "convnext_tiny_5class",
+      "val": {
+        "accuracy": 0.9090909090909091,
+        "precision_macro": 0.913759374627991,
+        "recall_macro": 0.9011505845752421,
+        "f1_macro": 0.901279213636092,
+        "f1_weighted": 0.9108261805436557
+      },
+      "val_confusion_matrix": [
+        [
+          31,
+          3,
+          0,
+          0,
+          1
+        ],
+        [
+          13,
+          140,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          12,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          71
+        ]
+      ],
+      "test": {
+        "accuracy": 0.8981132075471698,
+        "precision_macro": 0.8013854662298734,
+        "recall_macro": 0.8386006213344344,
+        "f1_macro": 0.8169831507838887,
+        "f1_weighted": 0.8990969705743778,
+        "accuracy_ci": [
+          0.8582361546499477,
+          0.9341085271317829
+        ],
+        "f1_macro_ci": [
+          0.7148436286962868,
+          0.889654853597408
+        ]
+      },
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.6896551724137931,
+          "recall": 0.7407407407407407,
+          "f1": 0.7142857142857143,
+          "support": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.9545454545454546,
+          "recall": 0.9064748201438849,
+          "f1": 0.9298892988929889,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.7692307692307693,
+          "recall": 0.7142857142857143,
+          "f1": 0.7407407407407407,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.6666666666666666,
+          "recall": 0.8571428571428571,
+          "f1": 0.75,
+          "support": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.926829268292683,
+          "recall": 0.9743589743589743,
+          "f1": 0.95,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          20,
+          6,
+          0,
+          0,
+          1
+        ],
+        [
+          7,
+          126,
+          2,
+          1,
+          3
+        ],
+        [
+          0,
+          0,
+          10,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          6,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          76
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "ConvNeXt-Tiny (5-class) + TTA",
+      "family": "Deep Learning",
+      "type": "tta",
+      "arch": "convnext_tiny",
+      "input_size": 256,
+      "feature_set": "Learned features (ImageNet-pretrained ConvNeXt-Tiny, 256px); averaged over 8 test-time views",
+      "best_params": {
+        "best_epoch": 21,
+        "epochs_run": 31,
+        "tta_views": 8
+      },
+      "train_time_s": 306.07278320001205,
+      "params": 27823973,
+      "members": [
+        {
+          "key": "convnext_tiny_5class",
+          "path": "dl/clean/convnext_tiny_5class.pt",
+          "temperature": 0.711897878714664,
+          "tta_views": 8
+        }
+      ],
+      "temperature": 0.711897878714664,
+      "inference_ms_per_image": 207.95799999905284,
+      "key": "convnext_tiny_5class_tta",
+      "val": {
+        "accuracy": 0.9125874125874126,
+        "precision_macro": 0.9188601901580856,
+        "recall_macro": 0.8903188820312108,
+        "f1_macro": 0.8923293126475501,
+        "f1_weighted": 0.9129384078070641
+      },
+      "val_confusion_matrix": [
+        [
+          33,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          13,
+          140,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          2,
+          10,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          72
+        ]
+      ],
+      "test": {
+        "accuracy": 0.909433962264151,
+        "precision_macro": 0.8184558639164917,
+        "recall_macro": 0.8548542850701123,
+        "f1_macro": 0.8337766546627305,
+        "f1_weighted": 0.9101835399781425,
+        "accuracy_ci": [
+          0.8702204943386589,
+          0.9431871783876501
+        ],
+        "f1_macro_ci": [
+          0.7322120894215742,
+          0.905567432596388
+        ]
+      },
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.7586206896551724,
+          "recall": 0.8148148148148148,
+          "f1": 0.7857142857142857,
+          "support": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.9477611940298507,
+          "recall": 0.9136690647482014,
+          "f1": 0.9304029304029304,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.7692307692307693,
+          "recall": 0.7142857142857143,
+          "f1": 0.7407407407407407,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.6666666666666666,
+          "recall": 0.8571428571428571,
+          "f1": 0.75,
+          "support": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.95,
+          "recall": 0.9743589743589743,
+          "f1": 0.9620253164556962,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          22,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          127,
+          2,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          10,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          6,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          76
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "EfficientNet-B0 (5-class)",
+      "family": "Deep Learning",
+      "type": "single",
+      "arch": "efficientnet_b0",
+      "input_size": 256,
+      "feature_set": "Learned features (ImageNet-pretrained EfficientNet-B0, 256px)",
+      "best_params": {
+        "best_epoch": 24,
+        "epochs_run": 34,
+        "tta_views": 1
+      },
+      "train_time_s": 185.11227440001676,
+      "params": 4013953,
+      "members": [
+        {
+          "key": "efficientnet_b0_5class",
+          "path": "dl/clean/efficientnet_b0_5class.pt",
+          "temperature": 0.8141135433139249,
+          "tta_views": 1
+        }
+      ],
+      "temperature": 0.8141135433139249,
+      "inference_ms_per_image": 26.987699995515868,
+      "key": "efficientnet_b0_5class",
+      "val": {
+        "accuracy": 0.8776223776223776,
+        "precision_macro": 0.8225702371221475,
+        "recall_macro": 0.8964570475186914,
+        "f1_macro": 0.8499969063379315,
+        "f1_weighted": 0.8827243947579115
+      },
+      "val_confusion_matrix": [
+        [
+          31,
+          3,
+          0,
+          0,
+          1
+        ],
+        [
+          19,
+          133,
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          13,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          1,
+          68
+        ]
+      ],
+      "test": {
+        "accuracy": 0.8830188679245283,
+        "precision_macro": 0.8009336240970424,
+        "recall_macro": 0.8251839553997827,
+        "f1_macro": 0.8096430586997723,
+        "f1_weighted": 0.8832705285446485,
+        "accuracy_ci": [
+          0.8389482240605837,
+          0.9213556515176924
+        ],
+        "f1_macro_ci": [
+          0.7045058660205988,
+          0.885690739342154
+        ]
+      },
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.7586206896551724,
+          "recall": 0.8148148148148148,
+          "f1": 0.7857142857142857,
+          "support": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.9202898550724637,
+          "recall": 0.9136690647482014,
+          "f1": 0.9169675090252708,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.75,
+          "recall": 0.6428571428571429,
+          "f1": 0.6923076923076923,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.6666666666666666,
+          "recall": 0.8571428571428571,
+          "f1": 0.75,
+          "support": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.9090909090909091,
+          "recall": 0.8974358974358975,
+          "f1": 0.9032258064516129,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          22,
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          5,
+          127,
+          1,
+          1,
+          5
+        ],
+        [
+          0,
+          1,
+          9,
+          2,
+          2
+        ],
+        [
+          0,
+          0,
+          1,
+          6,
+          0
+        ],
+        [
+          2,
+          6,
+          0,
+          0,
+          70
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "EfficientNet-B0 (5-class) + TTA",
+      "family": "Deep Learning",
+      "type": "tta",
+      "arch": "efficientnet_b0",
+      "input_size": 256,
+      "feature_set": "Learned features (ImageNet-pretrained EfficientNet-B0, 256px); averaged over 8 test-time views",
+      "best_params": {
+        "best_epoch": 24,
+        "epochs_run": 34,
+        "tta_views": 8
+      },
+      "train_time_s": 185.11227440001676,
+      "params": 4013953,
+      "members": [
+        {
+          "key": "efficientnet_b0_5class",
+          "path": "dl/clean/efficientnet_b0_5class.pt",
+          "temperature": 0.7494280837502144,
+          "tta_views": 8
+        }
+      ],
+      "temperature": 0.7494280837502144,
+      "inference_ms_per_image": 113.6467499891296,
+      "key": "efficientnet_b0_5class_tta",
+      "val": {
+        "accuracy": 0.8846153846153846,
+        "precision_macro": 0.8386252074783103,
+        "recall_macro": 0.9040152541522405,
+        "f1_macro": 0.8559377454130077,
+        "f1_weighted": 0.8906137840170824
+      },
+      "val_confusion_matrix": [
+        [
+          34,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          22,
+          131,
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          12,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          1,
+          70
+        ]
+      ],
+      "test": {
+        "accuracy": 0.8943396226415095,
+        "precision_macro": 0.7883881922675026,
+        "recall_macro": 0.8420050772568759,
+        "f1_macro": 0.8123062972227277,
+        "f1_weighted": 0.8959795758981449,
+        "accuracy_ci": [
+          0.8554588428442029,
+          0.927542771935332
+        ],
+        "f1_macro_ci": [
+          0.7102909999944715,
+          0.8841012320409678
+        ]
+      },
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.7241379310344828,
+          "recall": 0.7777777777777778,
+          "f1": 0.75,
+          "support": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.946969696969697,
+          "recall": 0.8992805755395683,
+          "f1": 0.922509225092251,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.6666666666666666,
+          "recall": 0.7142857142857143,
+          "f1": 0.6896551724137931,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.6666666666666666,
+          "recall": 0.8571428571428571,
+          "f1": 0.75,
+          "support": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.9375,
+          "recall": 0.9615384615384616,
+          "f1": 0.9493670886075949,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          21,
+          5,
+          1,
+          0,
+          0
+        ],
+        [
+          6,
+          125,
+          3,
+          1,
+          4
+        ],
+        [
+          0,
+          1,
+          10,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          6,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          75
+        ]
+      ],
+      "selected": false
+    },
+    {
+      "name": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+      "family": "Deep Learning",
+      "type": "ensemble",
+      "feature_set": "Average of calibrated probabilities: ConvNeXt-Tiny (single view) + EfficientNet-B0 (8-view TTA)",
+      "best_params": {
+        "members": [
+          "convnext_tiny_5class",
+          "efficientnet_b0_5class"
+        ]
+      },
+      "train_time_s": 491.1850576000288,
+      "params": 31837926,
+      "members": [
+        {
+          "key": "convnext_tiny_5class",
+          "path": "dl/clean/convnext_tiny_5class.pt",
+          "temperature": 0.7516078098110994,
+          "tta_views": 1
+        },
+        {
+          "key": "efficientnet_b0_5class",
+          "path": "dl/clean/efficientnet_b0_5class.pt",
+          "temperature": 0.7494280837502144,
+          "tta_views": 8
+        }
+      ],
+      "temperature": null,
+      "inference_ms_per_image": 149.60550000250805,
+      "key": "ensemble_5class",
+      "val": {
+        "accuracy": 0.9195804195804196,
+        "precision_macro": 0.9225532879818594,
+        "recall_macro": 0.9182934417180993,
+        "f1_macro": 0.9118918918918919,
+        "f1_weighted": 0.921986571986572
+      },
+      "val_confusion_matrix": [
+        [
+          34,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          15,
+          140,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          12,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          71
+        ]
+      ],
+      "test": {
+        "accuracy": 0.909433962264151,
+        "precision_macro": 0.820773603906134,
+        "recall_macro": 0.8559795387133515,
+        "f1_macro": 0.8354303557528329,
+        "f1_weighted": 0.9097497304478105,
+        "accuracy_ci": [
+          0.8725868725868726,
+          0.9427535337996691
+        ],
+        "f1_macro_ci": [
+          0.7380293065546798,
+          0.9068306385669255
+        ]
+      },
+      "per_class": [
+        {
+          "key": "healthy",
+          "name": "Healthy",
+          "precision": 0.7857142857142857,
+          "recall": 0.8148148148148148,
+          "f1": 0.8,
+          "support": 27
+        },
+        {
+          "key": "leaf_miner",
+          "name": "Leaf Miner",
+          "precision": 0.9545454545454546,
+          "recall": 0.9064748201438849,
+          "f1": 0.9298892988929889,
+          "support": 139
+        },
+        {
+          "key": "magnesium_deficiency",
+          "name": "Magnesium Deficiency",
+          "precision": 0.7692307692307693,
+          "recall": 0.7142857142857143,
+          "f1": 0.7407407407407407,
+          "support": 14
+        },
+        {
+          "key": "nitrogen_deficiency",
+          "name": "Nitrogen Deficiency",
+          "precision": 0.6666666666666666,
+          "recall": 0.8571428571428571,
+          "f1": 0.75,
+          "support": 7
+        },
+        {
+          "key": "spotted_wilt_virus",
+          "name": "Spotted Wilt Virus",
+          "precision": 0.927710843373494,
+          "recall": 0.9871794871794872,
+          "f1": 0.9565217391304348,
+          "support": 78
+        }
+      ],
+      "confusion_matrix": [
+        [
+          22,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          126,
+          2,
+          1,
+          5
+        ],
+        [
+          0,
+          1,
+          10,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          6,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          77
+        ]
+      ],
+      "selected": true
+    }
+  ],
+  "selected": "ensemble_5class",
+  "validation_ranking": [
+    {
+      "key": "ensemble_5class",
+      "name": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+      "type": "ensemble",
+      "family": "Deep Learning",
+      "val_f1_macro": 0.9118918918918919,
+      "val_accuracy": 0.9195804195804196
+    },
+    {
+      "key": "convnext_tiny_5class",
+      "name": "ConvNeXt-Tiny (5-class)",
+      "type": "single",
+      "family": "Deep Learning",
+      "val_f1_macro": 0.901279213636092,
+      "val_accuracy": 0.9090909090909091
+    },
+    {
+      "key": "convnext_tiny_5class_tta",
+      "name": "ConvNeXt-Tiny (5-class) + TTA",
+      "type": "tta",
+      "family": "Deep Learning",
+      "val_f1_macro": 0.8923293126475501,
+      "val_accuracy": 0.9125874125874126
+    },
+    {
+      "key": "efficientnet_b0_5class_tta",
+      "name": "EfficientNet-B0 (5-class) + TTA",
+      "type": "tta",
+      "family": "Deep Learning",
+      "val_f1_macro": 0.8559377454130077,
+      "val_accuracy": 0.8846153846153846
+    },
+    {
+      "key": "efficientnet_b0_5class",
+      "name": "EfficientNet-B0 (5-class)",
+      "type": "single",
+      "family": "Deep Learning",
+      "val_f1_macro": 0.8499969063379315,
+      "val_accuracy": 0.8776223776223776
+    },
+    {
+      "key": "rf_5class",
+      "name": "Random Forest (5-class)",
+      "type": "single",
+      "family": "Machine Learning",
+      "val_f1_macro": 0.5954418933166294,
+      "val_accuracy": 0.7657342657342657
+    },
+    {
+      "key": "logreg_5class",
+      "name": "Logistic Regression (5-class)",
+      "type": "single",
+      "family": "Machine Learning",
+      "val_f1_macro": 0.5936622762471482,
+      "val_accuracy": 0.6713286713286714
+    },
+    {
+      "key": "svm_5class",
+      "name": "SVM (RBF kernel) (5-class)",
+      "type": "single",
+      "family": "Machine Learning",
+      "val_f1_macro": 0.5481787836821393,
+      "val_accuracy": 0.7482517482517482
+    }
+  ],
+  "ml_vs_dl": {
+    "diff": 0.2344402431085849,
+    "ci": [
+      0.14077965172913406,
+      0.34372249949507133
+    ],
+    "share_of_resamples_a_not_better": 0.0,
+    "dl_model": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+    "ml_model": "Random Forest (5-class)",
+    "accuracy_gain": 0.16981132075471705
+  },
+  "calibration": {
+    "temperature": null,
+    "member_temperatures": [
+      0.7516078098110994,
+      0.7494280837502144
+    ],
+    "ece_before": 0.0829715726904222,
+    "ece_after": 0.03915826899156933,
+    "confidence_threshold": 0.6,
+    "coverage": 0.9169811320754717,
+    "accuracy_kept": 0.9382716049382716,
+    "accuracy_rejected": 0.5909090909090909
+  },
+  "selective": {
+    "target_accuracy": 0.95,
+    "threshold": 0.77,
+    "rule": "lowest calibrated-confidence threshold with validation accuracy on kept photos >= 95% (coverage >= 50%); chosen on validation, reported once on test",
+    "val": {
+      "threshold": 0.77,
+      "coverage": 0.8671328671328671,
+      "accuracy_kept": 0.9516129032258065,
+      "accuracy_rejected": 0.7105263157894737
+    },
+    "test": {
+      "threshold": 0.77,
+      "coverage": 0.8528301886792453,
+      "accuracy_kept": 0.9601769911504425,
+      "accuracy_rejected": 0.6153846153846154
+    }
+  },
+  "eight_class_model_on_same_photos": {
+    "model": "ConvNeXt-Tiny (fine-tuned) + TTA",
+    "photos": 265,
+    "accuracy": 0.8981132075471698,
+    "predicted_out_of_scope": 7
+  }
+}

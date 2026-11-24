@@ -1,0 +1,38 @@
+{
+  "created": "2026-11-19 19:21",
+  "fitted_on": "1813 train+validation photos",
+  "percentiles": [
+    0.5,
+    99.5
+  ],
+  "limits": {
+    "background_texture": {
+      "low": 6.278131068665919,
+      "high": 18.84920117391761
+    },
+    "brightness": {
+      "low": 121.84410247802734,
+      "high": 193.04444396972661
+    },
+    "highlights": {
+      "low": 175.0,
+      "high": 218.0
+    },
+    "leaf_contrast": {
+      "low": 77.87700790405273,
+      "high": 124.68828689575196
+    },
+    "leaf_fraction": {
+      "low": 0.064808349609375,
+      "high": 0.5190798950195313
+    },
+    "second_leaf": {
+      "low": 0.0,
+      "high": 0.014823303222656257
+    },
+    "sharpness": {
+      "low": 38.63455745812971,
+      "high": 589.0779101428025
+    }
+  }
+}

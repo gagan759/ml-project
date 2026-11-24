@@ -1,0 +1,122 @@
+{
+  "train_photos_used": 1502,
+  "train_rgb_mean": [
+    0.5748411648541116,
+    0.5963389761618487,
+    0.5735988992327411
+  ],
+  "train_rgb_std": [
+    0.19377456728913267,
+    0.17840282143308603,
+    0.28583239667948346
+  ],
+  "imagenet_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "imagenet_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "mean_leaf_area_pct": 24.107197280253935,
+  "per_class": [
+    {
+      "key": "early_blight",
+      "train_photos": 44,
+      "mean_leaf_area_pct": 22.30831493030895,
+      "median_paper_value": 191.5,
+      "mean_leaf_rgb": [
+        70.1922587244415,
+        83.55363691337662,
+        24.013157587920638
+      ],
+      "median_leaf_hue_deg": 76.0
+    },
+    {
+      "key": "healthy",
+      "train_photos": 154,
+      "mean_leaf_area_pct": 24.796840122767858,
+      "median_paper_value": 187.5,
+      "mean_leaf_rgb": [
+        59.287117722461794,
+        79.19123986267257,
+        20.945817842974915
+      ],
+      "median_leaf_hue_deg": 82.0
+    },
+    {
+      "key": "late_blight",
+      "train_photos": 84,
+      "mean_leaf_area_pct": 17.344465709867933,
+      "median_paper_value": 196.0,
+      "mean_leaf_rgb": [
+        79.86149701984779,
+        79.87079408933859,
+        37.4156220511365
+      ],
+      "median_leaf_hue_deg": 56.0
+    },
+    {
+      "key": "leaf_miner",
+      "train_photos": 729,
+      "mean_leaf_area_pct": 27.61362753450789,
+      "median_paper_value": 190.0,
+      "mean_leaf_rgb": [
+        65.37001190666051,
+        82.03292743455884,
+        25.31007277101069
+      ],
+      "median_leaf_hue_deg": 80.0
+    },
+    {
+      "key": "magnesium_deficiency",
+      "train_photos": 87,
+      "mean_leaf_area_pct": 24.16588794225934,
+      "median_paper_value": 187.0,
+      "mean_leaf_rgb": [
+        82.37715934245382,
+        88.38922306491999,
+        16.41000399172624
+      ],
+      "median_leaf_hue_deg": 68.0
+    },
+    {
+      "key": "nitrogen_deficiency",
+      "train_photos": 32,
+      "mean_leaf_area_pct": 19.08278465270996,
+      "median_paper_value": 195.0,
+      "mean_leaf_rgb": [
+        106.82335611389448,
+        94.7796174364997,
+        18.41450292982171
+      ],
+      "median_leaf_hue_deg": 50.0
+    },
+    {
+      "key": "potassium_deficiency",
+      "train_photos": 6,
+      "mean_leaf_area_pct": 24.60657755533854,
+      "median_paper_value": 208.5,
+      "mean_leaf_rgb": [
+        123.37013342703887,
+        114.42086877435224,
+        26.471004681831804
+      ],
+      "median_leaf_hue_deg": 54.0
+    },
+    {
+      "key": "spotted_wilt_virus",
+      "train_photos": 366,
+      "mean_leaf_area_pct": 19.018417108254354,
+      "median_paper_value": 189.0,
+      "mean_leaf_rgb": [
+        71.56897718461893,
+        78.60014169873192,
+        24.300631265220172
+      ],
+      "median_leaf_hue_deg": 70.0
+    }
+  ]
+}

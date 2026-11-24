@@ -1,0 +1,133 @@
+{
+  "url": "https://tomato-care.streamlit.app/~/+",
+  "pages": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "diagnose",
+      "viewport": "desktop",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "lab",
+      "viewport": "desktop",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "library",
+      "viewport": "desktop",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "method",
+      "viewport": "desktop",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "home",
+      "viewport": "phone",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "diagnose",
+      "viewport": "phone",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "lab",
+      "viewport": "phone",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "library",
+      "viewport": "phone",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "method",
+      "viewport": "phone",
+      "scheme": "light",
+      "issues": []
+    },
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "diagnose",
+      "viewport": "desktop",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "lab",
+      "viewport": "desktop",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "library",
+      "viewport": "desktop",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "method",
+      "viewport": "desktop",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "home",
+      "viewport": "phone",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "diagnose",
+      "viewport": "phone",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "lab",
+      "viewport": "phone",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "library",
+      "viewport": "phone",
+      "scheme": "dark",
+      "issues": []
+    },
+    {
+      "page": "method",
+      "viewport": "phone",
+      "scheme": "dark",
+      "issues": []
+    }
+  ],
+  "diagnose": {
+    "example": "CONDITION DETECTED \u00b7 97.1% CONFIDENCE\nLeaf Miner\nSee the condition below for symptoms and management.",
+    "compare": "shown",
+    "example_classical": "CONDITION DETECTED \u00b7 97.9% CONFIDENCE\nLeaf Miner\nSee the condition below for symptoms and management.",
+    "upload": "CONDITION DETECTED \u00b7 97.0% CONFIDENCE\nLeaf Miner\nSee the condition below for symptoms and management.",
+    "invalid": "This file could not be read as an image (UnidentifiedImageError). Please upload a JPEG or PNG photo."
+  },
+  "failures": []
+}

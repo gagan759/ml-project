@@ -1,0 +1,157 @@
+{
+  "recipe": {
+    "name": "convnext_t_in1k_robust_oe_crop",
+    "arch": "convnext_tiny",
+    "label": "ConvNeXt-Tiny, leaf crop, class-weighted loss + outlier exposure (weight 1.0)",
+    "input_size": 256,
+    "eval_resize": "resize",
+    "aug": "robust",
+    "batch": 16,
+    "head_epochs": 5,
+    "head_lr": 0.001,
+    "epochs": 30,
+    "lr": 0.0001,
+    "weight_decay": 0.05,
+    "layer_decay": null,
+    "warmup_epochs": 2,
+    "label_smoothing": 0.1,
+    "class_weighting": "balanced",
+    "sampling": "uniform",
+    "outlier_weight": 1.0,
+    "outlier_batch": 8,
+    "crop": "leaf",
+    "ema_decay": 0.998,
+    "model_kwargs": {}
+  },
+  "task": "5class",
+  "classes": [
+    "healthy",
+    "leaf_miner",
+    "magnesium_deficiency",
+    "nitrogen_deficiency",
+    "spotted_wilt_virus"
+  ],
+  "photos": 1654,
+  "views": {
+    "1": {
+      "accuracy": 0.903869407496977,
+      "precision_macro": 0.8746099570784003,
+      "recall_macro": 0.854805256402513,
+      "f1_macro": 0.864349067931005,
+      "f1_weighted": 0.9036545986768015,
+      "temperature": 0.8411939379582596,
+      "ece_raw": 0.05241444687911412,
+      "ece_calibrated": 0.033034201250560835,
+      "nll_calibrated": 0.342861875610445
+    },
+    "8": {
+      "accuracy": 0.9117291414752116,
+      "precision_macro": 0.8881339190169915,
+      "recall_macro": 0.858755073581154,
+      "f1_macro": 0.8720234361535939,
+      "f1_weighted": 0.9117521536264173,
+      "temperature": 0.8011802365256859,
+      "ece_raw": 0.060880229876788976,
+      "ece_calibrated": 0.03180609007769107,
+      "nll_calibrated": 0.31337816841402943
+    }
+  },
+  "per_fold": [
+    {
+      "fold": 0,
+      "held_photos": 326,
+      "train_seconds": 508.1284387000196,
+      "held_1view": {
+        "accuracy": 0.9141104294478528,
+        "precision_macro": 0.8891148914850493,
+        "recall_macro": 0.8782620767605287,
+        "f1_macro": 0.8819153834749711,
+        "f1_weighted": 0.9138636021975826
+      },
+      "held_tta8": {
+        "accuracy": 0.9233128834355828,
+        "precision_macro": 0.8960257554455243,
+        "recall_macro": 0.8994316674038035,
+        "f1_macro": 0.8969248271715491,
+        "f1_weighted": 0.9233493065345503
+      }
+    },
+    {
+      "fold": 1,
+      "held_photos": 340,
+      "train_seconds": 499.739175100025,
+      "held_1view": {
+        "accuracy": 0.8941176470588236,
+        "precision_macro": 0.9208039579468151,
+        "recall_macro": 0.8344308667641904,
+        "f1_macro": 0.8719528887175269,
+        "f1_weighted": 0.8919575935827404
+      },
+      "held_tta8": {
+        "accuracy": 0.9058823529411765,
+        "precision_macro": 0.9094032764621,
+        "recall_macro": 0.8246731166330161,
+        "f1_macro": 0.8615330400617804,
+        "f1_weighted": 0.9040608964381592
+      }
+    },
+    {
+      "fold": 2,
+      "held_photos": 332,
+      "train_seconds": 578.2300751000002,
+      "held_1view": {
+        "accuracy": 0.8855421686746988,
+        "precision_macro": 0.7996313317141984,
+        "recall_macro": 0.8217371711198131,
+        "f1_macro": 0.8083252673851005,
+        "f1_weighted": 0.8856704128810374
+      },
+      "held_tta8": {
+        "accuracy": 0.9066265060240963,
+        "precision_macro": 0.8980514942779093,
+        "recall_macro": 0.854719018147053,
+        "f1_macro": 0.8690504445413358,
+        "f1_weighted": 0.9065726232639988
+      }
+    },
+    {
+      "fold": 3,
+      "held_photos": 333,
+      "train_seconds": 757.5549090999993,
+      "held_1view": {
+        "accuracy": 0.9309309309309309,
+        "precision_macro": 0.904692394895829,
+        "recall_macro": 0.8767858493468912,
+        "f1_macro": 0.8843465250036399,
+        "f1_weighted": 0.9316736325754408
+      },
+      "held_tta8": {
+        "accuracy": 0.9219219219219219,
+        "precision_macro": 0.862125112917796,
+        "recall_macro": 0.8452069019784701,
+        "f1_macro": 0.85001324608559,
+        "f1_weighted": 0.9218138314309557
+      }
+    },
+    {
+      "fold": 4,
+      "held_photos": 323,
+      "train_seconds": 616.9751206000219,
+      "held_1view": {
+        "accuracy": 0.8947368421052632,
+        "precision_macro": 0.8929514790786467,
+        "recall_macro": 0.8688472506119564,
+        "f1_macro": 0.8740039597274235,
+        "f1_weighted": 0.8972960674329217
+      },
+      "held_tta8": {
+        "accuracy": 0.9009287925696594,
+        "precision_macro": 0.8975635421154105,
+        "recall_macro": 0.868409670174376,
+        "f1_macro": 0.8764927452226917,
+        "f1_weighted": 0.9034774307909272
+      }
+    }
+  ],
+  "train_minutes_total": 49.343795310001106
+}

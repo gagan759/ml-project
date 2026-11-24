@@ -1,0 +1,229 @@
+{
+  "generated_at": "2026-11-18T15:35:07+00:00",
+  "path": "POST /api/predict with each original photo's file bytes (FastAPI TestClient, no explanation)",
+  "device": "cpu",
+  "model_key": "ensemble_5class",
+  "model_name": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+  "classes": [
+    "healthy",
+    "leaf_miner",
+    "magnesium_deficiency",
+    "nitrogen_deficiency",
+    "spotted_wilt_virus"
+  ],
+  "threshold": 0.77,
+  "val": {
+    "in_scope": {
+      "photos": 286,
+      "answered": 248,
+      "answered_correct": 236,
+      "referred": 38,
+      "referred_correct": 27,
+      "coverage": 0.8671328671328671,
+      "accuracy_answered": 0.9516129032258065,
+      "accuracy_referred": 0.7105263157894737,
+      "accuracy_all": 0.9195804195804196,
+      "confusion_matrix": [
+        [
+          34,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          15,
+          140,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          12,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          71
+        ]
+      ],
+      "borderline": [
+        {
+          "path": "val/Leaf Miner/IMG20220325134125.jpg",
+          "true": "leaf_miner",
+          "pred": "healthy",
+          "confidence": 0.7694077491760254,
+          "uncertain": true
+        }
+      ]
+    },
+    "out_of_scope": {
+      "photos": 25,
+      "referred": 8,
+      "answered": 17,
+      "by_class": {
+        "early_blight": {
+          "photos": 10,
+          "referred": 1,
+          "answered_as": {
+            "leaf_miner": 1,
+            "spotted_wilt_virus": 8
+          }
+        },
+        "late_blight": {
+          "photos": 14,
+          "referred": 7,
+          "answered_as": {
+            "spotted_wilt_virus": 6,
+            "nitrogen_deficiency": 1
+          }
+        },
+        "potassium_deficiency": {
+          "photos": 1,
+          "referred": 0,
+          "answered_as": {
+            "magnesium_deficiency": 1
+          }
+        }
+      }
+    }
+  },
+  "test": {
+    "in_scope": {
+      "photos": 265,
+      "answered": 225,
+      "answered_correct": 216,
+      "referred": 40,
+      "referred_correct": 25,
+      "coverage": 0.8490566037735849,
+      "accuracy_answered": 0.96,
+      "accuracy_referred": 0.625,
+      "accuracy_all": 0.909433962264151,
+      "confusion_matrix": [
+        [
+          22,
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          126,
+          2,
+          1,
+          5
+        ],
+        [
+          0,
+          1,
+          10,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          6,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          77
+        ]
+      ],
+      "borderline": [
+        {
+          "path": "train/Spotted Wilt Virus/IMG20220323185738.jpg",
+          "true": "spotted_wilt_virus",
+          "pred": "spotted_wilt_virus",
+          "confidence": 0.7693102955818176,
+          "uncertain": true
+        },
+        {
+          "path": "train/Spotted Wilt Virus/IMG20220323094227.jpg",
+          "true": "spotted_wilt_virus",
+          "pred": "spotted_wilt_virus",
+          "confidence": 0.7746888399124146,
+          "uncertain": false
+        }
+      ]
+    },
+    "out_of_scope": {
+      "photos": 25,
+      "referred": 3,
+      "answered": 22,
+      "by_class": {
+        "early_blight": {
+          "photos": 8,
+          "referred": 1,
+          "answered_as": {
+            "spotted_wilt_virus": 6,
+            "leaf_miner": 1
+          }
+        },
+        "late_blight": {
+          "photos": 15,
+          "referred": 2,
+          "answered_as": {
+            "spotted_wilt_virus": 13
+          }
+        },
+        "potassium_deficiency": {
+          "photos": 2,
+          "referred": 0,
+          "answered_as": {
+            "spotted_wilt_virus": 1,
+            "nitrogen_deficiency": 1
+          }
+        }
+      }
+    }
+  },
+  "mean_request_ms": 188.8201366057724,
+  "comparison_with_offline": {
+    "val": {
+      "same_predictions": true,
+      "offline_accuracy_all": 0.9195804195804196,
+      "deployed_accuracy_all": 0.9195804195804196,
+      "offline_answered": 248,
+      "deployed_answered": 248,
+      "offline_answered_correct": 236,
+      "deployed_answered_correct": 236,
+      "offline_coverage": 0.8671328671328671,
+      "deployed_coverage": 0.8671328671328671,
+      "offline_accuracy_answered": 0.9516129032258065,
+      "deployed_accuracy_answered": 0.9516129032258065
+    },
+    "test": {
+      "same_predictions": true,
+      "offline_accuracy_all": 0.909433962264151,
+      "deployed_accuracy_all": 0.909433962264151,
+      "offline_answered": 226,
+      "deployed_answered": 225,
+      "offline_answered_correct": 217,
+      "deployed_answered_correct": 216,
+      "offline_coverage": 0.8528301886792453,
+      "deployed_coverage": 0.8490566037735849,
+      "offline_accuracy_answered": 0.9601769911504425,
+      "deployed_accuracy_answered": 0.96
+    }
+  }
+}

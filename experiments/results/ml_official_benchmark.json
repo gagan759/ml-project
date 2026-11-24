@@ -1,0 +1,485 @@
+[
+  {
+    "model_key": "logreg",
+    "model": "Logistic Regression",
+    "feature_set": "Color",
+    "protocol": "Official split (leaky)",
+    "test": {
+      "accuracy": 0.544468546637744,
+      "precision_macro": 0.5112942451707149,
+      "recall_macro": 0.6019023782106929,
+      "f1_macro": 0.5102623737226446,
+      "f1_weighted": 0.5615979234361907
+    },
+    "per_class": [
+      {
+        "key": "early_blight",
+        "name": "Early Blight",
+        "precision": 0.359375,
+        "recall": 0.46,
+        "f1": 0.40350877192982454,
+        "support": 50
+      },
+      {
+        "key": "healthy",
+        "name": "Healthy",
+        "precision": 0.2903225806451613,
+        "recall": 0.8181818181818182,
+        "f1": 0.42857142857142855,
+        "support": 22
+      },
+      {
+        "key": "late_blight",
+        "name": "Late Blight",
+        "precision": 0.7101449275362319,
+        "recall": 0.532608695652174,
+        "f1": 0.6086956521739131,
+        "support": 92
+      },
+      {
+        "key": "leaf_miner",
+        "name": "Leaf Miner",
+        "precision": 0.7407407407407407,
+        "recall": 0.5769230769230769,
+        "f1": 0.6486486486486487,
+        "support": 104
+      },
+      {
+        "key": "magnesium_deficiency",
+        "name": "Magnesium Deficiency",
+        "precision": 0.765625,
+        "recall": 0.5157894736842106,
+        "f1": 0.6163522012578616,
+        "support": 95
+      },
+      {
+        "key": "nitrogen_deficiency",
+        "name": "Nitrogen Deficiency",
+        "precision": 0.5227272727272727,
+        "recall": 0.6216216216216216,
+        "f1": 0.5679012345679012,
+        "support": 37
+      },
+      {
+        "key": "potassium_deficiency",
+        "name": "Potassium Deficiency",
+        "precision": 0.23333333333333334,
+        "recall": 0.875,
+        "f1": 0.3684210526315789,
+        "support": 8
+      },
+      {
+        "key": "spotted_wilt_virus",
+        "name": "Spotted Wilt Virus",
+        "precision": 0.46808510638297873,
+        "recall": 0.41509433962264153,
+        "f1": 0.44,
+        "support": 53
+      }
+    ],
+    "confusion_matrix": [
+      [
+        23,
+        6,
+        1,
+        8,
+        2,
+        0,
+        0,
+        10
+      ],
+      [
+        0,
+        18,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        12,
+        3,
+        49,
+        0,
+        2,
+        11,
+        6,
+        9
+      ],
+      [
+        6,
+        31,
+        0,
+        60,
+        4,
+        0,
+        1,
+        2
+      ],
+      [
+        9,
+        3,
+        2,
+        7,
+        49,
+        8,
+        13,
+        4
+      ],
+      [
+        0,
+        0,
+        7,
+        0,
+        4,
+        23,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        7,
+        0
+      ],
+      [
+        14,
+        1,
+        10,
+        2,
+        3,
+        1,
+        0,
+        22
+      ]
+    ]
+  },
+  {
+    "model_key": "svm",
+    "model": "SVM (RBF kernel)",
+    "feature_set": "Color",
+    "protocol": "Official split (leaky)",
+    "test": {
+      "accuracy": 0.6203904555314533,
+      "precision_macro": 0.5411214766721849,
+      "recall_macro": 0.5049198013733763,
+      "f1_macro": 0.5145987870297069,
+      "f1_weighted": 0.6057783615182867
+    },
+    "per_class": [
+      {
+        "key": "early_blight",
+        "name": "Early Blight",
+        "precision": 0.46153846153846156,
+        "recall": 0.36,
+        "f1": 0.4044943820224719,
+        "support": 50
+      },
+      {
+        "key": "healthy",
+        "name": "Healthy",
+        "precision": 0.3,
+        "recall": 0.13636363636363635,
+        "f1": 0.1875,
+        "support": 22
+      },
+      {
+        "key": "late_blight",
+        "name": "Late Blight",
+        "precision": 0.6831683168316832,
+        "recall": 0.75,
+        "f1": 0.7150259067357513,
+        "support": 92
+      },
+      {
+        "key": "leaf_miner",
+        "name": "Leaf Miner",
+        "precision": 0.6343283582089553,
+        "recall": 0.8173076923076923,
+        "f1": 0.7142857142857143,
+        "support": 104
+      },
+      {
+        "key": "magnesium_deficiency",
+        "name": "Magnesium Deficiency",
+        "precision": 0.7291666666666666,
+        "recall": 0.7368421052631579,
+        "f1": 0.7329842931937173,
+        "support": 95
+      },
+      {
+        "key": "nitrogen_deficiency",
+        "name": "Nitrogen Deficiency",
+        "precision": 0.6666666666666666,
+        "recall": 0.4864864864864865,
+        "f1": 0.5625,
+        "support": 37
+      },
+      {
+        "key": "potassium_deficiency",
+        "name": "Potassium Deficiency",
+        "precision": 0.42857142857142855,
+        "recall": 0.375,
+        "f1": 0.4,
+        "support": 8
+      },
+      {
+        "key": "spotted_wilt_virus",
+        "name": "Spotted Wilt Virus",
+        "precision": 0.425531914893617,
+        "recall": 0.37735849056603776,
+        "f1": 0.4,
+        "support": 53
+      }
+    ],
+    "confusion_matrix": [
+      [
+        18,
+        3,
+        4,
+        12,
+        2,
+        0,
+        0,
+        11
+      ],
+      [
+        0,
+        3,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        0,
+        69,
+        4,
+        4,
+        2,
+        0,
+        8
+      ],
+      [
+        7,
+        1,
+        0,
+        85,
+        5,
+        0,
+        0,
+        6
+      ],
+      [
+        2,
+        3,
+        3,
+        8,
+        70,
+        5,
+        3,
+        1
+      ],
+      [
+        0,
+        0,
+        11,
+        0,
+        7,
+        18,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        3,
+        1
+      ],
+      [
+        7,
+        0,
+        13,
+        6,
+        7,
+        0,
+        0,
+        20
+      ]
+    ]
+  },
+  {
+    "model_key": "rf",
+    "model": "Random Forest",
+    "feature_set": "Color",
+    "protocol": "Official split (leaky)",
+    "test": {
+      "accuracy": 0.8351409978308026,
+      "precision_macro": 0.8577610608847213,
+      "recall_macro": 0.7483319805395169,
+      "f1_macro": 0.7798316274666757,
+      "f1_weighted": 0.8257064041149279
+    },
+    "per_class": [
+      {
+        "key": "early_blight",
+        "name": "Early Blight",
+        "precision": 0.88,
+        "recall": 0.88,
+        "f1": 0.88,
+        "support": 50
+      },
+      {
+        "key": "healthy",
+        "name": "Healthy",
+        "precision": 0.6666666666666666,
+        "recall": 0.2727272727272727,
+        "f1": 0.3870967741935484,
+        "support": 22
+      },
+      {
+        "key": "late_blight",
+        "name": "Late Blight",
+        "precision": 0.8155339805825242,
+        "recall": 0.9130434782608695,
+        "f1": 0.8615384615384616,
+        "support": 92
+      },
+      {
+        "key": "leaf_miner",
+        "name": "Leaf Miner",
+        "precision": 0.7404580152671756,
+        "recall": 0.9326923076923077,
+        "f1": 0.825531914893617,
+        "support": 104
+      },
+      {
+        "key": "magnesium_deficiency",
+        "name": "Magnesium Deficiency",
+        "precision": 0.9052631578947369,
+        "recall": 0.9052631578947369,
+        "f1": 0.9052631578947369,
+        "support": 95
+      },
+      {
+        "key": "nitrogen_deficiency",
+        "name": "Nitrogen Deficiency",
+        "precision": 0.9166666666666666,
+        "recall": 0.8918918918918919,
+        "f1": 0.9041095890410958,
+        "support": 37
+      },
+      {
+        "key": "potassium_deficiency",
+        "name": "Potassium Deficiency",
+        "precision": 1.0,
+        "recall": 0.625,
+        "f1": 0.7692307692307693,
+        "support": 8
+      },
+      {
+        "key": "spotted_wilt_virus",
+        "name": "Spotted Wilt Virus",
+        "precision": 0.9375,
+        "recall": 0.5660377358490566,
+        "f1": 0.7058823529411765,
+        "support": 53
+      }
+    ],
+    "confusion_matrix": [
+      [
+        44,
+        1,
+        2,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        6,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        84,
+        3,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        97,
+        3,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        3,
+        3,
+        86,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        1,
+        33,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        5,
+        1
+      ],
+      [
+        0,
+        0,
+        11,
+        10,
+        2,
+        0,
+        0,
+        30
+      ]
+    ]
+  }
+]

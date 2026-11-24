@@ -1,0 +1,22 @@
+{
+  "fold": 3,
+  "train_photos": 1447,
+  "held_photos": 366,
+  "train_seconds": 0.0,
+  "best_C": 0.03,
+  "held_1view": {
+    "accuracy": 0.7595628415300546,
+    "precision_macro": 0.59020031135723,
+    "recall_macro": 0.6445501934310942,
+    "f1_macro": 0.5942054401518011,
+    "f1_weighted": 0.7595198358537145
+  },
+  "held_tta8": {
+    "accuracy": 0.7595628415300546,
+    "precision_macro": 0.59020031135723,
+    "recall_macro": 0.6445501934310942,
+    "f1_macro": 0.5942054401518011,
+    "f1_weighted": 0.7595198358537145
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+# Full pipeline (data audit, training, evaluation, reports) + the REST API + the Streamlit app.
+# Install PyTorch first:
+#   GPU (CUDA 12.8): pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
+#   CPU only:        pip install torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cpu
+# then: pip install -r requirements-train.txt && pip install -e .
+-r requirements-serve.txt
+pandas==2.3.3
+seaborn==0.13.2
+tqdm==4.70.1
+streamlit==1.65.0
+altair==6.2.2

@@ -1,0 +1,18 @@
+{
+  "api_prediction": {
+    "index": 3,
+    "key": "leaf_miner",
+    "name": "Leaf Miner",
+    "confidence": 0.9706465860538236,
+    "is_healthy": false,
+    "status": "Diseased"
+  },
+  "desktop_pages": 10,
+  "phone_pages": 10,
+  "ui_heading": "Leaf Miner",
+  "compare_rows": 2,
+  "invalid_file_rejected": true,
+  "lab_rows": 15,
+  "problems": [],
+  "passed": true
+}

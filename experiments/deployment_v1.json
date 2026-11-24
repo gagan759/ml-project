@@ -1,0 +1,322 @@
+{
+  "default_model": "ensemble_5class",
+  "confidence_threshold": 0.6,
+  "models": [
+    {
+      "key": "ensemble_5class",
+      "name": "Ensemble (5-class): ConvNeXt-Tiny + EfficientNet-B0",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Average of calibrated probabilities: ConvNeXt-Tiny (single view) + EfficientNet-B0 (8-view TTA)",
+      "params": 31837926,
+      "class_keys": [
+        "healthy",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "confidence_threshold": 0.77,
+      "test_metrics": {
+        "accuracy": 0.909433962264151,
+        "precision_macro": 0.820773603906134,
+        "recall_macro": 0.8559795387133515,
+        "f1_macro": 0.8354303557528329,
+        "f1_weighted": 0.9097497304478105
+      },
+      "operating_point": {
+        "target_accuracy": 0.95,
+        "threshold": 0.77,
+        "rule": "lowest calibrated-confidence threshold with validation accuracy on kept photos >= 95% (coverage >= 50%); chosen on validation, reported once on test",
+        "val": {
+          "threshold": 0.77,
+          "coverage": 0.8671328671328671,
+          "accuracy_kept": 0.9516129032258065,
+          "accuracy_rejected": 0.7105263157894737
+        },
+        "test": {
+          "threshold": 0.77,
+          "coverage": 0.8528301886792453,
+          "accuracy_kept": 0.9601769911504425,
+          "accuracy_rejected": 0.6153846153846154
+        },
+        "test_photos": 265
+      },
+      "type": "ensemble",
+      "members": [
+        {
+          "key": "convnext_tiny_5class",
+          "path": "dl/clean/convnext_tiny_5class.pt",
+          "temperature": 0.7516078098110994,
+          "tta_views": 1
+        },
+        {
+          "key": "efficientnet_b0_5class",
+          "path": "dl/clean/efficientnet_b0_5class.pt",
+          "temperature": 0.7494280837502144,
+          "tta_views": 8
+        }
+      ]
+    },
+    {
+      "key": "logreg",
+      "name": "Logistic Regression (8-class)",
+      "family": "Machine Learning",
+      "kind": "classical",
+      "feature_set": "Color",
+      "params": null,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.5,
+        "precision_macro": 0.3712657149560431,
+        "recall_macro": 0.4254331058962354,
+        "f1_macro": 0.3651848385041663,
+        "f1_weighted": 0.5466965675426991
+      },
+      "type": "sklearn",
+      "path": "ml/logreg__color.joblib"
+    },
+    {
+      "key": "svm",
+      "name": "SVM (RBF kernel) (8-class)",
+      "family": "Machine Learning",
+      "kind": "classical",
+      "feature_set": "Color",
+      "params": null,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.6896551724137931,
+        "precision_macro": 0.45096652282473,
+        "recall_macro": 0.37605183252665264,
+        "f1_macro": 0.38943241389349176,
+        "f1_weighted": 0.6595630533689588
+      },
+      "type": "sklearn",
+      "path": "ml/svm__color.joblib"
+    },
+    {
+      "key": "rf",
+      "name": "Random Forest (8-class)",
+      "family": "Machine Learning",
+      "kind": "classical",
+      "feature_set": "Color",
+      "params": null,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.7,
+        "precision_macro": 0.4924027994431305,
+        "recall_macro": 0.4084657914693886,
+        "f1_macro": 0.43082238422368335,
+        "f1_weighted": 0.671051602629895
+      },
+      "type": "sklearn",
+      "path": "ml/rf__color.joblib"
+    },
+    {
+      "key": "custom_cnn",
+      "name": "Custom CNN (8-class)",
+      "family": "Deep Learning",
+      "kind": "cnn",
+      "feature_set": "Learned features (end-to-end CNN)",
+      "params": 1175272,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.4517241379310345,
+        "precision_macro": 0.3572987572225904,
+        "recall_macro": 0.462916626405835,
+        "f1_macro": 0.34944183608505053,
+        "f1_weighted": 0.4849584882033892
+      },
+      "type": "torch",
+      "path": "dl/clean/custom_cnn.pt",
+      "temperature": 0.7170706648669737,
+      "tta_views": 1
+    },
+    {
+      "key": "mobilenetv2_fe",
+      "name": "MobileNetV2 (feature extraction) (8-class)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features (ImageNet-pretrained MobileNetV2, 224px)",
+      "params": 2234120,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.6241379310344828,
+        "precision_macro": 0.4335926942452992,
+        "recall_macro": 0.5002310148218422,
+        "f1_macro": 0.45188984896531803,
+        "f1_weighted": 0.6516581532571076
+      },
+      "type": "torch",
+      "path": "dl/clean/mobilenetv2_fe.pt",
+      "temperature": 0.5223655582069823,
+      "tta_views": 1
+    },
+    {
+      "key": "mobilenetv2_ft",
+      "name": "MobileNetV2 (fine-tuned) (8-class)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features (ImageNet-pretrained MobileNetV2, 224px)",
+      "params": 2234120,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.7482758620689656,
+        "precision_macro": 0.6324645748987854,
+        "recall_macro": 0.6135932279817171,
+        "f1_macro": 0.6062946260320957,
+        "f1_weighted": 0.762419549925271
+      },
+      "type": "torch",
+      "path": "dl/clean/mobilenetv2_ft.pt",
+      "temperature": 1.153191588429666,
+      "tta_views": 1
+    },
+    {
+      "key": "efficientnet_b0_v2",
+      "name": "EfficientNet-B0 (fine-tuned) (8-class)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features (ImageNet-pretrained EfficientNet-B0, 256px)",
+      "params": 4017796,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.7862068965517242,
+        "precision_macro": 0.5168356983647644,
+        "recall_macro": 0.5452824096034528,
+        "f1_macro": 0.524901139607238,
+        "f1_weighted": 0.7817810617388959
+      },
+      "type": "torch",
+      "path": "dl/clean/efficientnet_b0_v2.pt",
+      "temperature": 0.9570318875476894,
+      "tta_views": 1
+    },
+    {
+      "key": "convnext_tiny_v2",
+      "name": "ConvNeXt-Tiny (fine-tuned) (8-class)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features (ImageNet-pretrained ConvNeXt-Tiny, 256px)",
+      "params": 27826280,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.8206896551724138,
+        "precision_macro": 0.5468015419333878,
+        "recall_macro": 0.5396754757366269,
+        "f1_macro": 0.5406474686395031,
+        "f1_weighted": 0.8112694154438219
+      },
+      "type": "torch",
+      "path": "dl/clean/convnext_tiny_v2.pt",
+      "temperature": 0.9146634519857545,
+      "tta_views": 1
+    },
+    {
+      "key": "convnext_tiny_v2_tta",
+      "name": "ConvNeXt-Tiny (fine-tuned) + TTA (8-class)",
+      "family": "Deep Learning",
+      "kind": "transfer",
+      "feature_set": "Learned features; averaged over 8 test-time views",
+      "params": 27826280,
+      "class_keys": [
+        "early_blight",
+        "healthy",
+        "late_blight",
+        "leaf_miner",
+        "magnesium_deficiency",
+        "nitrogen_deficiency",
+        "potassium_deficiency",
+        "spotted_wilt_virus"
+      ],
+      "test_metrics": {
+        "accuracy": 0.8482758620689655,
+        "precision_macro": 0.5706311870626386,
+        "recall_macro": 0.6036215350064271,
+        "f1_macro": 0.5858631410166775,
+        "f1_weighted": 0.8382864025659794
+      },
+      "type": "ensemble",
+      "members": [
+        {
+          "key": "convnext_tiny_v2",
+          "path": "dl/clean/convnext_tiny_v2.pt",
+          "temperature": 0.8957107571387836,
+          "tta_views": 8
+        }
+      ]
+    }
+  ]
+}

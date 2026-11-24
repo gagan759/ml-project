@@ -1,0 +1,80 @@
+{
+  "n_folds": 5,
+  "photos": 1813,
+  "seed": 131,
+  "balance_score": 3.3564201424473463,
+  "empty_class_fold_cells": 0,
+  "per_fold": [
+    {
+      "fold": 0,
+      "photos": 354,
+      "per_class": {
+        "early_blight": 10,
+        "healthy": 42,
+        "late_blight": 17,
+        "leaf_miner": 171,
+        "magnesium_deficiency": 20,
+        "nitrogen_deficiency": 8,
+        "potassium_deficiency": 1,
+        "spotted_wilt_virus": 85
+      }
+    },
+    {
+      "fold": 1,
+      "photos": 372,
+      "per_class": {
+        "early_blight": 10,
+        "healthy": 43,
+        "late_blight": 21,
+        "leaf_miner": 173,
+        "magnesium_deficiency": 23,
+        "nitrogen_deficiency": 8,
+        "potassium_deficiency": 1,
+        "spotted_wilt_virus": 93
+      }
+    },
+    {
+      "fold": 2,
+      "photos": 360,
+      "per_class": {
+        "early_blight": 8,
+        "healthy": 43,
+        "late_blight": 18,
+        "leaf_miner": 162,
+        "magnesium_deficiency": 24,
+        "nitrogen_deficiency": 6,
+        "potassium_deficiency": 2,
+        "spotted_wilt_virus": 97
+      }
+    },
+    {
+      "fold": 3,
+      "photos": 366,
+      "per_class": {
+        "early_blight": 12,
+        "healthy": 33,
+        "late_blight": 20,
+        "leaf_miner": 194,
+        "magnesium_deficiency": 19,
+        "nitrogen_deficiency": 7,
+        "potassium_deficiency": 1,
+        "spotted_wilt_virus": 80
+      }
+    },
+    {
+      "fold": 4,
+      "photos": 361,
+      "per_class": {
+        "early_blight": 14,
+        "healthy": 28,
+        "late_blight": 22,
+        "leaf_miner": 185,
+        "magnesium_deficiency": 17,
+        "nitrogen_deficiency": 9,
+        "potassium_deficiency": 2,
+        "spotted_wilt_virus": 84
+      }
+    }
+  ],
+  "rule": "StratifiedGroupKFold over train+val photos; groups = leaf groups; best of 200 seeds by label balance only; test photos excluded"
+}
